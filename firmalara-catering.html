@@ -3157,33 +3157,34 @@ body.dark-mode .brand-item {
         }
     }
     
-    #intro-animation {
-        position: fixed;
-        z-index: 9999;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: var(--primary-color);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: opacity 1s ease;
-    }
+/* Intro animation styles */
+#intro-animation {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s ease;
+}
 
-    #intro-animation .intro-logo {
-        font-size: clamp(24px, 8vw, 42px);
-        font-family: 'Playfair Display', serif;
-        color: white;
-        opacity: 0;
-        animation: logoFade 2s ease forwards;
-    }
+#intro-animation .intro-logo {
+    font-size: clamp(24px, 8vw, 42px);
+    font-family: 'Playfair Display', serif;
+    color: white;
+    opacity: 0;
+    animation: logoFade 2s ease forwards;
+}
 
-    @keyframes logoFade {
-        0% { opacity: 0; transform: scale(0.8); }
-        50% { opacity: 1; transform: scale(1.05); }
-        100% { opacity: 1; transform: scale(1); }
-    }
+@keyframes logoFade {
+    0% { opacity: 0; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 1; transform: scale(1); }
+}
 	
     </style>
 </head>
@@ -4185,120 +4186,121 @@ body.dark-mode .brand-item {
 </section>
 
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section section" aria-labelledby="contact-heading">
-        <div class="container">
-            <div class="section-title">
-                <h2 id="contact-heading">İletişim</h2>
-                <p>Firmanız için catering hizmeti almak veya detaylı bilgi için bizimle iletişime geçin</p>
-            </div>
-            
-            <div class="contact-container">
-                <div class="contact-info">
-<article class="info-card">
-    <div class="info-icon">
-        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-    </div>
-    <div class="info-content">
-        <h3>Adres</h3>
-        <a href="https://www.google.com/maps/place/%C4%B0stanbul+Alev+Catering/@41.031533,28.901311,17z/data=!3m1!4b1!4m6!3m5!1s0x89d53cfbc558756b:0xe730685fc7684eff!8m2!3d41.031533!4d28.901311!16s%2Fg%2F11sd9rc6fh?entry=ttu" class="contact-link" target="_blank">Terazidere, Sema Sk. No:2, 34045 Bayrampaşa/İstanbul</a>
-    </div>
-</article>
-                    
-                    <article class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-phone-alt" aria-hidden="true"></i>
-                        </div>
-                        <div class="info-content">
-                            <h3>Telefon</h3>
-                            <a href="tel:+902123456789" class="contact-link">+90 212 345 67 89</a>
-                        </div>
-                    </article>
-                    
-                    <article class="info-card whatsapp-card">
-                        <div class="info-icon">
-                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
-                        </div>
-                        <div class="info-content">
-                            <h3>WhatsApp</h3>
-                            <div class="whatsapp-container">
-                                <a href="https://wa.me/905555555555" class="whatsapp-link" target="_blank">
-                                    <span class="phone-number">+90 555 555 55 55</span>
-                                    <span class="whatsapp-action">
-                                        <i class="fab fa-whatsapp" aria-hidden="true"></i> Mesaj Gönder
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-envelope" aria-hidden="true"></i>
-                        </div>
-                        <div class="info-content">
-                            <h3>E-posta</h3>
-                            <a href="mailto:info@kurumsalcatering.com" class="contact-link">info@kurumsalcatering.com</a>
-                        </div>
-                    </article>
-                    
-                    <article class="working-hours">
-                        <h3>Çalışma Saatleri</h3>
-                        <p><strong>Pazartesi - Cuma:</strong> 08:00 - 18:00</p>
-                        <p><strong>Cumartesi:</strong> 09:00 - 15:00</p>
-                        <p><strong>Pazar:</strong> Kapalı</p>
-                    </article>
-                </div>
-                
-                <div class="contact-form-container">
-                    <div class="contact-form-header">
-                        <h3>Teklif Formu</h3>
-                        <p>Firmanız için catering hizmeti almak istiyorsanız lütfen formu doldurun</p>
+<!-- Contact Section -->
+<section id="contact" class="contact-section section" aria-labelledby="contact-heading">
+    <div class="container">
+        <div class="section-title">
+            <h2 id="contact-heading">İletişim</h2>
+            <p>Firmanız için catering hizmeti almak veya detaylı bilgi için bizimle iletişime geçin</p>
+        </div>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <article class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                     </div>
-                    
-                    <form id="contactForm" method="post">
-                        <div class="form-group">
-                            <i class="fas fa-user" aria-hidden="true"></i>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Adınız Soyadınız" required>
+                    <div class="info-content">
+                        <h3>Adres</h3>
+                        <a href="https://www.google.com/maps/place/%C4%B0stanbul+Alev+Catering/@41.031533,28.901311,17z/data=!3m1!4b1!4m6!3m5!1s0x89d53cfbc558756b:0xe730685fc7684eff!8m2!3d41.031533!4d28.901311!16s%2Fg%2F11sd9rc6fh?entry=ttu" class="contact-link" target="_blank">Terazidere, Sema Sk. No:2, 34045 Bayrampaşa/İstanbul</a>
+                    </div>
+                </article>
+
+                <article class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Telefon</h3>
+                        <a href="tel:+902123456789" class="contact-link">+90 212 345 67 89</a>
+                    </div>
+                </article>
+
+                <article class="info-card whatsapp-card">
+                    <div class="info-icon">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>WhatsApp</h3>
+                        <div class="whatsapp-container">
+                            <a href="https://wa.me/905555555555" class="whatsapp-link" target="_blank">
+                                <span class="phone-number">+90 555 555 55 55</span>
+                                <span class="whatsapp-action">
+                                    <i class="fab fa-whatsapp" aria-hidden="true"></i> Mesaj Gönder
+                                </span>
+                            </a>
                         </div>
-                        
-                        <div class="form-group">
-                            <i class="fas fa-building" aria-hidden="true"></i>
-                            <input type="text" class="form-control" id="company" name="company" placeholder="Firma Adı" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <i class="fas fa-phone-alt" aria-hidden="true"></i>
-                            <input type="tel" class="form-control" id="phone" name="phone" 
-                                   placeholder="Telefon (5__) ___ __ __" 
-                                   pattern="[\d\s\(\)\-]{10,}" 
-                                   title="10 haneli telefon numarası giriniz"
-                                   required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <i class="fas fa-envelope" aria-hidden="true"></i>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="E-posta Adresiniz" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <i class="fas fa-users" aria-hidden="true"></i>
-                            <input type="number" class="form-control" id="person-count" name="person-count" placeholder="Günlük Kişi Sayısı" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <i class="fas fa-edit" aria-hidden="true"></i>
-                            <textarea class="form-control" id="message" name="message" placeholder="Ek bilgiler ve özel istekleriniz" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn">
-                            <i class="fas fa-paper-plane" aria-hidden="true"></i> TEKLİF AL
-                        </button>
-                    </form>
+                    </div>
+                </article>
+
+                <article class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>E-posta</h3>
+                        <a href="mailto:info@kurumsalcatering.com" class="contact-link">info@kurumsalcatering.com</a>
+                    </div>
+                </article>
+
+                <article class="working-hours">
+                    <h3>Çalışma Saatleri</h3>
+                    <p><strong>Pazartesi - Cuma:</strong> 08:00 - 18:00</p>
+                    <p><strong>Cumartesi:</strong> 09:00 - 15:00</p>
+                    <p><strong>Pazar:</strong> Kapalı</p>
+                </article>
+            </div>
+
+            <div class="contact-form-container">
+                <div class="contact-form-header">
+                    <h3>Teklif Formu</h3>
+                    <p>Firmanız için catering hizmeti almak istiyorsanız lütfen formu doldurun</p>
                 </div>
+
+                <!-- Form -->
+                <form id="contactForm" action="https://formspree.io/f/mwpqogyd" method="POST">
+                    <div class="form-group">
+                        <i class="fas fa-user" aria-hidden="true"></i>
+                        <input type="text" class="form-control" name="Ad Soyad" placeholder="Adınız Soyadınız" required>
+                    </div>
+
+                    <div class="form-group">
+                        <i class="fas fa-building" aria-hidden="true"></i>
+                        <input type="text" class="form-control" name="Firma" placeholder="Firma Adı" required>
+                    </div>
+
+                    <div class="form-group">
+                        <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                        <input type="tel" class="form-control" id="phone" name="Telefon"
+                               placeholder="Telefon (5__) ___ __ __"
+                               pattern="[\d\s\(\)\-]{10,}"
+                               title="10 haneli telefon numarası giriniz"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <input type="email" class="form-control" name="E-posta" placeholder="E-posta Adresiniz" required>
+                    </div>
+
+                    <div class="form-group">
+                        <i class="fas fa-users" aria-hidden="true"></i>
+                        <input type="number" class="form-control" name="Kişi Sayısı" placeholder="Günlük Kişi Sayısı" required>
+                    </div>
+
+                    <div class="form-group">
+                        <i class="fas fa-edit" aria-hidden="true"></i>
+                        <textarea class="form-control" name="Mesaj" placeholder="Ek bilgiler ve özel istekleriniz" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i> TEKLİF AL
+                    </button>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 </main>
 
     <!-- Footer -->
@@ -4392,6 +4394,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setupMobileMenu();
     setupBackToTop();
     setupContactForm();
+	setupIntroAnimation();
     setupHeaderEffects();
     setupServicesDropdown();
     setupCookieConsent();
@@ -4403,7 +4406,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Mobil optimizasyonlar
     optimizeForMobile();
     setupTouchEvents();
-    setupIntroAnimation();
     preventHorizontalScroll(); // Yeni eklenen mobil optimizasyon
     
     // Sayfa yüklendiğinde AOS animasyonlarını başlat
@@ -4538,50 +4540,53 @@ const setupBackToTop = () => {
 const setupContactForm = () => {
     const contactForm = document.getElementById('contactForm');
     if (!contactForm) return;
-    
-    // Telefon numarası formatlama
+
+    // Telefon numarası otomatik formatlama
     const phoneInput = contactForm.querySelector('#phone');
     if (phoneInput) {
         phoneInput.addEventListener('input', (e) => {
             let value = e.target.value.replace(/\D/g, '');
             if (value.length > 10) value = value.substring(0, 10);
-            value = value.replace(/^(\d{3})(\d{3})(\d{2})(\d{2})$/, '($1) $2 $3 $4');
+            if (value.length >= 10) {
+                value = value.replace(/^(\d{3})(\d{3})(\d{2})(\d{2})$/, '($1) $2 $3 $4');
+            }
             e.target.value = value;
         });
     }
-    
+
     // Form gönderimi
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
+
         const submitBtn = contactForm.querySelector('button[type="submit"]');
-        const originalBtnText = submitBtn.textContent;
-        
+        const originalBtnText = submitBtn.innerHTML;
+
         try {
-            // Buton durumunu güncelle
             submitBtn.disabled = true;
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Gönderiliyor...';
-            
-            // Form verilerini hazırla
+
             const formData = new FormData(contactForm);
-            const formObject = Object.fromEntries(formData.entries());
-            
-            // Burada gerçek bir API isteği yapılabilir
-            console.log('Form verileri:', formObject);
-            
-            // Simüle edilmiş gecikme
-            await new Promise(resolve => setTimeout(resolve, 1500));
-            
-            // Başarılı mesajı göster
-            alert('Talebiniz başarıyla gönderildi! En kısa sürede sizinle iletişime geçeceğiz.');
-            contactForm.reset();
+
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                alert('Talebiniz başarıyla gönderildi! En kısa sürede sizinle iletişime geçeceğiz.');
+                contactForm.reset();
+            } else {
+                alert('Gönderim başarısız. Lütfen bilgilerinizi kontrol ederek tekrar deneyin.');
+            }
         } catch (error) {
             console.error('Form gönderim hatası:', error);
             alert('Bir hata oluştu. Lütfen daha sonra tekrar deneyin.');
         } finally {
-            // Buton durumunu sıfırla
             submitBtn.disabled = false;
-            submitBtn.textContent = originalBtnText;
+            submitBtn.innerHTML = originalBtnText;
         }
     });
 };
@@ -5079,7 +5084,7 @@ const setupTouchEvents = () => {
     }
 };
 
-// 14. INTRO ANİMASYONU
+// 10. INTRO ANİMASYONU
 const setupIntroAnimation = () => {
     const intro = document.getElementById('intro-animation');
     if (!intro) return;
