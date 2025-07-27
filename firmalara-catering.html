@@ -4258,45 +4258,54 @@ body.dark-mode .brand-item {
                 </div>
 
                 <!-- Form -->
-                <form id="contactForm" action="https://formspree.io/f/mwpqogyd" method="POST">
-                    <div class="form-group">
-                        <i class="fas fa-user" aria-hidden="true"></i>
-                        <input type="text" class="form-control" name="Ad Soyad" placeholder="Adınız Soyadınız" required>
-                    </div>
+<form id="contactForm" action="https://formspree.io/f/mwpqogyd" method="POST">
+    <div class="form-group">
+        <i class="fas fa-user" aria-hidden="true"></i>
+        <input type="text" class="form-control" name="Ad Soyad" placeholder="Adınız Soyadınız" required>
+    </div>
 
-                    <div class="form-group">
-                        <i class="fas fa-building" aria-hidden="true"></i>
-                        <input type="text" class="form-control" name="Firma" placeholder="Firma Adı" required>
-                    </div>
+    <div class="form-group">
+        <i class="fas fa-building" aria-hidden="true"></i>
+        <input type="text" class="form-control" name="Firma" placeholder="Firma Adı" required>
+    </div>
 
-                    <div class="form-group">
-                        <i class="fas fa-phone-alt" aria-hidden="true"></i>
-                        <input type="tel" class="form-control" id="phone" name="Telefon"
-                               placeholder="Telefon (5__) ___ __ __"
-                               pattern="[\d\s\(\)\-]{10,}"
-                               title="10 haneli telefon numarası giriniz"
-                               required>
-                    </div>
+    <div class="form-group">
+        <i class="fas fa-phone-alt" aria-hidden="true"></i>
+        <input type="tel" class="form-control" id="phone" name="Telefon"
+               placeholder="Telefon (5__) ___ __ __"
+               pattern="[\d\s\(\)\-]{10,}"
+               title="10 haneli telefon numarası giriniz"
+               required>
+    </div>
 
-                    <div class="form-group">
-                        <i class="fas fa-envelope" aria-hidden="true"></i>
-                        <input type="email" class="form-control" name="E-posta" placeholder="E-posta Adresiniz" required>
-                    </div>
+    <div class="form-group">
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+        <input type="email" class="form-control" name="E-posta" placeholder="E-posta Adresiniz" required>
+    </div>
 
-                    <div class="form-group">
-                        <i class="fas fa-users" aria-hidden="true"></i>
-                        <input type="number" class="form-control" name="Kişi Sayısı" placeholder="Günlük Kişi Sayısı" required>
-                    </div>
+    <div class="form-group">
+        <i class="fas fa-users" aria-hidden="true"></i>
+        <input type="number"
+               class="form-control"
+               name="Kişi Sayısı"
+               id="person-count"
+               placeholder="Günlük Kişi Sayısı"
+               inputmode="numeric"
+               pattern="[0-9]*"
+               min="1"
+               step="1"
+               required>
+    </div>
 
-                    <div class="form-group">
-                        <i class="fas fa-edit" aria-hidden="true"></i>
-                        <textarea class="form-control" name="Mesaj" placeholder="Ek bilgiler ve özel istekleriniz" required></textarea>
-                    </div>
+    <div class="form-group">
+        <i class="fas fa-edit" aria-hidden="true"></i>
+        <textarea class="form-control" name="Mesaj" placeholder="Ek bilgiler ve özel istekleriniz" required></textarea>
+    </div>
 
-                    <button type="submit" class="submit-btn">
-                        <i class="fas fa-paper-plane" aria-hidden="true"></i> TEKLİF AL
-                    </button>
-                </form>
+    <button type="submit" class="submit-btn">
+        <i class="fas fa-paper-plane" aria-hidden="true"></i> TEKLİF AL
+    </button>
+</form>
             </div>
         </div>
     </div>
@@ -4553,14 +4562,14 @@ const setupContactForm = () => {
             e.target.value = value;
         });
     }
-	
-	const personInput = contactForm.querySelector('#person-count');
-if (personInput) {
-    personInput.addEventListener('input', (e) => {
-        let value = e.target.value.replace(/\D/g, '');
-        e.target.value = value;
-    });
-}
+
+    // Günlük kişi sayısı sadece sayı kabul etsin
+    const personInput = contactForm.querySelector('#person-count');
+    if (personInput) {
+        personInput.addEventListener('input', (e) => {
+            e.target.value = e.target.value.replace(/\D/g, '');
+        });
+    }
 
     // Form gönderimi
     contactForm.addEventListener('submit', async (e) => {
