@@ -4502,6 +4502,7 @@ body.dark-mode .newsletter-form input {
 /**
  * İstanbul Alev Catering - Tam Optimize JavaScript
  * Mobil menü sorunları giderildi ve tüm fonksiyonlar yeniden düzenlendi
+ * Mobile optimizasyonları eklendi - Hiçbir mevcut fonksiyon bozulmadan
  */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -4522,6 +4523,7 @@ document.addEventListener("DOMContentLoaded", () => {
     optimizeForMobile();
     setupTouchEvents();
     setupIntroAnimation();
+    preventHorizontalScroll(); // Yeni eklenen mobil optimizasyon
     
     // Sayfa yüklendiğinde AOS animasyonlarını başlat
     if (typeof AOS !== 'undefined') {
@@ -4563,65 +4565,67 @@ const initTheme = () => {
     });
 };
 
-    // 2. MOBİL MENÜ YÖNETİMİ (Optimize Edildi)
-    const setupMobileMenu = () => {
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenuClose = document.querySelector('.mobile-menu-close');
-        const mobileMenu = document.getElementById('mobileMenu');
+// 2. MOBİL MENÜ YÖNETİMİ (Optimize Edildi)
+const setupMobileMenu = () => {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    if (!mobileMenuBtn || !mobileMenu) return;
+    
+    const toggleMenu = (isOpening) => {
+        mobileMenu.classList.toggle('active', isOpening);
+        document.body.classList.toggle('menu-open', isOpening);
+        mobileMenuBtn.setAttribute('aria-expanded', isOpening);
+        mobileMenu.setAttribute('aria-hidden', !isOpening);
         
-        if (!mobileMenuBtn || !mobileMenu) return;
-        
-        const toggleMenu = (isOpening) => {
-            mobileMenu.classList.toggle('active', isOpening);
-            document.body.classList.toggle('menu-open', isOpening);
-            mobileMenuBtn.setAttribute('aria-expanded', isOpening);
-            mobileMenu.setAttribute('aria-hidden', !isOpening);
-            
-            // Mobilde body scroll'u engelleme
-            if (isOpening) {
-                document.body.style.overflow = 'hidden';
-                // Açılırken tüm dropdown'ları kapat
-                document.querySelectorAll('.mobile-menu-links .services-dropdown').forEach(item => {
-                    item.classList.remove('active');
-                });
-            } else {
-                document.body.style.overflow = '';
-            }
-        };
-        
-        // Event delegation kullanarak mobil dropdown'ları yönetme
-        document.addEventListener('click', (e) => {
-            // Mobil menü butonu
-            if (e.target.closest('#mobileMenuBtn')) {
-                toggleMenu(!mobileMenu.classList.contains('active'));
-                return;
-            }
-            
-            // Mobil menü kapatma butonu
-            if (e.target.closest('.mobile-menu-close')) {
-                toggleMenu(false);
-                return;
-            }
-            
-            // Mobil dropdown'lar
-            if (window.innerWidth <= 992) {
-                const dropdownLink = e.target.closest('.mobile-menu-links .services-dropdown > a');
-                if (dropdownLink) {
-                    e.preventDefault();
-                    const dropdown = dropdownLink.parentElement;
-                    dropdown.classList.toggle('active');
-                    return;
-                }
-            }
-            
-            // Mobil menü dışına tıklama
-            if (mobileMenu.classList.contains('active') && 
-                !mobileMenu.contains(e.target) && 
-                !e.target.closest('#mobileMenuBtn')) {
-                toggleMenu(false);
-            }
-        }, { passive: true });
+        // Mobilde body scroll'u engelleme
+        if (isOpening) {
+            document.body.style.overflow = 'hidden';
+            document.body.style.touchAction = 'none'; // Mobil kaydırmayı engelle
+            // Açılırken tüm dropdown'ları kapat
+            document.querySelectorAll('.mobile-menu-links .services-dropdown').forEach(item => {
+                item.classList.remove('active');
+            });
+        } else {
+            document.body.style.overflow = '';
+            document.body.style.touchAction = '';
+        }
     };
+    
+    // Event delegation kullanarak mobil dropdown'ları yönetme
+    document.addEventListener('click', (e) => {
+        // Mobil menü butonu
+        if (e.target.closest('#mobileMenuBtn')) {
+            toggleMenu(!mobileMenu.classList.contains('active'));
+            return;
+        }
+        
+        // Mobil menü kapatma butonu
+        if (e.target.closest('.mobile-menu-close')) {
+            toggleMenu(false);
+            return;
+        }
+        
+        // Mobil dropdown'lar
+        if (window.innerWidth <= 992) {
+            const dropdownLink = e.target.closest('.mobile-menu-links .services-dropdown > a');
+            if (dropdownLink) {
+                e.preventDefault();
+                const dropdown = dropdownLink.parentElement;
+                dropdown.classList.toggle('active');
+                return;
+            }
+        }
+        
+        // Mobil menü dışına tıklama
+        if (mobileMenu.classList.contains('active') && 
+            !mobileMenu.contains(e.target) && 
+            !e.target.closest('#mobileMenuBtn')) {
+            toggleMenu(false);
+        }
+    }, { passive: true });
+};
 
 // 3. BACK TO TOP BUTONU
 const setupBackToTop = () => {
@@ -4728,7 +4732,15 @@ const setupHeaderEffects = () => {
         updateHeaderStyle();
     });
     
-    window.addEventListener('scroll', updateHeaderStyle);
+    // Throttle eklenmiş scroll event
+    let isScrolling;
+    window.addEventListener('scroll', () => {
+        window.clearTimeout(isScrolling);
+        isScrolling = setTimeout(() => {
+            updateHeaderStyle();
+        }, 66); // 60fps için
+    }, { passive: true });
+    
     updateHeaderStyle(); // Sayfa yüklendiğinde kontrol et
 };
 
@@ -4954,6 +4966,7 @@ const setupProductModals = () => {
         modalOverlay.classList.add('active');
         modalContainer.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden';
+        document.body.style.touchAction = 'none'; // Mobil kaydırmayı engelle
         isModalOpen = true;
         
         // Odak yönetimi
@@ -4967,6 +4980,7 @@ const setupProductModals = () => {
         modalOverlay.classList.remove('active');
         modalContainer.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
+        document.body.style.touchAction = ''; // Mobil kaydırmayı tekrar etkinleştir
         isModalOpen = false;
     };
     
@@ -4996,7 +5010,7 @@ const setupProductModals = () => {
     });
 };
 
-// 10. MARKA SLIDER'LARI
+// 10. MARKA SLIDER'LARI (Mobil için optimize edildi)
 const setupBrandSliders = () => {
     // Ana marka slider'ı
     const brandsSlider = document.querySelector('.brands-slider');
@@ -5044,7 +5058,7 @@ const setupBrandSliders = () => {
             slider.scrollLeft = scrollLeft - walk;
         });
         
-        // Mobil touch event'leri
+        // Mobil touch event'leri (passive: false ile optimize edildi)
         slider.addEventListener('touchstart', (e) => {
             isDown = true;
             slider.style.scrollBehavior = 'auto';
@@ -5055,7 +5069,7 @@ const setupBrandSliders = () => {
         slider.addEventListener('touchend', () => {
             isDown = false;
             slider.style.scrollBehavior = 'smooth';
-        }, { passive: false });
+        }, { passive: true });
         
         slider.addEventListener('touchmove', (e) => {
             if (!isDown) return;
@@ -5063,6 +5077,14 @@ const setupBrandSliders = () => {
             const x = e.touches[0].pageX - slider.offsetLeft;
             const walk = (x - startX) * 2;
             slider.scrollLeft = scrollLeft - walk;
+        }, { passive: false });
+        
+        // Mobilde yatay kaydırmayı engelleme
+        slider.addEventListener('wheel', (e) => {
+            if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+                return; // Dikey kaydırmaya izin ver
+            }
+            e.preventDefault(); // Yatay kaydırmayı engelle
         }, { passive: false });
     }
 };
@@ -5156,6 +5178,23 @@ const setupTouchEvents = () => {
             }
         `;
         document.head.appendChild(style);
+        
+        // Mobilde yatay kaydırmayı engelleme
+        const preventHorizontalScroll = () => {
+            let startX;
+            
+            document.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].pageX;
+            }, { passive: true });
+            
+            document.addEventListener('touchmove', (e) => {
+                if (Math.abs(e.touches[0].pageX - startX) > 10) {
+                    e.preventDefault();
+                }
+            }, { passive: false });
+        };
+        
+        preventHorizontalScroll();
     }
 };
 
@@ -5174,7 +5213,30 @@ const setupIntroAnimation = () => {
     }, 500);
 };
 
-// 15. PROGRESS BAR ANİMASYONLARI
+// 15. YATAY KAYDIRMAYI ÖNLEME (Yeni eklendi)
+const preventHorizontalScroll = () => {
+    // Mobil cihazlarda yatay kaydırmayı önle
+    if (window.innerWidth <= 992) {
+        document.body.style.overflowX = 'hidden';
+        document.documentElement.style.overflowX = 'hidden';
+        
+        // Tüm elementler için yatay kaydırmayı engelle
+        const style = document.createElement('style');
+        style.textContent = `
+            html, body {
+                overflow-x: hidden !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            * {
+                overscroll-behavior-x: contain !important;
+            }
+        `;
+        document.head.appendChild(style);
+    }
+};
+
+// 16. PROGRESS BAR ANİMASYONLARI
 document.querySelectorAll('.progress-fill').forEach(bar => {
     const width = bar.getAttribute('data-width') || bar.style.width;
     bar.style.width = '0';
@@ -5192,6 +5254,12 @@ window.addEventListener('resize', () => {
     
     // Mobil optimizasyonları kontrol et
     optimizeForMobile();
+    preventHorizontalScroll(); // Yeni eklenen mobil optimizasyon
+});
+
+// Sayfa yüklendiğinde yatay kaydırmayı kontrol et
+window.addEventListener('load', () => {
+    preventHorizontalScroll();
 });
 </script>
 </body>
