@@ -1,0 +1,4007 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#e74c3c">
+    <meta name="color-scheme" content="light dark">
+    
+    <!-- SEO Meta Tags -->
+    <title>İstanbul Alev Catering - Hizmet Bölgelerimiz</title>
+    <meta name="description" content="İstanbul'un tüm ilçelerine profesyonel catering hizmetleri. Özel davetler, kurumsal yemek çözümleri için bölgelerimiz.">
+    <meta name="keywords" content="istanbul catering, catering bölgeleri, toplu yemek hizmeti, ilçe catering">
+    <meta name="author" content="İstanbul Alev Catering">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="İstanbul Alev Catering - Hizmet Bölgelerimiz">
+    <meta property="og:description" content="İstanbul'un tüm ilçelerine profesyonel catering hizmetleri. Özel davetler, kurumsal yemek çözümleri için bölgelerimiz.">
+    <meta property="og:image" content="https://ornek.com/path/to/image.jpg">
+    <meta property="og:url" content="https://www.istanbulalevcatering.com/hizmet-bolgelerimiz">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;700&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Inline Critical CSS -->
+    <style>
+/* CSS Reset */
+*, *::before, *::after { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+/* Font Definitions */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+    src: local('Montserrat'), url('https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Hw5aX8.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: local('Playfair Display'), url('https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.woff2') format('woff2');
+}
+
+/* Root Variables */
+:root {
+    /* Light mode colors */
+    --primary-color: #e74c3c;
+    --primary-light: #ff6b5b;
+    --secondary-color: #2c3e50;
+    --accent-color: #f39c12;
+    --light-color: #f9f9f9;
+    --dark-color: #222;
+    --text-color: #555;
+    --white: #fff;
+    --gold: #d4af37;
+    --gray-light: #e0e0e0;
+    --gray-medium: #b0b0b0;
+    --gray-dark: #7f8c8d;
+    
+    /* Dark mode colors */
+    --dark-bg: #121212;
+    --dark-card: #1e1e1e;
+    --dark-text: #e0e0e0;
+    --dark-secondary: #f5f5f5;
+    --dark-border: rgba(255, 255, 255, 0.1);
+    --dark-gray: #2d2d2d;
+    --dark-accent: #ff8e7f;
+    
+    /* Transitions */
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-fast: all 0.2s ease;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+    --shadow-primary: 0 5px 15px rgba(231, 76, 60, 0.3);
+    
+    /* Border radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-full: 50px;
+}
+
+/* Base Styles */
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--light-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: var(--secondary-color);
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: var(--dark-secondary);
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-fast);
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/* Utility Classes */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+    position: relative;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: clamp(32px, 5vw, 42px);
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.section-title p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: clamp(16px, 2vw, 18px);
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    transition: var(--transition);
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+    text-align: center;
+    min-width: 120px;
+    min-height: 44px;
+    gap: 8px;
+}
+
+.btn:hover, 
+.btn:focus {
+    background-color: var(--primary-light);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-primary);
+    outline: none;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.btn-outline:hover, 
+.btn-outline:focus {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    background-color: white;
+    box-shadow: var(--shadow-md);
+    z-index: 1000;
+    transition: var(--transition);
+    will-change: transform, background-color;
+}
+
+body.dark-mode .header {
+    background-color: var(--dark-card);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.header.transparent {
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    box-shadow: none;
+}
+
+.header.transparent:hover {
+    background-color: white;
+}
+
+body.dark-mode .header.transparent:hover {
+    background-color: var(--dark-card);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: clamp(20px, 3vw, 24px);
+    color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+body.dark-mode .logo {
+    color: var(--dark-secondary);
+}
+
+.header.transparent .logo {
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.logo-icon {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: clamp(24px, 3vw, 28px);
+    transition: var(--transition);
+}
+
+.header.transparent .logo-icon {
+    color: var(--accent-light);
+}
+
+/* Navigation */
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    position: relative;
+    padding: 10px 15px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    transition: var(--transition);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+}
+
+body.dark-mode .nav-links li a {
+    color: var(--dark-secondary);
+}
+
+.header.transparent .nav-links li a {
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.nav-links li a i {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.nav-links li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    transition: var(--transition);
+}
+
+.header.transparent .nav-links li a::before {
+    background: linear-gradient(90deg, var(--accent-light), white);
+}
+
+.nav-links li a:hover, 
+.nav-links li a:focus {
+    color: var(--primary-color);
+    outline: none;
+}
+
+body.dark-mode .nav-links li a:hover,
+body.dark-mode .nav-links li a:focus {
+    color: var(--primary-light);
+}
+
+.header.transparent .nav-links li a:hover,
+.header.transparent .nav-links li a:focus {
+    color: var(--accent-light);
+}
+
+.nav-links li a:hover::before,
+.nav-links li a:focus::before {
+    width: 60%;
+}
+
+/* Normal modda aktif menü öğesi */
+.nav-links li.active a {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    color: white;
+    box-shadow: var(--shadow-primary);
+}
+
+/* Dark modda aktif menü öğesi */
+body.dark-mode .nav-links li.active a {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+}
+
+/* Transparent header durumunda aktif menü öğesi */
+.header.transparent .nav-links li.active a {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(5px);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Normal modda link renkleri */
+.nav-links li a {
+    color: var(--secondary-color);
+}
+
+/* Dark modda link renkleri */
+body.dark-mode .nav-links li a {
+    color: var(--dark-secondary);
+}
+
+/* Transparent header durumunda link renkleri */
+.header.transparent .nav-links li a {
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.nav-links li.active a::before {
+    display: none;
+}
+
+/* Services Dropdown */
+.services-dropdown {
+    position: relative;
+}
+
+.services-dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 250px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: var(--transition);
+    z-index: 1000;
+    padding: 10px 0;
+    will-change: transform, opacity;
+}
+
+body.dark-mode .services-dropdown-content {
+    background-color: var(--dark-card);
+    border: 1px solid var(--dark-border);
+}
+
+.header.transparent .services-dropdown-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+.services-dropdown:hover .services-dropdown-content,
+.services-dropdown:focus-within .services-dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.services-dropdown-content a {
+    display: flex;
+    align-items: center;
+    padding: 12px 25px;
+    color: var(--secondary-color);
+    font-weight: 500;
+    transition: var(--transition);
+    border-left: 3px solid transparent;
+    min-height: 44px;
+}
+
+.services-dropdown-content a:hover, 
+.services-dropdown-content a:focus {
+    background-color: rgba(231, 76, 60, 0.1);
+    border-left-color: var(--primary-color);
+    padding-left: 22px;
+}
+
+body.dark-mode .services-dropdown-content a:hover {
+    background-color: rgba(231, 76, 60, 0.2);
+}
+
+.services-dropdown-content a i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: var(--shadow-primary);
+    z-index: 1001;
+    transition: var(--transition);
+    border: none;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.header.transparent .mobile-menu-btn {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    color: white;
+}
+
+.mobile-menu-btn:hover,
+.mobile-menu-btn:focus {
+    transform: scale(1.1);
+    outline: none;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 350px;
+    height: 100vh;
+    background: white;
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    padding: 80px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    will-change: transform;
+}
+
+body.dark-mode .mobile-menu {
+    background-color: var(--dark-card);
+    border-left: 1px solid var(--dark-border);
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu-logo {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.mobile-menu-links li a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: var(--radius-md);
+    background: rgba(231, 76, 60, 0.1);
+    color: var(--secondary-color);
+    font-weight: 600;
+    transition: var(--transition);
+    min-height: 44px;
+}
+
+body.dark-mode .mobile-menu-links li a {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: var(--dark-text);
+}
+
+.mobile-menu-links li a i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.mobile-menu-links li a:hover,
+.mobile-menu-links li a:focus {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    transform: translateX(10px);
+    outline: none;
+}
+
+body.dark-mode .mobile-menu-links li a:hover,
+body.dark-mode .mobile-menu-links li a:focus {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+}
+
+.mobile-menu-links li a:hover i,
+.mobile-menu-links li a:focus i {
+    color: white;
+}
+
+.mobile-menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: #f5f5f5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+body.dark-mode .mobile-menu-close {
+    background: var(--dark-gray);
+    color: var(--dark-text);
+}
+
+.mobile-menu-close:hover,
+.mobile-menu-close:focus {
+    background: var(--primary-color);
+    color: white;
+    transform: rotate(90deg);
+    outline: none;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.hizliresim.com/6y4ioav.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 0 20px;
+    will-change: transform;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 8vw, 72px);
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    animation: fadeInDown 1s ease forwards, pulse 3s ease-in-out infinite 1s;
+}
+
+.hero p {
+    font-size: clamp(18px, 3vw, 24px);
+    margin-bottom: 40px;
+    max-width: 800px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    animation: fadeInUp 1s ease forwards, floating 4s ease-in-out infinite 1s;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeInUp 1s ease forwards, pulse 2.5s ease-in-out infinite 1.5s;
+}
+
+/* Regions Section */
+.regions-section {
+    background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+}
+
+body.dark-mode .regions-section {
+    background-color: var(--dark-bg);
+}
+
+.region-filter {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 25px;
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    outline: none;
+    min-width: 120px;
+}
+
+.filter-btn:hover {
+    background-color: rgba(231, 76, 60, 0.1);
+}
+
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+body.dark-mode .filter-btn {
+    color: var(--dark-text);
+    border-color: var(--primary-light);
+}
+
+body.dark-mode .filter-btn.active {
+    background-color: var(--primary-light);
+}
+
+.regions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.district-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+body.dark-mode .district-card {
+    background-color: var(--dark-card);
+    border: 1px solid var(--dark-border);
+}
+
+.district-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    position: relative;
+    height: auto; /* Sabit yükseklik yerine otomatik yükseklik */
+    min-height: 180px; /* Minimum yükseklik */
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.district-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    color: white;
+}
+
+.card-overlay h3 {
+    color: white;
+    margin: 0;
+    font-size: 22px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.district-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--radius-sm);
+    font-size: 12px;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+.card-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.district-links {
+    margin-bottom: 20px;
+}
+
+.district-links ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.district-links li a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: rgba(231, 76, 60, 0.1);
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+    color: var(--secondary-color);
+    font-weight: 500;
+    gap: 10px;
+}
+
+body.dark-mode .district-links li a {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: var(--dark-text);
+}
+
+.district-links li a:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateX(5px);
+}
+
+.district-links li a i {
+    color: var(--primary-color);
+    transition: var(--transition);
+    min-width: 20px;
+    text-align: center;
+}
+
+.district-links li a:hover i {
+    color: white;
+}
+
+.card-footer {
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+    padding-top: 15px;
+    border-top: 1px solid var(--gray-light);
+}
+
+body.dark-mode .card-footer {
+    border-top-color: var(--dark-border);
+}
+
+.district-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    transition: var(--transition);
+    gap: 8px;
+    flex: 1;
+    text-align: center;
+    border: 2px solid var(--primary-color);
+}
+
+.district-btn.outline {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+body.dark-mode .district-btn.outline {
+    color: var(--primary-light);
+    border-color: var(--primary-light);
+}
+
+.district-btn:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.district-btn.outline:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Why Choose Section */
+.why-choose-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, rgba(231, 76, 60, 0.03), rgba(243, 156, 18, 0.03));
+    position: relative;
+    overflow: hidden;
+}
+
+body.dark-mode .why-choose-section {
+    background: linear-gradient(135deg, rgba(231, 76, 60, 0.05), rgba(243, 156, 18, 0.05));
+}
+
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.why-choose-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    text-align: center;
+    border-top: 5px solid var(--primary-color);
+    will-change: transform;
+}
+
+body.dark-mode .why-choose-card {
+    background-color: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    border-top: 5px solid var(--primary-color);
+}
+
+.why-choose-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.why-choose-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    color: white;
+    font-size: 30px;
+    transition: var(--transition);
+    will-change: transform;
+}
+
+.why-choose-card:hover .why-choose-icon {
+    transform: rotateY(180deg);
+    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+}
+
+.why-choose-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+body.dark-mode .why-choose-card h3 {
+    color: var(--dark-secondary);
+}
+
+.why-choose-card p {
+    color: var(--text-color);
+    margin-bottom: 0;
+}
+
+body.dark-mode .why-choose-card p {
+    color: var(--gray-medium);
+}
+
+/* Coverage Section Styles */
+.coverage-section {
+    padding: 80px 0;
+    background-color: var(--light-color);
+    position: relative;
+}
+
+body.dark-mode .coverage-section {
+    background-color: var(--dark-bg);
+}
+
+.coverage-container {
+ align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.coverage-map-wrapper {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    background: white;
+}
+
+body.dark-mode .coverage-map-wrapper {
+    background-color: var(--dark-card);
+    border: 1px solid var(--dark-border);
+}
+
+.coverage-map {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 70%; /* Aspect ratio */
+    overflow: hidden;
+}
+
+.map-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+     object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.coverage-point {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.coverage-point::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background-color: rgba(231, 76, 60, 0.3);
+    animation: pulse 2s infinite;
+    z-index: -1;
+}
+
+.coverage-point:hover {
+    transform: translate(-50%, -50%) scale(1.3);
+}
+
+.pulse-effect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: pulse 2s infinite;
+    z-index: -1;
+}
+
+.point-tooltip {
+
+    position: absolute;
+    bottom: calc(100% + 15px);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 15px;
+    border-radius: var(--radius-md);
+    width: 180px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: var(--shadow-lg);
+}
+
+body.dark-mode .point-tooltip {
+    background-color: var(--dark-card);
+    border: 1px solid var(--dark-border);
+}
+
+.point-tooltip h4 {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: white;
+}
+
+body.dark-mode .point-tooltip h4 {
+    color: var(--dark-secondary);
+}
+
+.point-tooltip p {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 0;
+}
+
+.tooltip-arrow {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid var(--secondary-color);
+}
+
+body.dark-mode .tooltip-arrow {
+    border-top-color: var(--dark-card);
+}
+
+.coverage-point:hover .point-tooltip {
+    opacity: 1;
+    visibility: visible;
+    bottom: calc(100% + 25px);
+}
+
+/* Bölge Detayları */
+.region-details {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+}
+
+body.dark-mode .region-details {
+    background-color: var(--dark-card);
+    border: 1px solid var(--dark-border);
+}
+
+.region-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+body.dark-mode .region-tabs {
+    border-bottom-color: var(--dark-border);
+}
+
+.region-tab {
+    flex: 1;
+    padding: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-bottom: 3px solid transparent;
+}
+
+body.dark-mode .region-tab {
+    color: var(--gray-medium);
+}
+
+.region-tab i {
+    font-size: 16px;
+    color: var(--primary-color);
+}
+
+.region-tab.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+body.dark-mode .region-tab.active {
+    color: var(--primary-light);
+}
+
+.region-tab:hover:not(.active) {
+    background-color: rgba(231, 76, 60, 0.1);
+}
+
+body.dark-mode .region-tab:hover:not(.active) {
+    background-color: rgba(231, 76, 60, 0.2);
+}
+
+.region-content {
+    transition: opacity 0.3s ease;
+    padding: 30px;
+    display: none;
+}
+
+.region-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.region-content h3 {
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+}
+
+body.dark-mode .region-content h3 {
+    color: var(--dark-secondary);
+}
+
+.region-content p {
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+body.dark-mode .region-content p {
+    color: var(--gray-medium);
+}
+
+.district-count {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.count-box {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    background: rgba(231, 76, 60, 0.1);
+    border-radius: var(--radius-md);
+}
+
+body.dark-mode .count-box {
+    background: rgba(231, 76, 60, 0.2);
+}
+
+.count-number {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1;
+}
+
+.count-label {
+    display: block;
+    font-size: 14px;
+    color: var(--text-color);
+    margin-top: 5px;
+}
+
+body.dark-mode .count-label {
+    color: var(--gray-medium);
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f9f9f9 0%, #f1f1f1 100%);
+}
+
+body.dark-mode .contact-section {
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-gray) 100%);
+}
+
+.contact-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-form-container {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    box-shadow: var(--shadow-xl);
+    position: relative;
+    overflow: hidden;
+    will-change: transform;
+}
+
+body.dark-mode .contact-form-container {
+    background-color: var(--dark-card);
+    border: 1px solid var(--dark-border);
+}
+
+.contact-form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+}
+
+.contact-form-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contact-form-header h3 {
+    font-size: 28px;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+body.dark-mode .contact-form-header h3 {
+    color: var(--dark-secondary);
+}
+
+.contact-form-header p {
+    color: var(--text-color);
+}
+
+body.dark-mode .contact-form-header p {
+    color: var(--gray-medium);
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-group i {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    color: var(--primary-color);
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--radius-md);
+    font-size: 16px;
+    transition: var(--transition);
+    background-color: #f9f9f9;
+}
+
+body.dark-mode .form-control {
+    background-color: var(--dark-card);
+    color: var(--dark-text);
+    border-color: var(--dark-border);
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+    background-color: white;
+}
+
+body.dark-mode .form-control:focus {
+    background-color: var(--dark-gray);
+}
+
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: var(--radius-md);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: var(--shadow-primary);
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(231, 76, 60, 0.4);
+    outline: none;
+}
+
+/* Contact Cards */
+.info-card {
+    display: flex;
+    align-items: flex-start;
+    background: white;
+    padding: 25px;
+    border-radius: var(--radius-md);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    transition: var(--transition);
+    will-change: transform;
+}
+
+body.dark-mode .info-card {
+    background-color: var(--dark-card);
+    border: 1px solid var(--dark-border);
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.info-icon {
+    font-size: 24px;
+    color: white;
+    background: #e74c3c;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.whatsapp-card .info-icon {
+    background: #25D366;
+}
+
+.info-content h3 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+body.dark-mode .info-content h3 {
+    color: var(--dark-secondary);
+}
+
+.contact-link {
+    color: #7f8c8d;
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 16px;
+    display: inline-block;
+}
+
+body.dark-mode .contact-link {
+    color: var(--gray-medium);
+}
+
+.contact-link:hover,
+.contact-link:focus {
+    color: #e74c3c;
+    outline: none;
+}
+
+body.dark-mode .contact-link:hover,
+body.dark-mode .contact-link:focus {
+    color: var(--dark-accent);
+}
+
+.whatsapp-container {
+    display: flex;
+    align-items: center;
+}
+
+.whatsapp-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: #333;
+    padding: 8px 0;
+}
+
+body.dark-mode .whatsapp-link {
+    color: var(--dark-text);
+}
+
+.phone-number {
+    font-weight: bold;
+    font-size: 18px;
+    color: #075E54;
+    letter-spacing: 0.5px;
+}
+
+body.dark-mode .phone-number {
+    color: #25D366;
+}
+
+.whatsapp-action {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #25D366;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.whatsapp-action i {
+    font-size: 16px;
+}
+
+.whatsapp-link:hover .whatsapp-action,
+.whatsapp-link:focus .whatsapp-action {
+    background: #128C7E;
+    transform: translateX(5px);
+}
+
+.working-hours {
+    background: white;
+    padding: 25px;
+    border-radius: var(--radius-md);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .working-hours {
+    background-color: var(--dark-card);
+    border: 1px solid var(--dark-border);
+}
+
+.working-hours h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+body.dark-mode .working-hours h3 {
+    color: var(--dark-secondary);
+}
+
+.working-hours p {
+    color: #7f8c8d;
+    margin-bottom: 8px;
+}
+
+body.dark-mode .working-hours p {
+    color: var(--gray-medium);
+}
+
+/* Footer */
+.footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 60px 0 0;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+
+body.dark-mode .footer {
+    background-color: var(--dark-card);
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col {
+    padding: 0 15px;
+}
+
+.footer-about {
+    max-width: 300px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+
+.footer-logo i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 28px;
+}
+
+.footer-description {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    color: white;
+    transition: var(--transition);
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.footer-social a:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.footer-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #bdc3c7;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+}
+
+.footer-links a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.footer-links i {
+    margin-right: 8px;
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.footer-contact i {
+    color: var(--primary-color);
+    margin-right: 15px;
+    font-size: 18px;
+    margin-top: 3px;
+}
+
+.footer-contact a {
+    color: #bdc3c7;
+    transition: var(--transition);
+}
+
+.footer-contact a:hover {
+    color: white;
+}
+
+.footer-hours li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed rgba(255,255,255,0.1);
+}
+
+.footer-newsletter {
+    margin-top: 30px;
+}
+
+.footer-newsletter h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.newsletter-form {
+    display: flex;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+    font-family: 'Montserrat', sans-serif;
+}
+
+body.dark-mode .newsletter-form input {
+    background-color: var(--dark-gray);
+    color: var(--dark-text);
+}
+
+.newsletter-form button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0 15px;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.newsletter-form button:hover {
+    background: var(--primary-light);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-copyright {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-legal a {
+    color: #bdc3c7;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.footer-legal a:hover {
+    color: white;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    z-index: 999;
+    border: none;
+    cursor: pointer;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover,
+.back-to-top:focus {
+    background-color: var(--primary-light);
+    transform: translateY(-5px) scale(1.1);
+    outline: none;
+}
+
+.back-to-top i {
+    transition: transform 0.3s ease;
+}
+
+.back-to-top:hover i {
+    transform: translateY(-3px);
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 999;
+    outline: none;
+    transition: transform 0.3s ease;
+}
+
+.toggle-track {
+    display: block;
+    width: 60px;
+    height: 30px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 15px;
+    position: relative;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.toggle-thumb {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.toggle-icon {
+    position: absolute;
+    font-size: 12px;
+    color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+.fa-moon { opacity: 1; transform: rotate(0); }
+.fa-sun { opacity: 0; transform: rotate(90deg); }
+
+/* Dark mode active styles */
+body.dark-mode .toggle-track {
+    background: linear-gradient(135deg, var(--primary-light), var(--accent-light));
+}
+
+body.dark-mode .toggle-thumb {
+    left: 33px;
+    background-color: var(--dark-secondary);
+}
+
+body.dark-mode .toggle-icon {
+    color: var(--primary-color);
+}
+
+body.dark-mode .fa-moon {
+    opacity: 0;
+    transform: rotate(-90deg);
+}
+
+body.dark-mode .fa-sun {
+    opacity: 1;
+    transform: rotate(0);
+}
+
+.dark-mode-toggle.animating {
+    animation: pulse 0.5s ease;
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.1);
+}
+
+.dark-mode-toggle:active {
+    transform: scale(0.95);
+}
+
+/* Skip to Content Link for Accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+    70% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes cardHover {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes iconPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes borderGlow {
+    0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(231, 76, 60, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    .hero h1 {
+        font-size: 48px;
+    }
+    
+    .hero p {
+        font-size: 18px;
+    }
+    
+    .hero-btns {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    /* Mobile dropdown adjustment */
+    .services-dropdown-content {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: transparent;
+        display: none;
+        padding-left: 20px;
+    }
+    
+    .mobile-menu-links .services-dropdown.active .services-dropdown-content {
+        display: block;
+    }
+    
+    .services-dropdown-content a {
+        padding: 10px 15px;
+        color: var(--secondary-color);
+        border-left: none;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    .section-title h2 {
+        font-size: 32px;
+    }
+    
+    .regions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .why-choose-card {
+        padding: 30px 20px;
+    }
+    
+    .why-choose-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 25px;
+    }
+    
+    .whatsapp-link {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .whatsapp-action {
+        align-self: flex-end;
+    }
+    
+    .contact-form-container {
+        padding: 30px;
+    }
+    
+    /* Footer adjustments */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-col {
+        text-align: center;
+        padding: 0;
+    }
+    
+    .footer-about {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .footer-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+    
+    .footer-links a {
+        justify-content: center;
+    }
+    
+    .footer-contact li {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .footer-legal {
+        justify-content: center;
+    }
+    
+    .newsletter-form {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 500px;
+    }
+    
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+    
+    .section {
+        padding: 50px 0;
+    }
+    
+    .section-title {
+        margin-bottom: 40px;
+    }
+    
+    .region-content, 
+    .why-choose-card {
+        padding: 20px;
+    }
+    
+    .info-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .info-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    /* Dark mode toggle adjustment */
+    .dark-mode-toggle {
+        bottom: 20px;
+        left: 20px;
+    }
+    
+    .toggle-track {
+        width: 50px;
+        height: 25px;
+    }
+    
+    .toggle-thumb {
+        width: 20px;
+        height: 20px;
+    }
+    
+    body.dark-mode .toggle-thumb {
+        left: 27px;
+    }
+    
+    /* Bölge kartları için mobil optimizasyon */
+    .district-card {
+        flex-direction: column;
+    }
+    
+    .card-image {
+        height: 150px;
+    }
+    
+    .card-content {
+        padding: 15px;
+    }
+    
+    .district-links li a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    .card-footer {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .district-btn {
+        width: 100%;
+    }
+    
+    /* Coverage section mobil optimizasyon */
+    .coverage-container {
+        flex-direction: column;
+    }
+    
+    .coverage-map-wrapper,
+    .region-details {
+        min-width: 100%;
+    }
+    
+    .region-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .region-tab {
+        flex: 1 0 50%;
+        padding: 12px;
+        font-size: 14px;
+    }
+    
+    .district-count {
+        flex-wrap: wrap;
+    }
+    
+    .count-box {
+        flex: 1 0 100%;
+        margin-bottom: 10px;
+    }
+    
+    /* Contact form mobil optimizasyon */
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .contact-info,
+    .contact-form-container {
+        min-width: 100%;
+    }
+    
+    .whatsapp-link {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .whatsapp-action {
+        align-self: flex-start;
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+    }
+    
+    .why-choose-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+    
+    .footer-legal {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    /* Daha küçük ekranlar için ek ayarlamalar */
+    .section {
+        padding: 40px 0;
+    }
+    
+    .section-title h2 {
+        font-size: 28px;
+    }
+    
+    .filter-btn {
+        padding: 8px 15px;
+        min-width: 100px;
+        font-size: 14px;
+    }
+    
+    .region-filter {
+        gap: 8px;
+    }
+    
+    .mobile-menu {
+        width: 90%;
+        padding: 60px 20px 20px;
+    }
+    
+    .mobile-menu-links li a {
+        padding: 12px 15px;
+    }
+}
+
+/* iOS specific fixes */
+@supports (-webkit-touch-callout: none) {
+    .hero {
+        height: -webkit-fill-available;
+        min-height: -webkit-fill-available;
+    }
+    
+    input, textarea, button {
+        -webkit-appearance: none;
+        border-radius: 0;
+    }
+}
+
+/* Performance optimizations for mobile */
+@media (max-width: 768px) {
+    * {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+    
+    .region-card:hover, 
+    .why-choose-card:hover {
+        transform: none !important;
+    }
+}
+
+@media (hover: none) {
+    .region-card, .why-choose-card {
+        will-change: auto !important;
+    }
+}
+
+/* Cookie Consent */
+#cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: var(--secondary-color);
+    color: white;
+    z-index: 9999;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+#accept-cookies {
+    margin-top: 10px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: var(--transition);
+    min-width: 120px;
+    min-height: 44px;
+}
+
+#accept-cookies:hover {
+    background: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+@media (min-width: 769px) {
+    #cookie-consent {
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    #accept-cookies {
+        margin-top: 0;
+        margin-left: 15px;
+    }
+}
+
+#intro-animation {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s ease;
+}
+
+#intro-animation .intro-logo {
+    font-size: clamp(24px, 8vw, 42px);
+    font-family: 'Playfair Display', serif;
+    color: white;
+    opacity: 0;
+    animation: logoFade 2s ease forwards;
+}
+
+@keyframes logoFade {
+    0% { opacity: 0; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 1; transform: scale(1); }
+}
+    </style>
+</head>
+<body>
+
+<div id="intro-animation">
+    <div class="intro-logo">İstanbul Alev Catering</div>
+</div>
+
+<div id="cookie-consent" style="display: none;">
+    <p>Bu web sitesi deneyiminizi geliştirmek için çerezleri kullanır.</p>
+    <button id="accept-cookies" aria-label="Çerezleri Kabul Et">Kabul Et</button>
+</div>
+
+    <!-- Skip to Content Link -->
+    <a href="#main-content" class="skip-link">Ana İçeriğe Geç</a>
+
+    <!-- Header -->
+<header class="header" id="mainHeader">
+    <div class="header-container">
+        <a href="index.html" class="logo" aria-label="İstanbul Alev Catering Ana Sayfa">
+            <i class="fas fa-utensils logo-icon" aria-hidden="true"></i>
+            İstanbul Alev Catering
+        </a>
+        
+        <nav aria-label="Ana Navigasyon">
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Ana Sayfa</a></li>
+                <li class="services-dropdown">
+                    <a href="#services" aria-haspopup="true" aria-expanded="false"><i class="fas fa-concierge-bell" aria-hidden="true"></i> Hizmetler <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+                    <div class="services-dropdown-content" aria-label="Hizmet Alt Menüsü">
+                        <a href="firmalara-catering.html"><i class="fas fa-building" aria-hidden="true"></i> Firmalara Catering</a>
+                        <a href="fabrikalara-catering.html"><i class="fas fa-industry" aria-hidden="true"></i> Fabrikalara Catering</a>
+                        <a href="okullara-catering.html"><i class="fas fa-school" aria-hidden="true"></i> Okullara Catering</a>
+                        <a href="otellere-catering.html"><i class="fas fa-hotel" aria-hidden="true"></i> Otellere Catering</a>
+                        <a href="hastanelere-catering.html"><i class="fas fa-hospital" aria-hidden="true"></i> Hastanelere Catering</a>
+                        <a href="santiyelere-catering.html"><i class="fas fa-hard-hat" aria-hidden="true"></i> Şantiyelere Catering</a>
+                    </div>
+                </li>
+                <li><a href="#pricing"><i class="fas fa-book-open" aria-hidden="true"></i> Menü</a></li>
+                <li><a href="#contact"><i class="fas fa-phone-alt" aria-hidden="true"></i> İletişim</a></li>
+                <li class="active"><a href="hizmet-bolgelerimiz.html"><i class="fas fa-map-marked-alt" aria-hidden="true"></i> Hizmet Bölgelerimiz</a></li>
+            </ul>
+        </nav>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Mobil Menü" aria-expanded="false" aria-controls="mobileMenu">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+    </div>
+</header>
+
+<!-- Mobil Menü -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" aria-label="Menüyü kapat"><i class="fas fa-times"></i></button>
+  <div class="mobile-menu-logo">
+    <a href="index.html" class="logo"><i class="fas fa-utensils logo-icon"></i> İstanbul Alev Catering</a>
+  </div>
+  <ul class="mobile-menu-links">
+    <li><a href="index.html"><i class="fas fa-home"></i> Anasayfa</a></li>
+    
+    <!-- Hizmetler tek tek listeleniyor -->
+    <li><a href="firmalara-catering.html"><i class="fas fa-building"></i> Firmalara Catering</a></li>
+    <li><a href="fabrikalara-catering.html"><i class="fas fa-industry"></i> Fabrikalara Catering</a></li>
+    <li><a href="okullara-catering.html"><i class="fas fa-school"></i> Okullara Catering</a></li>
+    <li><a href="otellere-catering.html"><i class="fas fa-hotel"></i> Otellere Catering</a></li>
+    <li><a href="hastanelere-catering.html"><i class="fas fa-hospital"></i> Hastanelere Catering</a></li>
+    <li><a href="santiyelere-catering.html"><i class="fas fa-hard-hat"></i> Şantiyelere Catering</a></li>
+    
+    <!-- Diğer bölümler -->
+    <li><a href="index.html#pricing"><i class="fas fa-book-open"></i> Menü</a></li>
+    <li><a href="index.html#contact"><i class="fas fa-phone-alt"></i> İletişim</a></li>
+    <li class="active"><a href="hizmet-bolgelerimiz.html"><i class="fas fa-map-marked-alt"></i> Hizmet Bölgelerimiz</a></li>
+  </ul>
+</div>
+
+
+    <!-- Dark Mode Toggle Button -->
+    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Dark modu aç/kapat" aria-pressed="false">
+        <span class="toggle-track">
+            <span class="toggle-thumb">
+                <i class="fas fa-moon toggle-icon"></i>
+                <i class="fas fa-sun toggle-icon"></i>
+            </span>
+        </span>
+    </button>
+   
+    <!-- Hero Section -->
+    <section id="home" class="hero section" aria-labelledby="hero-heading">
+        <h1 id="hero-heading">Hizmet Bölgelerimiz</h1>
+        <p>İstanbul'un Her Noktasına Profesyonel Catering Hizmeti</p>
+        <div class="hero-btns">
+            <a href="#contact" class="btn">Hemen Teklif Al</a>
+            <a href="#regions" class="btn btn-outline">Bölgeleri Keşfet</a>
+        </div>
+    </section>
+
+<!-- Regions Section -->
+<section id="regions" class="regions-section section" aria-labelledby="regions-heading">
+    <div class="container">
+        <div class="section-title">
+            <h2 id="regions-heading">Hizmet Verdiğimiz Bölgeler</h2>
+            <p>İstanbul'un tüm ilçelerine kaliteli ve hijyenik catering hizmeti sunuyoruz</p>
+        </div>
+        
+        <!-- Filtreleme Butonları -->
+        <div class="region-filter">
+            <button class="filter-btn active" data-filter="all" aria-pressed="true">Tümü</button>
+            <button class="filter-btn" data-filter="avrupa" aria-pressed="false">Avrupa Yakası</button>
+            <button class="filter-btn" data-filter="anadolu" aria-pressed="false">Anadolu Yakası</button>
+        </div>
+        
+        <div class="regions-grid">
+            <!-- Bağcılar (Avrupa Yakası) -->
+            <article class="district-card" data-region="avrupa">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/2zj72ry.png" alt="Bağcılar Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Bağcılar Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="bagcilar-catering.html"><i class="fas fa-chevron-right"></i> Bağcılar Catering</a></li>
+                            <li><a href="bagcilar-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Bağcılar Yemek Firmaları</a></li>
+                            <li><a href="bagcilar-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Bağcılar Catering Fiyatları</a></li>
+                           <li><a href="bagcilar-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Bağcılar Tabldot Yemek</a></li>
+                            <li><a href="bagcilar-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Bağcılar Toplu Yemek</a></li>
+                            <li><a href="bagcilar-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Bağcılar Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Bağcılar İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Arnavutköy (Avrupa Yakası) -->
+            <article class="district-card" data-region="avrupa">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/aplchut.png" alt="Arnavutköy Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Arnavutköy Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="arnavutkoy-catering.html"><i class="fas fa-chevron-right"></i>Arnavutköy Catering</a></li>
+                            <li><a href="arnavutkoy-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Arnavutköy Yemek Firmaları</a></li>
+                            <li><a href="arnavutkoy-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Arnavutköy Catering Fiyatları</a></li>
+                            <li><a href="arnavutkoy-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Arnavutköy Tabldot Yemek</a></li>
+                            <li><a href="arnavutkoy-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Arnavutköy Toplu Yemek</a></li>
+                            <li><a href="arnavutkoy-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Arnavutköy Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Arnavutköy İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Esenler (Avrupa Yakası) -->
+            <article class="district-card" data-region="avrupa">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/np95qal.png" alt="Esenler Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Esenler Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="esenler-catering.html"><i class="fas fa-chevron-right"></i>Esenler Catering</a></li>
+                            <li><a href="esenler-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Esenler Yemek Firmaları</a></li>
+                            <li><a href="esenler-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Esenler Catering Fiyatları</a></li>
+                            <li><a href="esenler-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Esenler Tabldot Yemek</a></li>
+                            <li><a href="esenler-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Esenler Toplu Yemek</a></li>
+                            <li><a href="esenler-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Esenler Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Esenler İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Bayrampaşa (Avrupa Yakası) -->
+            <article class="district-card" data-region="avrupa">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/lz3itc1.png" alt="Bayrampaşa Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Bayrampaşa Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="bayrampasa-catering.html"><i class="fas fa-chevron-right"></i> Bayrampaşa Catering</a></li>
+                            <li><a href="bayrampasa-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Bayrampaşa Yemek Firmaları</a></li>
+                            <li><a href="bayrampasa-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Bayrampaşa Catering Fiyatları</a></li>
+                            <li><a href="bayrampasa-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Bayrampaşa Tabldot Yemek</a></li>
+                            <li><a href="bayrampasa-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Bayrampaşa Toplu Yemek</a></li>
+                            <li><a href="bayrampasa-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Bayrampaşa Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Bayrampaşa İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Bahçelievler (Avrupa Yakası) -->
+            <article class="district-card" data-region="avrupa">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/sie6fr4.png" alt="Bahçelievler Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Bahçelievler Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="bahcelievler-catering.html"><i class="fas fa-chevron-right"></i>Bahçelievler Catering</a></li>
+                            <li><a href="bahcelievler-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Bahçelievler Yemek Firmaları</a></li>
+                            <li><a href="bahcelievler-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Bahçelievler Catering Fiyatları</a></li>
+                            <li><a href="bahcelievler-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Bahçelievler Tabldot Yemek</a></li>
+                            <li><a href="bahcelievler-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Bahçelievler Toplu Yemek</a></li>
+                            <li><a href="bahcelievler-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Bahçelievler Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Bahçelievler İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Bakırköy (Avrupa Yakası) -->
+            <article class="district-card" data-region="avrupa">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/2cha1zd.png" alt="Bakırköy Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Bakırköy Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="bakirkoy-catering.html"><i class="fas fa-chevron-right"></i>BakırKöy Catering</a></li>
+                            <li><a href="bakirkoy-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Bakırköy Yemek Firmaları</a></li>
+                            <li><a href="bakirkoy-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Bakırköy Catering Fiyatları</a></li>
+                            <li><a href="bakirkoy-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Bakırköy Tabldot Yemek</a></li>
+                            <li><a href="bakirkoy-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Bakırköy Toplu Yemek</a></li>
+                            <li><a href="bakirkoy-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Bakırköy Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Bakırköy İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Avcılar (Avrupa Yakası) -->
+            <article class="district-card" data-region="avrupa">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/dpllu83.png" alt="Avcılar Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Avcılar Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="avcilar-catering.html"><i class="fas fa-chevron-right"></i>Avcılar Catering</a></li>
+                            <li><a href="avcilar-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Avcılar Yemek Firmaları</a></li>
+                            <li><a href="avcilar-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Avcılar Catering Fiyatları</a></li>
+                            <li><a href="avcilar-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Avcılar Tabldot Yemek</a></li>
+                            <li><a href="avcilar-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Avcılar Toplu Yemek</a></li>
+                            <li><a href="avcilar-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Avcılar Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Avcılar İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Başakşehir (Avrupa Yakası) -->
+            <article class="district-card" data-region="avrupa">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/6wzwzt4.png" alt="Başakşehir Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Başakşehir Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="basaksehir-catering.html"><i class="fas fa-chevron-right"></i>Başakşehir Catering</a></li>
+                            <li><a href="basaksehir-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Başakşehir Yemek Firmaları</a></li>
+                            <li><a href="basaksehir-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Başakşehir Catering Fiyatları</a></li>
+                            <li><a href="basaksehir-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Başakşehir Tabldot Yemek</a></li>
+                            <li><a href="basaksehir-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Başakşehir Toplu Yemek</a></li>
+                            <li><a href="basaksehir-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Başakşehir Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Başakşehir İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Beşiktaş (Avrupa Yakası) -->
+            <article class="district-card" data-region="avrupa">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/cjfpnjc.png" alt="Beşiktaş Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Beşiktaş Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="besiktas-catering.html"><i class="fas fa-chevron-right"></i>Beşiktaş Catering</a></li>
+                            <li><a href="besiktas-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Beşiktaş Yemek Firmaları</a></li>
+                            <li><a href="besiktas-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Beşiktaş Catering Fiyatları</a></li>
+                            <li><a href="besiktas-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Beşiktaş Tabldot Yemek</a></li>
+                            <li><a href="besiktas-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Beşiktaş Toplu Yemek</a></li>
+                            <li><a href="besiktas-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Beşiktaş Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Beşiktaş İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Beylikdüzü (Avrupa Yakası) -->
+            <article class="district-card" data-region="avrupa">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/beylikduzu-thumb.jpg" alt="Beylikdüzü Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Beylikdüzü Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="beylikduzu-catering.html"><i class="fas fa-chevron-right"></i>Beylikdüzü Catering</a></li>
+                            <li><a href="beylikduzu-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Beylikdüzü Yemek Firmaları</a></li>
+                            <li><a href="beylikduzu-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Beylikdüzü Catering Fiyatları</a></li>
+                            <li><a href="beylikduzu-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Beylikdüzü Tabldot Yemek</a></li>
+                            <li><a href="beylikduzu-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Beylikdüzü Toplu Yemek</a></li>
+                            <li><a href="beylikduzu-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Beylikdüzü Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Beylikdüzü İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Beyoğlu (Avrupa Yakası) -->
+            <article class="district-card" data-region="avrupa">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/beyoglu-thumb.jpg" alt="Beyoğlu Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Beyoğlu Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="beyoglu-catering.html"><i class="fas fa-chevron-right"></i> Beyoğlu Catering</a></li>
+                            <li><a href="beyoglu-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Beyoğlu Yemek Firmaları</a></li>
+                            <li><a href="beyoglu-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Beyoğlu Catering Fiyatları</a></li>
+                            <li><a href="beyoglu-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Beyoğlu Tabldot Yemek</a></li>
+                            <li><a href="beyoglu-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Beyoğlu Toplu Yemek</a></li>
+                            <li><a href="beyoglu-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Beyoğlu Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Beyoğlu İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Büyükçekmece (Avrupa Yakası) -->
+            <article class="district-card" data-region="avrupa">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/buyukcekmece-thumb.jpg" alt="Büyükçekmece Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Büyükçekmece Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="buyukcekmece-catering.html"><i class="fas fa-chevron-right"></i> Büyükçekmece Catering</a></li>
+                            <li><a href="buyukcekmece-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Büyükçekmece Yemek Firmaları</a></li>
+                            <li><a href="buyukcekmece-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Büyükçekmece Catering Fiyatları</a></li>
+                            <li><a href="buyukcekmece-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Büyükçekmece Tabldot Yemek</a></li>
+                            <li><a href="buyukcekmece-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Büyükçekmece Toplu Yemek</a></li>
+                            <li><a href="buyukcekmece-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Büyükçekmece Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Büyükçekmece İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Çatalca (Avrupa Yakası) -->
+            <article class="district-card" data-region="avrupa">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/catalca-thumb.jpg" alt="Çatalca Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Çatalca Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="catalca-catering.html"><i class="fas fa-chevron-right"></i> Çatalca Catering</a></li>
+                            <li><a href="catalca-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Çatalca Yemek Firmaları</a></li>
+                            <li><a href="catalca-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Çatalca Catering Fiyatları</a></li>
+                            <li><a href="catalca-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Çatalca Tabldot Yemek</a></li>
+                            <li><a href="catalca-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Çatalca Toplu Yemek</a></li>
+                            <li><a href="catalca-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Çatalca Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Çatalca İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Esenyurt (Avrupa Yakası) -->
+            <article class="district-card" data-region="avrupa">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/esenyurt-thumb.jpg" alt="Esenyurt Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Esenyurt Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="esenyurt-catering.html"><i class="fas fa-chevron-right"></i> Esenyurt Catering</a></li>
+                            <li><a href="esenyurt-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Esenyurt Yemek Firmaları</a></li>
+                            <li><a href="esenyurt-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Esenyurt Catering Fiyatları</a></li>
+                            <li><a href="esenyurt-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Esenyurt Tabldot Yemek</a></li>
+                            <li><a href="esenyurt-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Esenyurt Toplu Yemek</a></li>
+                            <li><a href="esenyurt-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Esenyurt Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Esenyurt İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Eyüp (Avrupa Yakası) -->
+            <article class="district-card" data-region="avrupa">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/eyup-thumb.jpg" alt="Eyüp Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Eyüp Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="eyup-catering.html"><i class="fas fa-chevron-right"></i>Eyüp Catering</a></li>
+                            <li><a href="eyup-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Eyüp Yemek Firmaları</a></li>
+                            <li><a href="eyup-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Eyüp Catering Fiyatları</a></li>
+                            <li><a href="eyup-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Eyüp Tabldot Yemek</a></li>
+                            <li><a href="eyup-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Eyüp Toplu Yemek</a></li>
+                            <li><a href="eyup-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Eyüp Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Eyüp İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Fatih (Avrupa Yakası) -->
+            <article class="district-card" data-region="avrupa">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/fatih-thumb.jpg" alt="Fatih Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Fatih Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="fatih-catering.html"><i class="fas fa-chevron-right"></i> Fatih Catering</a></li>
+                            <li><a href="fatih-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Fatih Yemek Firmaları</a></li>
+                            <li><a href="fatih-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Fatih Catering Fiyatları</a></li>
+                            <li><a href="fatih-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Fatih Tabldot Yemek</a></li>
+                            <li><a href="fatih-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Fatih Toplu Yemek</a></li>
+                            <li><a href="fatih-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Fatih Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Fatih İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Gaziosmanpaşa (Avrupa Yakası) -->
+            <article class="district-card" data-region="avrupa">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/gaziosmanpasa-thumb.jpg" alt="Gaziosmanpaşa Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Gaziosmanpaşa Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="gaziosmanpasa-catering.html"><i class="fas fa-chevron-right"></i> Gaziosmanpaşa Catering</a></li>
+                            <li><a href="gaziosmanpasa-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Gaziosmanpaşa Yemek Firmaları</a></li>
+                            <li><a href="gaziosmanpasa-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Gaziosmanpaşa Catering Fiyatları</a></li>
+                            <li><a href="gaziosmanpasa-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Gaziosmanpaşa Tabldot Yemek</a></li>
+                            <li><a href="gaziosmanpasa-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Gaziosmanpaşa Toplu Yemek</a></li>
+                            <li><a href="gaziosmanpasa-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Gaziosmanpaşa Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Gaziosmanpaşa İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Güngören (Avrupa Yakası) -->
+            <article class="district-card" data-region="avrupa">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/gungoren-thumb.jpg" alt="Güngören Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Güngören Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="gungoren-catering.html"><i class="fas fa-chevron-right"></i> Güngören Catering</a></li>
+                            <li><a href="gungoren-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Güngören Yemek Firmaları</a></li>
+                            <li><a href="gungoren-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Güngören Catering Fiyatları</a></li>
+                            <li><a href="gungoren-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Güngören Tabldot Yemek</a></li>
+                            <li><a href="gungoren-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Güngören Toplu Yemek</a></li>
+                            <li><a href="gungoren-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Güngören Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Güngören İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Kağıthane (Avrupa Yakası) -->
+            <article class="district-card" data-region="avrupa">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/kagithane-thumb.jpg" alt="Kağıthane Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Kağıthane Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="kagithane-catering.html"><i class="fas fa-chevron-right"></i> Kağıthane Catering</a></li>
+                            <li><a href="kagithane-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Kağıthane Yemek Firmaları</a></li>
+                            <li><a href="kagithane-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Kağıthane Catering Fiyatları</a></li>
+                            <li><a href="kagithane-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Kağıthane Tabldot Yemek</a></li>
+                            <li><a href="kagithane-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Kağıthane Toplu Yemek</a></li>
+                            <li><a href="kagithane-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Kağıthane Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Kağıthane İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Küçükçekmece (Avrupa Yakası) -->
+            <article class="district-card" data-region="avrupa">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/kucukcekmece-thumb.jpg" alt="Küçükçekmece Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Küçükçekmece Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="kucukcekmece-catering.html"><i class="fas fa-chevron-right"></i>Küçükçekmece Catering</a></li>
+                            <li><a href="kucukcekmece-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Küçükçekmece Yemek Firmaları</a></li>
+                            <li><a href="kucukcekmece-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Küçükçekmece Catering Fiyatları</a></li>
+                            <li><a href="kucukcekmece-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Küçükçekmece Tabldot Yemek</a></li>
+                            <li><a href="kucukcekmece-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Küçükçekmece Toplu Yemek</a></li>
+                            <li><a href="kucukcekmece-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Küçükçekmece Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Küçükçekmece İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Sarıyer (Avrupa Yakası) -->
+            <article class="district-card" data-region="avrupa">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/sariyer-thumb.jpg" alt="Sarıyer Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Sarıyer Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="sariyer-catering.html"><i class="fas fa-chevron-right"></i> Sarıyer Catering</a></li>
+                            <li><a href="sariyer-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Sarıyer Yemek Firmaları</a></li>
+                            <li><a href="sariyer-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Sarıyer Catering Fiyatları</a></li>
+                            <li><a href="sariyer-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Sarıyer Tabldot Yemek</a></li>
+                            <li><a href="sariyer-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Sarıyer Toplu Yemek</a></li>
+                            <li><a href="sariyer-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Sarıyer Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Sarıyer İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Silivri (Avrupa Yakası) -->
+            <article class="district-card" data-region="avrupa">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/silivri-thumb.jpg" alt="Silivri Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Silivri Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="silivri-catering.html"><i class="fas fa-chevron-right"></i> Silivri Catering</a></li>
+                            <li><a href="silivri-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Silivri Yemek Firmaları</a></li>
+                            <li><a href="silivri-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Silivri Catering Fiyatları</a></li>
+                            <li><a href="silivri-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Silivri Tabldot Yemek</a></li>
+                            <li><a href="silivri-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Silivri Toplu Yemek</a></li>
+                            <li><a href="silivri-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Silivri Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Silivri İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Sultangazi (Avrupa Yakası) -->
+            <article class="district-card" data-region="avrupa">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/sultangazi-thumb.jpg" alt="Sultangazi Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Sultangazi Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="sultangazi-catering.html"><i class="fas fa-chevron-right"></i> Sultangazi Catering</a></li>
+                            <li><a href="sultangazi-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Sultangazi Yemek Firmaları</a></li>
+                            <li><a href="sultangazi-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Sultangazi Catering Fiyatları</a></li>
+                            <li><a href="sultangazi-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Sultangazi Tabldot Yemek</a></li>
+                            <li><a href="sultangazi-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Sultangazi Toplu Yemek</a></li>
+                            <li><a href="sultangazi-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Sultangazi Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Sultangazi İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Şişli (Avrupa Yakası) -->
+            <article class="district-card" data-region="avrupa">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/sisli-thumb.jpg" alt="Şişli Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Şişli Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="sisli-catering.html"><i class="fas fa-chevron-right"></i> Şişli Catering</a></li>
+                            <li><a href="sisli-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Şişli Yemek Firmaları</a></li>
+                            <li><a href="sisli-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Şişli Catering Fiyatları</a></li>
+                            <li><a href="sisli-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Şişli Tabldot Yemek</a></li>
+                            <li><a href="sisli-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Şişli Toplu Yemek</a></li>
+                            <li><a href="sisli-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Şişli Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Şişli İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Zeytinburnu (Avrupa Yakası) -->
+            <article class="district-card" data-region="avrupa">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/zeytinburnu-thumb.jpg" alt="Zeytinburnu Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Zeytinburnu Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="zeytinburnu-catering.html"><i class="fas fa-chevron-right"></i> Zeytinburnu Catering</a></li>
+                            <li><a href="zeytinburnu-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Zeytinburnu Yemek Firmaları</a></li>
+                            <li><a href="zeytinburnu-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Zeytinburnu Catering Fiyatları</a></li>
+                            <li><a href="zeytinburnu-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Zeytinburnu Tabldot Yemek</a></li>
+                            <li><a href="zeytinburnu-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Zeytinburnu Toplu Yemek</a></li>
+                            <li><a href="zeytinburnu-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Zeytinburnu Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Zeytinburnu İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Diğer Anadolu Yakası Kartları -->
+            <!-- Kadıköy (Anadolu Yakası) -->
+            <article class="district-card" data-region="anadolu">
+                <div class="card-image">
+                    <img src="https://i.hizliresim.com/kadikoy-thumb.jpg" alt="Kadıköy Catering" loading="lazy">
+                    <div class="card-overlay">
+                        <h3>Kadıköy Catering</h3>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="district-links">
+                        <ul>
+						    <li><a href="kadikoy-catering.html"><i class="fas fa-chevron-right"></i> Kadıköy Catering</a></li>
+                            <li><a href="kadikoy-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Kadıköy Yemek Firmaları</a></li>
+                            <li><a href="kadikoy-catering-fiyatlari.html"><i class="fas fa-chevron-right"></i> Kadıköy Catering Fiyatları</a></li>
+                            <li><a href="kadikoy-tabldot-yemek.html"><i class="fas fa-chevron-right"></i> Kadıköy Tabldot Yemek</a></li>
+                            <li><a href="kadikoy-toplu-yemek.html"><i class="fas fa-chevron-right"></i> Kadıköy Toplu Yemek</a></li>
+                            <li><a href="kadikoy-toplu-yemek-sirketleri.html"><i class="fas fa-chevron-right"></i> Kadıköy Toplu Yemek Şirketleri</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://wa.me/905345769457" class="district-btn">Kadıköy İçin Teklif Al</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+    <!-- Why Choose Section -->
+    <section class="why-choose-section section" aria-labelledby="why-choose-heading">
+        <div class="container">
+            <div class="section-title">
+                <h2 id="why-choose-heading">Neden Tüm İstanbul'a Hizmet Verebiliyoruz?</h2>
+                <p>Geniş hizmet ağımız ve profesyonel ekibimizle İstanbul'un her noktasındayız</p>
+            </div>
+            
+            <div class="why-choose-grid">
+                <article class="why-choose-card">
+                    <div class="why-choose-icon">
+                        <i class="fas fa-truck" aria-hidden="true"></i>
+                    </div>
+                    <h3>Geniş Araç Filosu</h3>
+                    <p>Isı kontrollü özel araçlarımızla yemeklerinizi taze ve sıcak olarak teslim ediyoruz. İstanbul'un her bölgesine hızlı ulaşım sağlıyoruz.</p>
+                </article>
+                
+                <article class="why-choose-card">
+                    <div class="why-choose-icon">
+                        <i class="fas fa-clock" aria-hidden="true"></i>
+                    </div>
+                    <h3>Zamanında Teslimat</h3>
+                    <p>Trafik koşullarına uygun planlama yaparak yemeklerinizin zamanında ulaşmasını garanti ediyoruz. Teslimat saatlerinde asla gecikme yaşanmaz.</p>
+                </article>
+                
+                <article class="why-choose-card">
+                    <div class="why-choose-icon">
+                        <i class="fas fa-thermometer-half" aria-hidden="true"></i>
+                    </div>
+                    <h3>Isı Kontrollü Taşıma</h3>
+                    <p>Özel tasarlanmış ısı kontrollü kaplarımızla yemeklerin sıcaklığını koruyoruz. Uzun mesafelerde bile tazelik ve lezzet garantisi sunuyoruz.</p>
+                </article>
+                
+                <article class="why-choose-card">
+                    <div class="why-choose-icon">
+                        <i class="fas fa-map-marked-alt" aria-hidden="true"></i>
+                    </div>
+                    <h3>Bölge Bilgisi</h3>
+                    <p>İstanbul'un tüm ilçelerini ve ulaşım yollarını çok iyi biliyoruz. Bu sayede en kısa sürede en uygun rotayı belirleyerek hizmet veriyoruz.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverage Section -->
+    <section class="coverage-section section" aria-labelledby="coverage-heading">
+        <div class="container">
+            <div class="section-title">
+                <h2 id="coverage-heading">Hizmet Kapsamımız</h2>
+                <p>İstanbul'un her noktasına kesintisiz ve kaliteli catering hizmeti sunuyoruz</p>
+            </div>
+            
+            <div class="coverage-container">
+                <div class="coverage-map-wrapper">
+                    <div class="coverage-map">
+                        <img src="https://i.hizliresim.com/c2ulpnk.jpg" alt="İstanbul Hizmet Haritası" class="map-image" loading="lazy">
+                        
+                        <!-- Avrupa Yakası Noktası -->
+                        <div class="coverage-point" style="top: 30%; left: 30%;" data-region="avrupa">
+                            <div class="pulse-effect"></div>
+                            <div class="point-tooltip">
+                                <h4>Avrupa Yakası</h4>
+                                <p>39 ilçeye hizmet</p>
+                                <div class="tooltip-arrow"></div>
+                            </div>
+                        </div>
+                        
+                        <!-- Anadolu Yakası Noktası -->
+                        <div class="coverage-point" style="top: 40%; left: 70%;" data-region="anadolu">
+                            <div class="pulse-effect"></div>
+                            <div class="point-tooltip">
+                                <h4>Anadolu Yakası</h4>
+                                <p>28 ilçeye hizmet</p>
+                                <div class="tooltip-arrow"></div>
+                            </div>
+                        </div>
+                        
+                    
+                        <!-- Sanayi Noktası -->
+                        <div class="coverage-point" style="top: 60%; left: 40%;" data-region="sanayi">
+                            <div class="pulse-effect"></div>
+                            <div class="point-tooltip">
+                                <h4>Sanayi</h4>
+                                <p>12 OSB</p>
+                                <div class="tooltip-arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="region-details">
+                    <div class="region-tabs">
+                        <button class="region-tab active" data-region="avrupa">
+                            <i class="fas fa-map-marked-alt"></i> Avrupa Yakası
+                        </button>
+                        <button class="region-tab" data-region="anadolu">
+                            <i class="fas fa-map-marked-alt"></i> Anadolu Yakası
+                        </button>
+                        <button class="region-tab" data-region="sanayi">
+                            <i class="fas fa-industry"></i> Sanayi Bölgeleri
+                        </button>
+                    </div>
+                    
+                    <div id="avrupa-content" class="region-content active">
+                        <h3>Avrupa Yakası</h3>
+                        <p>İstanbul'un Avrupa yakasında bulunan tüm ilçelerine hızlı ve kaliteli catering hizmeti sunuyoruz. Özel etkinlikleriniz ve kurumsal ihtiyaçlarınız için profesyonel çözümler.</p>
+                        
+                        <div class="district-count">
+                            <div class="count-box">
+                                <span class="count-number">39</span>
+                                <span class="count-label">İlçe</span>
+                            </div>
+                            <div class="count-box">
+                                <span class="count-number">7/24</span>
+                                <span class="count-label">Hizmet</span>
+                            </div>
+                            <div class="count-box">
+                                <span class="count-number">500+</span>
+                                <span class="count-label">Müşteri</span>
+                            </div>
+                        </div>
+                        
+                        <a href="#contact" class="btn">Avrupa Yakası İçin Teklif Al</a>
+                    </div>
+                    
+                    <div id="anadolu-content" class="region-content">
+                        <h3>Anadolu Yakası</h3>
+                        <p>Anadolu yakasının her noktasına özel menülerimizle ulaşıyoruz. Lezzet garantili yemeklerimizle davetlerinize ve kurumsal etkinliklerinize değer katıyoruz.</p>
+                        
+                        <div class="district-count">
+                            <div class="count-box">
+                                <span class="count-number">28</span>
+                                <span class="count-label">İlçe</span>
+                            </div>
+                            <div class="count-box">
+                                <span class="count-number">7/24</span>
+                                <span class="count-label">Hizmet</span>
+                            </div>
+                            <div class="count-box">
+                                <span class="count-number">300+</span>
+                                <span class="count-label">Müşteri</span>
+                            </div>
+                        </div>
+                        
+                        <a href="#contact" class="btn">Anadolu Yakası İçin Teklif Al</a>
+                    </div>
+                    
+                    <div id="sanayi-content" class="region-content">
+                        <h3>Organize Sanayi Bölgeleri</h3>
+                        <p>İstanbul'daki tüm organize sanayi bölgelerine düzenli yemek hizmeti sağlıyoruz. Fabrika ve şantiyeler için özel menüler ve hijyenik servis anlayışı.</p>
+                        
+                        <div class="district-count">
+                            <div class="count-box">
+                                <span class="count-number">12</span>
+                                <span class="count-label">OSB</span>
+                            </div>
+                            <div class="count-box">
+                                <span class="count-number">5000+</span>
+                                <span class="count-label">Çalışan</span>
+                            </div>
+                            <div class="count-box">
+                                <span class="count-number">50+</span>
+                                <span class="count-label">Firma</span>
+                            </div>
+                        </div>
+                        
+                        <a href="#contact" class="btn">Sanayi Bölgeleri İçin Teklif Al</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section" aria-labelledby="contact-heading">
+        <div class="container">
+            <div class="section-title">
+                <h2 id="contact-heading">İletişim</h2>
+                <p>Bizimle iletişime geçmek için aşağıdaki formu doldurabilir veya iletişim bilgilerimizi kullanabilirsiniz</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <article class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Adres</h3>
+                            <a href="https://www.google.com/maps/place/%C4%B0stanbul+Alev+Catering/@41.0824163,28.8841708,16.5z/data=!4m6!3m5!1s0x89d53cfbc558756b:0xe730685fc7684eff!8m2!3d41.0830302!4d28.8822169!16s%2Fg%2F11sd9rc6fh?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D" class="contact-link" target="_blank">Güneşli Mahallesi, 1140. Sk. Akdeniz İş Merkezi No:2, 34212 Bağcılar/İstanbul</a>
+                        </div>
+                    </article>
+                    
+                    <article class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Telefon</h3>
+                            <a href="tel:+905345769457" class="contact-link">+90 534 576 94 57</a>
+                        </div>
+                    </article>
+                    
+                    <article class="info-card whatsapp-card">
+                        <div class="info-icon">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>WhatsApp</h3>
+                            <div class="whatsapp-container">
+                                <a href="https://wa.me/905345769457" class="whatsapp-link" target="_blank">
+                                    <span class="phone-number">+90 534 576 94 57</span>
+                                    <span class="whatsapp-action">
+                                        <i class="fab fa-whatsapp" aria-hidden="true"></i> Mesaj Gönder
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>E-posta</h3>
+                            <a href="mailto:istanbulalevcatering@hotmail.com" class="contact-link">istanbulalevcatering@hotmail.com</a>
+                        </div>
+                    </article>
+                    
+                    <article class="working-hours">
+                        <h3>Çalışma Saatleri</h3>
+                        <p><strong>Pazartesi - Cuma:</strong> 08:00 - 17:00</p>
+                        <p><strong>Cumartesi:</strong> 09:00 - 15:00</p>
+                        <p><strong>Pazar:</strong> Kapalı</p>
+                    </article>
+                </div>
+                
+                <div class="contact-form-container">
+                    <div class="contact-form-header">
+                        <h3>Bize Ulaşın</h3>
+                        <p>Her türlü soru, görüş ve önerileriniz için formu doldurabilirsiniz.</p>
+                    </div>
+                    
+                    <form id="contactForm" method="post">
+                        <div class="form-group">
+                            <i class="fas fa-user" aria-hidden="true"></i>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Adınız Soyadınız" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                            <input type="tel" class="form-control" id="phone" name="phone" 
+                                   placeholder="Telefon (5__) ___ __ __" 
+                                   pattern="[\d\s\(\)\-]{10,}" 
+                                   title="10 haneli telefon numarası giriniz"
+                                   required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="E-posta Adresiniz" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            <input type="text" class="form-control" id="location" name="location" placeholder="Hizmet Almak İstediğiniz Bölge" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <i class="fas fa-edit" aria-hidden="true"></i>
+                            <textarea class="form-control" id="message" name="message" placeholder="Mesajınız" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i> Gönder
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-utensils"></i>
+                        <span>İstanbul Alev Catering</span>
+                    </div>
+                    <p class="footer-description">Lüks yemek deneyimini özel etkinliklerinize taşıyoruz. Kaliteden ödün vermeden, lezzetin en şık hali.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Hızlı Linkler</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Ana Sayfa</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Hizmetler</a></li>
+                        <li><a href="#pricing"><i class="fas fa-chevron-right"></i> Menü</a></li>
+                        <li><a href="hizmet-bolgelerimiz.html"><i class="fas fa-chevron-right"></i> Hizmet Bölgelerimiz</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> İletişim</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">İletişim</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Güneşli Mahallesi, 1140. Sk. Akdeniz İş Merkezi No:2, 34212 Bağcılar/İstanbul</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+905345769457">+90 534 576 94 57</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:istanbulalevcatering@hotmail.com">istanbulalevcatering@hotmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/905345769457" target="_blank">WhatsApp'tan Yazın</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Çalışma Saatleri</h3>
+                    <ul class="footer-hours">
+                        <li><span>Pazartesi - Cuma</span> <span>08:00 - 18:00</span></li>
+                        <li><span>Cumartesi</span> <span>09:00 - 15:00</span></li>
+                        <li><span>Pazar</span> <span>Kapalı</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; 2025 İstanbul Alev Catering. Tüm hakları saklıdır.
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Gizlilik Politikası</a>
+                    <a href="#">Çerezler</a>
+                    <a href="#">Şartlar & Koşullar</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTopBtn" aria-label="Sayfanın başına dön">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+    
+    <script>
+    /**
+     * İstanbul Alev Catering - Optimize Edilmiş JavaScript
+     * Tüm fonksiyonlar modern ES6+ standartlarında yazılmıştır
+     */
+
+    document.addEventListener("DOMContentLoaded", () => {
+        // Tüm fonksiyonları başlat
+        initTheme();
+        setupMobileMenu();
+        setupBackToTop();
+        setupContactForm();
+        setupHeaderEffects();
+        setupServicesDropdown();
+        setupCookieConsent();
+        setupCoveragePoints();
+        
+        // Performans optimizasyonları
+        optimizeForMobile();
+    });
+
+    // 1. TEMA YÖNETİMİ
+    const initTheme = () => {
+        const body = document.body;
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        
+        // Kayıtlı tema kontrolü
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            darkModeToggle.setAttribute('aria-pressed', 'true');
+        }
+        
+        // Tema değiştirme butonu
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            darkModeToggle.setAttribute('aria-pressed', isDark);
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            
+            // Butona animasyon ekle
+            darkModeToggle.classList.add('animating');
+            setTimeout(() => darkModeToggle.classList.remove('animating'), 500);
+        });
+    };
+
+    // 2. MOBİL MENÜ YÖNETİMİ
+    const setupMobileMenu = () => {
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        if (!mobileMenuBtn || !mobileMenu) return;
+        
+        const toggleMenu = (isOpening) => {
+            mobileMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open', isOpening);
+            
+            // ARIA özelliklerini güncelle
+            mobileMenuBtn.setAttribute('aria-expanded', isOpening);
+            mobileMenu.setAttribute('aria-hidden', !isOpening);
+        };
+        
+        mobileMenuBtn.addEventListener('click', () => toggleMenu(!mobileMenu.classList.contains('active')));
+        mobileMenuClose.addEventListener('click', () => toggleMenu(false));
+        
+        // Menü dışına tıklanınca kapat
+        document.addEventListener('click', (e) => {
+            if (mobileMenu.classList.contains('active') && 
+                !mobileMenu.contains(e.target) && 
+                e.target !== mobileMenuBtn) {
+                toggleMenu(false);
+            }
+        });
+    };
+
+    // 3. BACK TO TOP BUTONU
+    const setupBackToTop = () => {
+        const backToTopBtn = document.getElementById('backToTopBtn');
+        if (!backToTopBtn) return;
+        
+        const handleScroll = () => {
+            backToTopBtn.classList.toggle('active', window.scrollY > 300);
+        };
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Sayfa yüklendiğinde kontrol et
+    };
+
+    // 4. İLETİŞİM FORMU
+    const setupContactForm = () => {
+        const contactForm = document.getElementById('contactForm');
+        if (!contactForm) return;
+        
+        // Telefon numarası formatlama
+        const phoneInput = contactForm.querySelector('#phone');
+        if (phoneInput) {
+            phoneInput.addEventListener('input', (e) => {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length > 10) value = value.substring(0, 10);
+                
+                // Format: (5XX) XXX XX XX
+                value = value.replace(/^(\d{3})(\d{3})(\d{2})(\d{2})$/, '($1) $2 $3 $4');
+                e.target.value = value;
+            });
+        }
+        
+        // Form gönderimi
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            try {
+                const formData = new FormData(contactForm);
+                
+                // Burada gerçek API isteği yapılacak
+                console.log('Form data:', Object.fromEntries(formData));
+                
+                // Başarılı mesajı göster
+                alert('Mesajınız başarıyla gönderildi! Teşekkür ederiz.');
+                contactForm.reset();
+            } catch (error) {
+                console.error('Form error:', error);
+                alert('Bir hata oluştu. Lütfen daha sonra tekrar deneyin.');
+            }
+        });
+    };
+
+    // 5. HEADER SCROLL EFFECT
+    const setupHeaderEffects = () => {
+        const header = document.getElementById('mainHeader');
+        const heroSection = document.querySelector('.hero');
+        if (!header || !heroSection) return;
+        
+        let isHovering = false;
+        const heroHeight = heroSection.offsetHeight;
+        
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            const shouldBeTransparent = scrollPosition < heroHeight - 100 && !isHovering;
+            
+            header.classList.toggle('transparent', shouldBeTransparent);
+        };
+        
+        header.addEventListener('mouseenter', () => {
+            isHovering = true;
+            header.classList.remove('transparent');
+        });
+        
+        header.addEventListener('mouseleave', () => {
+            isHovering = false;
+            handleScroll();
+        });
+        
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Sayfa yüklendiğinde kontrol et
+    };
+
+    // 6. SERVİS DROPDOWN
+    const setupServicesDropdown = () => {
+        const dropdown = document.querySelector('.services-dropdown');
+        if (!dropdown) return;
+        
+        const dropdownContent = dropdown.querySelector('.services-dropdown-content');
+        
+        dropdown.addEventListener('mouseenter', () => {
+            dropdownContent.style.opacity = '1';
+            dropdownContent.style.visibility = 'visible';
+            dropdownContent.style.transform = 'translateY(0)';
+        });
+        
+        dropdown.addEventListener('mouseleave', () => {
+            dropdownContent.style.opacity = '0';
+            dropdownContent.style.visibility = 'hidden';
+            dropdownContent.style.transform = 'translateY(20px)';
+        });
+        
+        // Mobil için touch event'leri
+        dropdown.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            const isOpen = dropdownContent.style.opacity === '1';
+            
+            dropdownContent.style.opacity = isOpen ? '0' : '1';
+            dropdownContent.style.visibility = isOpen ? 'hidden' : 'visible';
+            dropdownContent.style.transform = isOpen ? 'translateY(20px)' : 'translateY(0)';
+        }, { passive: false });
+    };
+
+    // 7. ÇEREZ BİLDİRİMİ
+    const setupCookieConsent = () => {
+        const cookieConsent = document.getElementById('cookie-consent');
+        const acceptCookiesBtn = document.getElementById('accept-cookies');
+        
+        if (!cookieConsent || !acceptCookiesBtn) return;
+        
+        // Çerez izni kontrolü
+        if (!localStorage.getItem('cookiesAccepted')) {
+            setTimeout(() => {
+                cookieConsent.style.display = 'flex';
+            }, 1000);
+        }
+        
+        // Kabul butonu işlevselliği
+        acceptCookiesBtn.addEventListener('click', () => {
+            localStorage.setItem('cookiesAccepted', 'true');
+            cookieConsent.style.display = 'none';
+        });
+    };
+
+    // 8. KAPSAM NOKTALARI ETKİLEŞİMİ
+    const setupCoveragePoints = () => {
+        const points = document.querySelectorAll('.coverage-point');
+        if (!points.length) return;
+        
+        points.forEach(point => {
+            point.addEventListener('mouseenter', () => {
+                const tooltip = point.querySelector('.point-tooltip');
+                tooltip.style.opacity = '1';
+                tooltip.style.visibility = 'visible';
+                tooltip.style.bottom = 'calc(100% + 10px)';
+            });
+            
+            point.addEventListener('mouseleave', () => {
+                const tooltip = point.querySelector('.point-tooltip');
+                tooltip.style.opacity = '0';
+                tooltip.style.visibility = 'hidden';
+                tooltip.style.bottom = '100%';
+            });
+        });
+    };
+
+    // 9. BÖLGE TAB'LARI İÇİN JAVASCRIPT
+    const setupRegionTabs = () => {
+        const tabs = document.querySelectorAll('.region-tab');
+        const contents = document.querySelectorAll('.region-content');
+        const points = document.querySelectorAll('.coverage-point');
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Aktif tab'ı kaldır
+                tabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Aktif içeriği değiştir
+                const region = this.getAttribute('data-region');
+                contents.forEach(content => {
+                    content.classList.remove('active');
+                    if (content.id === `${region}-content`) {
+                        content.classList.add('active');
+                    }
+                });
+                
+                // Harita noktasını vurgula
+                points.forEach(point => {
+                    point.classList.remove('active');
+                    if (point.getAttribute('data-region') === region) {
+                        point.classList.add('active');
+                        // Animasyon ekle
+                        point.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                        setTimeout(() => {
+                            point.style.transform = 'translate(-50%, -50%) scale(1.3)';
+                        }, 300);
+                    }
+                });
+            });
+        });
+        
+        // Harita noktaları etkileşimi
+        points.forEach(point => {
+            point.addEventListener('click', function() {
+                const region = this.getAttribute('data-region');
+                
+                // İlgili tab'ı aktif yap
+                tabs.forEach(tab => {
+                    tab.classList.remove('active');
+                    if (tab.getAttribute('data-region') === region) {
+                        tab.classList.add('active');
+                    }
+                });
+                
+                // İlgili içeriği göster
+                contents.forEach(content => {
+                    content.classList.remove('active');
+                    if (content.id === `${region}-content`) {
+                        content.classList.add('active');
+                    }
+                });
+            });
+        });
+        
+        // Varsayılan olarak Avrupa Yakasını göster
+        if (tabs.length > 0) {
+            tabs[0].click();
+        }
+    };
+
+    // 10. MOBİL PERFORMANS OPTİMİZASYONLARI
+    const optimizeForMobile = () => {
+        if ('matchMedia' in window && window.matchMedia('(max-width: 768px)').matches) {
+            document.body.classList.add('mobile-device');
+            
+            // Düşük performanslı cihazlarda animasyonları kapat
+            if (navigator.connection?.saveData) {
+                document.querySelectorAll('*').forEach(el => {
+                    el.style.animation = 'none !important';
+                    el.style.transition = 'none !important';
+                });
+            }
+        }
+    };
+
+    // 11. YARDIMCI FONKSİYONLAR
+    const showAlert = (message, type = 'info') => {
+        // Basit bir alert fonksiyonu, daha gelişmiş bir modal ile değiştirilebilir
+        alert(message);
+    };
+
+    window.addEventListener('load', () => {
+        const intro = document.getElementById('intro-animation');
+        setTimeout(() => {
+            intro.style.opacity = '0';
+            setTimeout(() => {
+                intro.style.display = 'none';
+            }, 100); // animasyon süresi kadar
+        }, 100); // intro kalma süresi
+    });
+    
+    // Bölge tab'larını başlat
+    setupRegionTabs();
+	
+	/**
+ * Bölge Filtreleme Sistemi
+ * Bu kod, ilçe kartlarını Avrupa/Anadolu yakasına göre filtreler
+ */
+document.addEventListener('DOMContentLoaded', function() {
+    // Filtreleme butonlarını seç
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const districtCards = document.querySelectorAll('.district-card');
+    
+    // Her filtre butonu için click eventi ekle
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Tüm butonlardan active classını kaldır
+            filterButtons.forEach(btn => {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-pressed', 'false');
+            });
+            
+            // Tıklanan butona active classını ekle
+            this.classList.add('active');
+            this.setAttribute('aria-pressed', 'true');
+            
+            // Filtre değerini al
+            const filterValue = this.getAttribute('data-filter');
+            
+            // Tüm kartları döngüye al
+            districtCards.forEach(card => {
+                // Eğer "tümü" seçildiyse veya kartın bölgesi seçilenle eşleşiyorsa göster
+                if (filterValue === 'all' || card.getAttribute('data-region') === filterValue) {
+                    card.style.display = 'flex';
+                    card.setAttribute('aria-hidden', 'false');
+                } else {
+                    // Eşleşmiyorsa gizle
+                    card.style.display = 'none';
+                    card.setAttribute('aria-hidden', 'true');
+                }
+            });
+            
+            // Animasyon ekle (isteğe bağlı)
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 200);
+        });
+    });
+    
+    // Kartlara hover efekti ekle
+    districtCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px)';
+            const img = this.querySelector('.card-image img');
+            if (img) {
+                img.style.transform = 'scale(1.05)';
+            }
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            const img = this.querySelector('.card-image img');
+            if (img) {
+                img.style.transform = 'scale(1)';
+            }
+        });
+    });
+    
+    // Mobil dokunmatik etkileşimler
+    districtCards.forEach(card => {
+        card.addEventListener('touchstart', function() {
+            this.classList.add('touched');
+        }, { passive: true });
+        
+        card.addEventListener('touchend', function() {
+            this.classList.remove('touched');
+        }, { passive: true });
+    });
+});
+
+/**
+ * Bölge Kartları için Ek JavaScript
+ * Bu fonksiyonlar kartların daha interaktif olmasını sağlar
+ */
+function setupDistrictCards() {
+    const cards = document.querySelectorAll('.district-card');
+    
+    cards.forEach(card => {
+        // Kart tıklandığında detay sayfasına git
+        card.addEventListener('click', function(e) {
+            // Eğer tıklanan element bir link değilse
+            if (!e.target.closest('a')) {
+                const detailLink = this.querySelector('.district-btn.outline');
+                if (detailLink) {
+                    window.location.href = detailLink.href;
+                }
+            }
+        });
+        
+        // Klavye erişilebilirliği
+        card.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                const detailLink = this.querySelector('.district-btn.outline');
+                if (detailLink) {
+                    window.location.href = detailLink.href;
+                }
+            }
+        });
+    });
+}
+
+// Sayfa yüklendiğinde tüm fonksiyonları çalıştır
+window.addEventListener('load', function() {
+    setupDistrictCards();
+});
+	
+    </script>
+</body>
+</html>

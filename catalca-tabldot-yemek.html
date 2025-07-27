@@ -1,0 +1,3339 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#e74c3c">
+    <meta name="color-scheme" content="light dark">
+    
+    <!-- SEO Meta Tags -->
+    <title>Çatalca Tabldot Yemek | İstanbul Alev Catering</title>
+    <meta name="description" content="Çatalca'da ekonomik tabldot yemek hizmeti. Günlük taze yemekler, uygun fiyatlar ve kaliteli servis.">
+    <meta name="keywords" content="çatalca tabldot yemek, çatalca günlük yemek, çatalca ekonomik yemek, çatalca yemek firmaları">
+    <meta name="author" content="İstanbul Alev Catering">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Çatalca Tabldot Yemek | İstanbul Alev Catering">
+    <meta property="og:description" content="Çatalca'da ekonomik tabldot yemek hizmeti. Günlük taze yemekler, uygun fiyatlar ve kaliteli servis.">
+    <meta property="og:image" content="https://www.istanbulalevcatering.com/assets/images/catalca-tabldot-social.jpg">
+    <meta property="og:url" content="https://www.istanbulalevcatering.com/catalca-tabldot-yemek">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- Fontlar -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	
+    <style>
+/* CSS Reset */
+*, *::before, *::after { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+/* Font Definitions */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+    src: local('Montserrat'), url('https://fonts.gstatic.com/s/montserrat/v25/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCs16Hw5aX8.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: local('Playfair Display'), url('https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.woff2') format('woff2');
+}
+
+/* Root Variables */
+:root {
+    /* Light mode colors */
+    --primary-color: #e74c3c;
+    --primary-light: #ff6b5b;
+    --secondary-color: #2c3e50;
+    --accent-color: #f39c12;
+    --light-color: #f9f9f9;
+    --dark-color: #222;
+    --text-color: #555;
+    --white: #fff;
+    --gold: #d4af37;
+    --gray-light: #e0e0e0;
+    --gray-medium: #b0b0b0;
+    --gray-dark: #7f8c8d;
+    
+    /* Dark mode colors */
+    --dark-bg: #121212;
+    --dark-card: #1e1e1e;
+    --dark-text: #e0e0e0;
+    --dark-secondary: #f5f5f5;
+    --dark-border: rgba(255, 255, 255, 0.1);
+    --dark-gray: #2d2d2d;
+    --dark-accent: #ff8e7f;
+    
+    /* Transitions */
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-fast: all 0.2s ease;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+    --shadow-primary: 0 5px 15px rgba(231, 76, 60, 0.3);
+    
+    /* Border radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-full: 50px;
+}
+
+/* Base Styles */
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--light-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: var(--secondary-color);
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+    color: var(--dark-secondary);
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-fast);
+}
+
+ul, ol {
+    list-style: none;
+}
+
+/* Utility Classes */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+    position: relative;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: clamp(32px, 5vw, 42px);
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.section-title p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: clamp(16px, 2vw, 18px);
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    transition: var(--transition);
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+    text-align: center;
+    min-width: 120px;
+    min-height: 44px;
+    gap: 8px;
+}
+
+.btn:hover, 
+.btn:focus {
+    background-color: var(--primary-light);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-primary);
+    outline: none;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.btn-outline:hover, 
+.btn-outline:focus {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+    /* İçerik Stilleri - Mevcut CSS ile uyumlu */
+    .content-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+    
+    .content-card {
+        background: var(--white);
+        border-radius: var(--radius-lg);
+        padding: 25px;
+        box-shadow: var(--shadow-md);
+        transition: var(--transition);
+        will-change: transform;
+    }
+    
+    body.dark-mode .content-card {
+        background-color: var(--dark-card);
+        border: 1px solid var(--dark-border);
+    }
+    
+    .content-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-lg);
+    }
+    
+    .card-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        color: white;
+        font-size: 24px;
+    }
+    
+    .content-card h3 {
+        color: var(--secondary-color);
+        margin-bottom: 15px;
+        font-size: 22px;
+    }
+    
+    body.dark-mode .content-card h3 {
+        color: var(--dark-secondary);
+    }
+    
+    .content-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: var(--radius-md);
+        margin-top: 20px;
+    }
+    
+    /* Menü Stilleri */
+    .menu-section {
+        background: var(--white);
+        border-radius: var(--radius-lg);
+        padding: 30px;
+        margin-bottom: 50px;
+        box-shadow: var(--shadow-md);
+    }
+    
+    body.dark-mode .menu-section {
+        background-color: var(--dark-card);
+        border: 1px solid var(--dark-border);
+    }
+    
+    .menu-title {
+        color: var(--primary-color);
+        text-align: center;
+        margin-bottom: 10px;
+        font-size: 26px;
+    }
+    
+    .menu-description {
+        text-align: center;
+        margin-bottom: 30px;
+        color: var(--text-color);
+    }
+    
+    body.dark-mode .menu-description {
+        color: var(--gray-medium);
+    }
+    
+    .menu-days {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    
+    .menu-day {
+        background: rgba(231, 76, 60, 0.05);
+        padding: 20px;
+        border-radius: var(--radius-md);
+    }
+    
+    body.dark-mode .menu-day {
+        background: rgba(231, 76, 60, 0.1);
+    }
+    
+    .menu-day h4 {
+        color: var(--primary-color);
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-bottom: 1px dashed var(--primary-color);
+    }
+    
+    .menu-day ul {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+    
+    .menu-day li {
+        margin-bottom: 8px;
+        color: var(--text-color);
+    }
+    
+    body.dark-mode .menu-day li {
+        color: var(--gray-medium);
+    }
+    
+    .menu-note {
+        margin-top: 20px;
+        padding: 15px;
+        background: rgba(243, 156, 18, 0.1);
+        border-radius: var(--radius-md);
+        text-align: center;
+    }
+    
+    body.dark-mode .menu-note {
+        background: rgba(243, 156, 18, 0.2);
+    }
+    
+    /* Hizmet Bölgeleri */
+    .service-areas {
+        margin-bottom: 50px;
+    }
+    
+    .service-areas h3 {
+        color: var(--secondary-color);
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    
+    body.dark-mode .service-areas h3 {
+        color: var(--dark-secondary);
+    }
+    
+    .service-areas p {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 30px;
+    }
+    
+    .area-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+    
+    .area-list ul {
+        min-width: 200px;
+    }
+    
+    .area-list li {
+        margin-bottom: 10px;
+        padding-left: 20px;
+        position: relative;
+    }
+    
+    .area-list li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        background: var(--primary-color);
+        border-radius: 50%;
+    }
+    
+    .delivery-info {
+        background: var(--white);
+        padding: 15px;
+        border-radius: var(--radius-md);
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+        box-shadow: var(--shadow-sm);
+    }
+    
+    body.dark-mode .delivery-info {
+        background-color: var(--dark-card);
+        border: 1px solid var(--dark-border);
+    }
+    
+    /* Neden Biz? */
+    .why-us {
+        margin-bottom: 50px;
+    }
+    
+    .why-us h3 {
+        color: var(--secondary-color);
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    body.dark-mode .why-us h3 {
+        color: var(--dark-secondary);
+    }
+    
+    .reasons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+    
+    .reason-item {
+        text-align: center;
+        padding: 30px 20px;
+        background: var(--white);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-sm);
+        transition: var(--transition);
+    }
+    
+    body.dark-mode .reason-item {
+        background-color: var(--dark-card);
+        border: 1px solid var(--dark-border);
+    }
+    
+    .reason-item:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-md);
+    }
+    
+    .reason-item i {
+        font-size: 40px;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+    }
+    
+    .reason-item h4 {
+        color: var(--secondary-color);
+        margin-bottom: 15px;
+    }
+    
+    body.dark-mode .reason-item h4 {
+        color: var(--dark-secondary);
+    }
+    
+    /* Sipariş Bilgisi */
+    .order-info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: center;
+        background: var(--white);
+        border-radius: var(--radius-lg);
+        padding: 40px;
+        box-shadow: var(--shadow-md);
+        margin-bottom: 30px;
+    }
+    
+    body.dark-mode .order-info {
+        background-color: var(--dark-card);
+        border: 1px solid var(--dark-border);
+    }
+    
+    .order-content {
+        flex: 1;
+        min-width: 300px;
+    }
+    
+    .order-image {
+        flex: 1;
+        min-width: 300px;
+    }
+    
+    .order-image img {
+        width: 100%;
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-md);
+    }
+    
+    .order-info h3 {
+        color: var(--secondary-color);
+        margin-bottom: 20px;
+    }
+    
+    body.dark-mode .order-info h3 {
+        color: var(--dark-secondary);
+    }
+    
+    .order-info ol {
+        padding-left: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .order-info li {
+        margin-bottom: 15px;
+        color: var(--text-color);
+    }
+    
+    body.dark-mode .order-info li {
+        color: var(--gray-medium);
+    }
+    
+    .order-info strong {
+        color: var(--primary-color);
+    }
+    
+    .order-cta {
+        text-align: center;
+    }
+    
+    /* Responsive Tasarım */
+    @media (max-width: 768px) {
+        .content-card {
+            padding: 20px;
+        }
+        
+        .menu-section {
+            padding: 20px;
+        }
+        
+        .order-info {
+            padding: 30px;
+        }
+        
+        .order-content, .order-image {
+            min-width: 100%;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .menu-days {
+            grid-template-columns: 1fr;
+        }
+        
+        .order-info {
+            padding: 20px;
+        }
+    }
+
+/* Hero Section */
+.hero {
+    height: 110vh;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.hizliresim.com/2zj72ry.png') no-repeat top center/cover;
+    color: white;
+    padding: 0 20px;
+    will-change: transform;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 8vw, 72px);
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    animation: fadeInDown 1s ease forwards, pulse 3s ease-in-out infinite 1s;
+}
+
+.hero p {
+    font-size: clamp(18px, 3vw, 24px);
+    margin-bottom: 40px;
+    max-width: 800px;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    animation: fadeInUp 1s ease forwards, floating 4s ease-in-out infinite 1s;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadeInUp 1s ease forwards, pulse 2.5s ease-in-out infinite 1.5s;
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    background-color: white;
+    box-shadow: var(--shadow-md);
+    z-index: 1000;
+    transition: var(--transition);
+    will-change: transform, background-color;
+}
+
+body.dark-mode .header {
+    background-color: var(--dark-card);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.header.transparent {
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    box-shadow: none;
+}
+
+.header.transparent:hover {
+    background-color: white;
+}
+
+body.dark-mode .header.transparent:hover {
+    background-color: var(--dark-card);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: clamp(20px, 3vw, 24px);
+    color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+body.dark-mode .logo {
+    color: var(--dark-secondary);
+}
+
+.header.transparent .logo {
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.logo-icon {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: clamp(24px, 3vw, 28px);
+    transition: var(--transition);
+}
+
+.header.transparent .logo-icon {
+    color: var(--accent-light);
+}
+
+/* Navigation */
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li a {
+    position: relative;
+    padding: 10px 15px;
+    font-weight: 600;
+    color: var(--secondary-color);
+    transition: var(--transition);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+}
+
+body.dark-mode .nav-links li a {
+    color: var(--dark-secondary);
+}
+
+.header.transparent .nav-links li a {
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.nav-links li a i {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.nav-links li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    transition: var(--transition);
+}
+
+.header.transparent .nav-links li a::before {
+    background: linear-gradient(90deg, var(--accent-light), white);
+}
+
+.nav-links li a:hover, 
+.nav-links li a:focus {
+    color: var(--primary-color);
+    outline: none;
+}
+
+body.dark-mode .nav-links li a:hover,
+body.dark-mode .nav-links li a:focus {
+    color: var(--primary-light);
+}
+
+.header.transparent .nav-links li a:hover,
+.header.transparent .nav-links li a:focus {
+    color: var(--accent-light);
+}
+
+.nav-links li a:hover::before,
+.nav-links li a:focus::before {
+    width: 60%;
+}
+
+/* Normal modda aktif menü öğesi */
+.nav-links li.active a {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    color: white;
+    box-shadow: var(--shadow-primary);
+}
+
+/* Dark modda aktif menü öğesi */
+body.dark-mode .nav-links li.active a {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+}
+
+/* Transparent header durumunda aktif menü öğesi */
+.header.transparent .nav-links li.active a {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(5px);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links li.active a::before {
+    display: none;
+}
+
+/* Services Dropdown */
+.services-dropdown {
+    position: relative;
+}
+
+.services-dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 250px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: var(--transition);
+    z-index: 1000;
+    padding: 10px 0;
+    will-change: transform, opacity;
+}
+
+body.dark-mode .services-dropdown-content {
+    background-color: var(--dark-card);
+    border: 1px solid var(--dark-border);
+}
+
+.header.transparent .services-dropdown-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+.services-dropdown:hover .services-dropdown-content,
+.services-dropdown:focus-within .services-dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.services-dropdown-content a {
+    display: flex;
+    align-items: center;
+    padding: 12px 25px;
+    color: var(--secondary-color);
+    font-weight: 500;
+    transition: var(--transition);
+    border-left: 3px solid transparent;
+    min-height: 44px;
+}
+
+.services-dropdown-content a:hover, 
+.services-dropdown-content a:focus {
+    background-color: rgba(231, 76, 60, 0.1);
+    border-left-color: var(--primary-color);
+    padding-left: 22px;
+}
+
+body.dark-mode .services-dropdown-content a:hover {
+    background-color: rgba(231, 76, 60, 0.2);
+}
+
+.services-dropdown-content a i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: var(--shadow-primary);
+    z-index: 1001;
+    transition: var(--transition);
+    border: none;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.header.transparent .mobile-menu-btn {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    color: white;
+}
+
+.mobile-menu-btn:hover,
+.mobile-menu-btn:focus {
+    transform: scale(1.1);
+    outline: none;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 350px;
+    height: 100vh;
+    background: white;
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    padding: 80px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    will-change: transform;
+    overflow-y: auto;
+}
+
+body.dark-mode .mobile-menu {
+    background-color: var(--dark-card);
+    border-left: 1px solid var(--dark-border);
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu-logo {
+    margin-bottom: 30px;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+body.dark-mode .mobile-menu-logo {
+    border-bottom-color: var(--dark-border);
+}
+
+.mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    flex-grow: 1;
+}
+
+.mobile-menu-links li a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: var(--radius-md);
+    color: var(--secondary-color);
+    font-weight: 600;
+    transition: var(--transition);
+    min-height: 44px;
+    background: rgba(231, 76, 60, 0.05);
+}
+
+body.dark-mode .mobile-menu-links li a {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: var(--dark-text);
+}
+
+.mobile-menu-links li.active a {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    color: white;
+    box-shadow: var(--shadow-primary);
+}
+
+.mobile-menu-links li a i {
+    margin-right: 10px;
+    color: var(--primary-color);
+    width: 20px;
+    text-align: center;
+}
+
+.mobile-menu-links li.active a i,
+.mobile-menu-links li a:hover i {
+    color: white;
+}
+
+.mobile-menu-links li a:hover,
+.mobile-menu-links li a:focus {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    transform: translateX(10px);
+    outline: none;
+}
+
+/* Dropdown icon */
+.dropdown-icon {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+.services-dropdown.active .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+/* Mobile dropdown content */
+.mobile-dropdown-content {
+    display: none;
+    padding-left: 30px;
+    margin-top: 10px;
+}
+
+.services-dropdown.active .mobile-dropdown-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mobile-dropdown-content a {
+    padding: 12px 15px;
+    background: rgba(231, 76, 60, 0.05);
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+body.dark-mode .mobile-dropdown-content a {
+    background: rgba(231, 76, 60, 0.1);
+}
+
+.mobile-dropdown-content a:hover {
+    background: rgba(231, 76, 60, 0.2);
+    transform: translateX(5px);
+}
+
+.mobile-menu-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: #f5f5f5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+body.dark-mode .mobile-menu-close {
+    background: var(--dark-gray);
+    color: var(--dark-text);
+}
+
+.mobile-menu-close:hover,
+.mobile-menu-close:focus {
+    background: var(--primary-color);
+    color: white;
+    transform: rotate(90deg);
+    outline: none;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f9f9f9 0%, #f1f1f1 100%);
+}
+
+body.dark-mode .contact-section {
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-gray) 100%);
+}
+
+.contact-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-form-container {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    box-shadow: var(--shadow-xl);
+    position: relative;
+    overflow: hidden;
+    will-change: transform;
+}
+
+body.dark-mode .contact-form-container {
+    background-color: var(--dark-card);
+    border: 1px solid var(--dark-border);
+}
+
+.contact-form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+}
+
+.contact-form-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contact-form-header h3 {
+    font-size: 28px;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+body.dark-mode .contact-form-header h3 {
+    color: var(--dark-secondary);
+}
+
+.contact-form-header p {
+    color: var(--text-color);
+}
+
+body.dark-mode .contact-form-header p {
+    color: var(--gray-medium);
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-group i {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    color: var(--primary-color);
+}
+
+.form-control {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--radius-md);
+    font-size: 16px;
+    transition: var(--transition);
+    background-color: #f9f9f9;
+}
+
+body.dark-mode .form-control {
+    background-color: var(--dark-card);
+    color: var(--dark-text);
+    border-color: var(--dark-border);
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+    background-color: white;
+}
+
+body.dark-mode .form-control:focus {
+    background-color: var(--dark-gray);
+}
+
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: var(--radius-md);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: var(--shadow-primary);
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(231, 76, 60, 0.4);
+    outline: none;
+}
+
+/* Contact Cards */
+.info-card {
+    display: flex;
+    align-items: flex-start;
+    background: white;
+    padding: 25px;
+    border-radius: var(--radius-md);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    transition: var(--transition);
+    will-change: transform;
+}
+
+body.dark-mode .info-card {
+    background-color: var(--dark-card);
+    border: 1px solid var(--dark-border);
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.info-icon {
+    font-size: 24px;
+    color: white;
+    background: #e74c3c;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.whatsapp-card .info-icon {
+    background: #25D366;
+}
+
+.info-content h3 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+body.dark-mode .info-content h3 {
+    color: var(--dark-secondary);
+}
+
+.contact-link {
+    color: #7f8c8d;
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 16px;
+    display: inline-block;
+}
+
+body.dark-mode .contact-link {
+    color: var(--gray-medium);
+}
+
+.contact-link:hover,
+.contact-link:focus {
+    color: #e74c3c;
+    outline: none;
+}
+
+body.dark-mode .contact-link:hover,
+body.dark-mode .contact-link:focus {
+    color: var(--dark-accent);
+}
+
+.whatsapp-container {
+    display: flex;
+    align-items: center;
+}
+
+.whatsapp-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: #333;
+    padding: 8px 0;
+}
+
+body.dark-mode .whatsapp-link {
+    color: var(--dark-text);
+}
+
+.phone-number {
+    font-weight: bold;
+    font-size: 18px;
+    color: #075E54;
+    letter-spacing: 0.5px;
+}
+
+body.dark-mode .phone-number {
+    color: #25D366;
+}
+
+.whatsapp-action {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #25D366;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.whatsapp-action i {
+    font-size: 16px;
+}
+
+.whatsapp-link:hover .whatsapp-action,
+.whatsapp-link:focus .whatsapp-action {
+    background: #128C7E;
+    transform: translateX(5px);
+}
+
+.working-hours {
+    background: white;
+    padding: 25px;
+    border-radius: var(--radius-md);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .working-hours {
+    background-color: var(--dark-card);
+    border: 1px solid var(--dark-border);
+}
+
+.working-hours h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+body.dark-mode .working-hours h3 {
+    color: var(--dark-secondary);
+}
+
+.working-hours p {
+    color: #7f8c8d;
+    margin-bottom: 8px;
+}
+
+body.dark-mode .working-hours p {
+    color: var(--gray-medium);
+}
+
+.custom-select-wrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 25px;
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+}
+
+.custom-select-wrapper.focused {
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+}
+
+.custom-select-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z'%3E%3C/path%3E%3Ccircle cx='12' cy='10' r='3'%3E%3C/circle%3E%3C/svg%3E");
+    mask-repeat: no-repeat;
+    z-index: 2;
+    transition: var(--transition);
+}
+
+.custom-select-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--radius-md);
+    font-size: 16px;
+    transition: var(--transition);
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+body.dark-mode .custom-select-wrapper select {
+    background-color: var(--dark-card);
+    color: var(--dark-text);
+    border-color: var(--dark-border);
+}
+
+.custom-select-wrapper select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: none;
+    background-color: white;
+}
+
+body.dark-mode .custom-select-wrapper select:focus {
+    background-color: var(--dark-gray);
+}
+
+.custom-select-wrapper select option {
+    padding: 12px 20px;
+    background-color: var(--white);
+    color: var(--text-color);
+    font-size: 15px;
+    transition: var(--transition-fast);
+}
+
+body.dark-mode .custom-select-wrapper select option {
+    background-color: var(--dark-card);
+    color: var(--dark-text);
+}
+
+.select-arrow {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+    font-size: 14px;
+    z-index: 1;
+}
+
+.custom-select-wrapper:hover .select-arrow {
+    color: var(--primary-light);
+}
+
+/* Floating label effect */
+.custom-select-wrapper .floating-label {
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    background: var(--white);
+    padding: 0 8px;
+    font-size: 12px;
+    color: var(--primary-color);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: var(--transition);
+    z-index: 3;
+    pointer-events: none;
+}
+
+body.dark-mode .custom-select-wrapper .floating-label {
+    background: var(--dark-card);
+}
+
+.custom-select-wrapper.focused .floating-label,
+.custom-select-wrapper.has-value .floating-label {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Gizlilik Politika */
+  /* Temel Stiller */
+  .privacy-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    padding: 20px;
+  }
+  
+  .privacy-modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .privacy-modal {
+    background: white;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 850px;
+    max-height: 90vh;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transform: translateY(30px);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .privacy-modal-overlay.active .privacy-modal {
+    transform: translateY(0);
+  }
+  
+  /* Başlık */
+  .privacy-header {
+    background: linear-gradient(135deg, #e74c3c, #ff6b5b);
+    color: white;
+    padding: 25px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+  }
+  
+  .privacy-header h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  /* Kapat Butonu */
+  .privacy-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .privacy-close-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+  }
+  
+  /* İçerik Alanı */
+  .privacy-content {
+    padding: 0;
+  }
+  
+  .privacy-scroll-container {
+    max-height: calc(90vh - 120px);
+    overflow-y: auto;
+    padding: 25px;
+  }
+  
+  /* Giriş Bölümü */
+  .privacy-intro {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  .privacy-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #f8f9fa;
+    border: 1px solid #eee;
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  .privacy-intro p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Bölümler */
+  .privacy-section {
+    margin-bottom: 35px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 25px;
+  }
+  
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .section-icon {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #e74c3c, #ff6b5b);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+  }
+  
+  .privacy-section h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #2c3e50;
+    font-weight: 600;
+  }
+  
+  .privacy-section p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 15px;
+  }
+  
+  /* Liste */
+  .privacy-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+    margin: 20px 0;
+  }
+  
+  .privacy-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f9f9f9;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #444;
+  }
+  
+  .privacy-list i {
+    color: #e74c3c;
+    width: 20px;
+    text-align: center;
+  }
+  
+  /* Kartlar */
+  .usage-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+  }
+  
+  .usage-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .usage-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .usage-card i {
+    font-size: 24px;
+    color: #e74c3c;
+    margin-bottom: 10px;
+  }
+  
+  .usage-card p {
+    margin: 0;
+    font-size: 13px;
+    color: #555;
+  }
+  
+  /* Tablo */
+  .cookie-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+  }
+  
+  .cookie-table th, 
+  .cookie-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .cookie-table th {
+    background: #f5f5f5;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .cookie-table tr:hover td {
+    background: #f9f9f9;
+  }
+  
+  /* İletişim */
+  .privacy-contact {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+  }
+  
+  .privacy-contact h4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #2c3e50;
+    font-size: 18px;
+  }
+  
+  .contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #e74c3c, #ff6b5b);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    margin-top: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+  }
+  
+  .contact-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(231, 76, 60, 0.4);
+  }
+  
+  /* Karanlık Mod */
+  body.dark-mode .privacy-modal {
+    background: #2c3e50;
+  }
+  
+  body.dark-mode .privacy-section h3,
+  body.dark-mode .privacy-contact h4 {
+    color: #f5f5f5;
+  }
+  
+  body.dark-mode .privacy-section p,
+  body.dark-mode .privacy-intro p,
+  body.dark-mode .privacy-list li,
+  body.dark-mode .usage-card p {
+    color: #ddd;
+  }
+  
+  body.dark-mode .privacy-list li,
+  body.dark-mode .usage-card,
+  body.dark-mode .cookie-table th {
+    background: #34495e;
+  }
+  
+  body.dark-mode .cookie-table td {
+    background: #2c3e50;
+  }
+  
+  body.dark-mode .privacy-list li {
+    border: 1px solid #3d5166;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .privacy-header h2 {
+      font-size: 22px;
+      padding-right: 30px;
+    }
+    
+    .privacy-scroll-container {
+      padding: 20px;
+    }
+    
+    .privacy-list {
+      grid-template-columns: 1fr;
+    }
+    
+    .usage-cards {
+      grid-template-columns: 1fr;
+    }
+    
+    .cookie-table {
+      display: block;
+      overflow-x: auto;
+    }
+  }
+
+/* Footer */
+.footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 60px 0 0;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+
+body.dark-mode .footer {
+    background-color: var(--dark-card);
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col {
+    padding: 0 15px;
+}
+
+.footer-about {
+    max-width: 300px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+
+.footer-logo i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 28px;
+}
+
+.footer-description {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    color: white;
+    transition: var(--transition);
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.footer-social a:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.footer-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #bdc3c7;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+}
+
+.footer-links a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.footer-links i {
+    margin-right: 8px;
+    font-size: 12px;
+    color: var(--primary-color);
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.footer-contact i {
+    color: var(--primary-color);
+    margin-right: 15px;
+    font-size: 18px;
+    margin-top: 3px;
+}
+
+.footer-contact a {
+    color: #bdc3c7;
+    transition: var(--transition);
+}
+
+.footer-contact a:hover {
+    color: white;
+}
+
+.footer-hours li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed rgba(255,255,255,0.1);
+}
+
+.footer-newsletter {
+    margin-top: 30px;
+}
+
+.footer-newsletter h4 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.newsletter-form {
+    display: flex;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+    font-family: 'Montserrat', sans-serif;
+}
+
+body.dark-mode .newsletter-form input {
+    background-color: var(--dark-gray);
+    color: var(--dark-text);
+}
+
+.newsletter-form button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0 15px;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.newsletter-form button:hover {
+    background: var(--primary-light);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-copyright {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-legal a {
+    color: #bdc3c7;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.footer-legal a:hover {
+    color: white;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    z-index: 999;
+    border: none;
+    cursor: pointer;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover,
+.back-to-top:focus {
+    background-color: var(--primary-light);
+    transform: translateY(-5px) scale(1.1);
+    outline: none;
+}
+
+.back-to-top i {
+    transition: transform 0.3s ease;
+}
+
+.back-to-top:hover i {
+    transform: translateY(-3px);
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 999;
+    outline: none;
+    transition: transform 0.3s ease;
+}
+
+.toggle-track {
+    display: block;
+    width: 60px;
+    height: 30px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 15px;
+    position: relative;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.toggle-thumb {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.toggle-icon {
+    position: absolute;
+    font-size: 12px;
+    color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+.fa-moon { opacity: 1; transform: rotate(0); }
+.fa-sun { opacity: 0; transform: rotate(90deg); }
+
+/* Dark mode active styles */
+body.dark-mode .toggle-track {
+    background: linear-gradient(135deg, var(--primary-light), var(--accent-light));
+}
+
+body.dark-mode .toggle-thumb {
+    left: 33px;
+    background-color: var(--dark-secondary);
+}
+
+body.dark-mode .toggle-icon {
+    color: var(--primary-color);
+}
+
+body.dark-mode .fa-moon {
+    opacity: 0;
+    transform: rotate(-90deg);
+}
+
+body.dark-mode .fa-sun {
+    opacity: 1;
+    transform: rotate(0);
+}
+
+.dark-mode-toggle.animating {
+    animation: pulse 0.5s ease;
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.1);
+}
+
+.dark-mode-toggle:active {
+    transform: scale(0.95);
+}
+
+/* Skip to Content Link for Accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--primary-color);
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+    70% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    /* Mobile dropdown adjustment */
+    .services-dropdown-content {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: transparent;
+        display: none;
+        padding-left: 20px;
+    }
+    
+    .mobile-menu-links .services-dropdown.active .services-dropdown-content {
+        display: block;
+    }
+    
+    .services-dropdown-content a {
+        padding: 10px 15px;
+        color: var(--secondary-color);
+        border-left: none;
+    }
+    
+    .contact-form-container {
+        padding: 30px;
+    }
+    
+    /* Footer adjustments */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-col {
+        text-align: center;
+        padding: 0;
+    }
+    
+    .footer-about {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .footer-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+    
+    .footer-links a {
+        justify-content: center;
+    }
+    
+    .footer-contact li {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .footer-legal {
+        justify-content: center;
+    }
+    
+    .newsletter-form {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 50px 0;
+    }
+    
+    /* Dark mode toggle adjustment */
+    .dark-mode-toggle {
+        bottom: 20px;
+        left: 20px;
+    }
+    
+    .toggle-track {
+        width: 50px;
+        height: 25px;
+    }
+    
+    .toggle-thumb {
+        width: 20px;
+        height: 20px;
+    }
+    
+    body.dark-mode .toggle-thumb {
+        left: 27px;
+    }
+    
+    /* Contact form mobil optimizasyon */
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .contact-info,
+    .contact-form-container {
+        min-width: 100%;
+    }
+    
+    .whatsapp-link {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .whatsapp-action {
+        align-self: flex-start;
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-legal {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    /* Daha küçük ekranlar için ek ayarlamalar */
+    .section {
+        padding: 40px 0;
+    }
+    
+    .mobile-menu {
+        width: 90%;
+        padding: 60px 20px 20px;
+    }
+    
+    .mobile-menu-links li a {
+        padding: 12px 15px;
+    }
+}
+
+/* iOS specific fixes */
+@supports (-webkit-touch-callout: none) {
+    input, textarea, button {
+        -webkit-appearance: none;
+        border-radius: 0;
+    }
+}
+
+/* Performance optimizations for mobile */
+@media (max-width: 768px) {
+    * {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+}
+
+/* Intro animation styles */
+#intro-animation {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1s ease;
+}
+
+#intro-animation .intro-logo {
+    font-size: clamp(24px, 8vw, 42px);
+    font-family: 'Playfair Display', serif;
+    color: white;
+    opacity: 0;
+    animation: logoFade 2s ease forwards;
+}
+
+@keyframes logoFade {
+    0% { opacity: 0; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 1; transform: scale(1); }
+}
+    </style>
+</head>
+<body>
+
+<div id="intro-animation">
+    <div class="intro-logo">İstanbul Alev Catering</div>
+</div>
+
+<div id="cookie-consent" style="display: none;">
+    <p>Bu web sitesi deneyiminizi geliştirmek için çerezleri kullanır.</p>
+    <button id="accept-cookies" aria-label="Çerezleri Kabul Et">Kabul Et</button>
+</div>
+
+    <!-- Skip to Content Link -->
+    <a href="#main-content" class="skip-link">Ana İçeriğe Geç</a>
+
+    <!-- Header -->
+<header class="header" id="mainHeader">
+    <div class="header-container">
+        <a href="index.html" class="logo" aria-label="İstanbul Alev Catering Ana Sayfa">
+            <i class="fas fa-utensils logo-icon" aria-hidden="true"></i>
+            İstanbul Alev Catering
+        </a>
+        
+        <nav aria-label="Ana Navigasyon">
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Ana Sayfa</a></li>
+                <li class="services-dropdown">
+                    <a href="#services" aria-haspopup="true" aria-expanded="false"><i class="fas fa-concierge-bell" aria-hidden="true"></i> Hizmetler <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
+                    <div class="services-dropdown-content" aria-label="Hizmet Alt Menüsü">
+                        <a href="firmalara-catering.html"><i class="fas fa-building" aria-hidden="true"></i> Firmalara Catering</a>
+                        <a href="fabrikalara-catering.html" class="active"><i class="fas fa-industry" aria-hidden="true"></i> Fabrikalara Catering</a>
+                        <a href="okullara-catering.html"><i class="fas fa-school" aria-hidden="true"></i> Okullara Catering</a>
+                        <a href="otellere-catering.html"><i class="fas fa-hotel" aria-hidden="true"></i> Otellere Catering</a>
+                        <a href="hastanelere-catering.html"><i class="fas fa-hospital" aria-hidden="true"></i> Hastanelere Catering</a>
+                        <a href="santiyelere-catering.html"><i class="fas fa-hard-hat" aria-hidden="true"></i> Şantiyelere Catering</a>
+                    </div>
+                </li>
+                <li><a href="index.html#pricing"><i class="fas fa-book-open" aria-hidden="true"></i> Menü</a></li>
+                <li><a href="#contact"><i class="fas fa-phone-alt" aria-hidden="true"></i> İletişim</a></li>
+				<li class="active"><a href="hizmet-bolgelerimiz.html"><i class="fas fa-map-marked-alt" aria-hidden="true"></i> Hizmet Bölgelerimiz</a></li>
+            </ul>
+        </nav>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Mobil Menü" aria-expanded="false" aria-controls="mobileMenu">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+    </div>
+</header>
+
+<!-- Mobil Menü -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" aria-label="Menüyü kapat"><i class="fas fa-times"></i></button>
+  <div class="mobile-menu-logo">
+    <a href="index.html" class="logo"><i class="fas fa-utensils logo-icon"></i> İstanbul Alev Catering</a>
+  </div>
+  <ul class="mobile-menu-links">
+    <li><a href="index.html"><i class="fas fa-home"></i> Ana Sayfa</a></li>
+    
+    <!-- Hizmetler dropdown -->
+    <li class="services-dropdown">
+      <a href="#"><i class="fas fa-concierge-bell"></i> Hizmetler <i class="fas fa-chevron-down dropdown-icon"></i></a>
+      <div class="mobile-dropdown-content">
+        <a href="firmalara-catering.html"><i class="fas fa-building"></i> Firmalara Catering</a>
+        <a href="fabrikalara-catering.html"><i class="fas fa-industry"></i> Fabrikalara Catering</a>
+        <a href="okullara-catering.html"><i class="fas fa-school"></i> Okullara Catering</a>
+        <a href="otellere-catering.html"><i class="fas fa-hotel"></i> Otellere Catering</a>
+        <a href="hastanelere-catering.html"><i class="fas fa-hospital"></i> Hastanelere Catering</a>
+        <a href="santiyelere-catering.html"><i class="fas fa-hard-hat"></i> Şantiyelere Catering</a>
+      </div>
+    </li>
+    
+    <!-- Diğer menü öğeleri -->
+    <li><a href="#pricing"><i class="fas fa-book-open"></i> Menü</a></li>
+    <li><a href="#contact"><i class="fas fa-phone-alt"></i> İletişim</a></li>
+    <li class="active"><a href="hizmet-bolgelerimiz.html"><i class="fas fa-map-marked-alt"></i> Hizmet Bölgelerimiz</a></li>
+  </ul>
+</div>
+
+    <!-- Dark Mode Toggle Button -->
+    <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Dark modu aç/kapat" aria-pressed="false">
+        <span class="toggle-track">
+            <span class="toggle-thumb">
+                <i class="fas fa-moon toggle-icon"></i>
+                <i class="fas fa-sun toggle-icon"></i>
+            </span>
+        </span>
+    </button>
+	
+<!-- Hero Section -->
+<section id="home" class="hero section" aria-labelledby="hero-heading">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 id="hero-heading">Çatalca Tabldot Yemek</h1>
+        <p>Çatalca'da ekonomik tabldot yemek hizmeti</p>
+        <div class="hero-btns">
+            <a href="#contact" class="btn">Hemen Teklif Al</a>
+            <a href="#services" class="btn btn-outline">Hizmetlerimiz</a>
+        </div>
+    </div>
+</section>
+
+<!-- İÇERİK KISMI BURAYA GELECEK -->
+<section id="tabldot-yemek" class="section" aria-labelledby="tabldot-heading">
+    <div class="container">
+        <div class="section-title">
+            <h2 id="tabldot-heading">Çatalca'da Lezzetli ve Ekonomik Tabldot Yemek Hizmeti</h2>
+            <p>Günlük taze yemeklerimizle Çatalca'da kurumsal ve bireysel müşterilerimize kaliteli yemek hizmeti sunuyoruz</p>
+        </div>
+
+        <div class="content-grid">
+            <!-- Hizmet Avantajları -->
+            <article class="content-card">
+                <div class="card-icon">
+                    <i class="fas fa-leaf" aria-hidden="true"></i>
+                </div>
+                <h3>Taze ve Kaliteli Malzemeler</h3>
+                <p>Yemeklerimiz günlük olarak taze malzemelerle, hijyenik mutfağımızda özenle hazırlanmaktadır. Mevsim sebzeleri ve doğal ürünler kullanıyoruz.</p>
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Taze sebzelerle hazırlanmış sağlıklı yemek" loading="lazy" class="content-image">
+            </article>
+
+            <article class="content-card">
+                <div class="card-icon">
+                    <i class="fas fa-money-bill-wave" aria-hidden="true"></i>
+                </div>
+                <h3>Uygun Fiyat Garantisi</h3>
+                <p>Çatalca'da en ekonomik tabldot yemek hizmetini sunuyoruz. Toplu siparişlerde özel indirimler ve kurumsal anlaşmalar yapıyoruz.</p>
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Ekonomik yemek servisi" loading="lazy" class="content-image">
+            </article>
+
+            <article class="content-card">
+                <div class="card-icon">
+                    <i class="fas fa-truck" aria-hidden="true"></i>
+                </div>
+                <h3>Zamanında Teslimat</h3>
+                <p>Çatalca'nın tüm mahallelerine zamanında ve sıcak yemek teslimatı yapıyoruz. Özel termal kaplarımızla yemeklerin sıcaklığını koruyoruz.</p>
+                <img src="https://images.unsplash.com/photo-1581349485608-9469926a8e5e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Zamanında yemek teslimatı" loading="lazy" class="content-image">
+            </article>
+        </div>
+
+        <!-- Tabldot Yemek Menüsü -->
+        <div class="menu-section">
+            <h3 class="menu-title">Haftalık Tabldot Yemek Menümüz</h3>
+            <p class="menu-description">Menülerimiz her hafta güncellenir ve beslenme uzmanları tarafından dengeli olacak şekilde hazırlanır.</p>
+            
+            <div class="menu-days">
+                <!-- Pazartesi -->
+                <div class="menu-day">
+                    <h4>Pazartesi</h4>
+                    <ul>
+                        <li>Çorba: Mercimek Çorbası</li>
+                        <li>Ana Yemek: Etli Kuru Fasulye</li>
+                        <li>Pilav: Bulgur Pilavı</li>
+                        <li>Salata: Mevsim Salatası</li>
+                        <li>Tatlı: Sütlaç</li>
+                    </ul>
+                </div>
+                
+                <!-- Salı -->
+                <div class="menu-day">
+                    <h4>Salı</h4>
+                    <ul>
+                        <li>Çorba: Tarhana Çorbası</li>
+                        <li>Ana Yemek: Tavuk Şinitzel</li>
+                        <li>Pilav: Pirinç Pilavı</li>
+                        <li>Salata: Çoban Salata</li>
+                        <li>Tatlı: İrmik Helvası</li>
+                    </ul>
+                </div>
+                
+                <!-- Çarşamba -->
+                <div class="menu-day">
+                    <h4>Çarşamba</h4>
+                    <ul>
+                        <li>Çorba: Ezogelin Çorbası</li>
+                        <li>Ana Yemek: İzmir Köfte</li>
+                        <li>Pilav: Şehriyeli Pilav</li>
+                        <li>Salata: Havuç Tarator</li>
+                        <li>Tatlı: Revani</li>
+                    </ul>
+                </div>
+                
+                <!-- Perşembe -->
+                <div class="menu-day">
+                    <h4>Perşembe</h4>
+                    <ul>
+                        <li>Çorba: Yayla Çorbası</li>
+                        <li>Ana Yemek: Karnıyarık</li>
+                        <li>Pilav: Nohutlu Pilav</li>
+                        <li>Salata: Piyaz</li>
+                        <li>Tatlı: Kabak Tatlısı</li>
+                    </ul>
+                </div>
+                
+                <!-- Cuma -->
+                <div class="menu-day">
+                    <h4>Cuma</h4>
+                    <ul>
+                        <li>Çorba: Domates Çorbası</li>
+                        <li>Ana Yemek: Hünkar Beğendi</li>
+                        <li>Pilav: Fırın Patates</li>
+                        <li>Salata: Roka Salatası</li>
+                        <li>Tatlı: Kemalpaşa Tatlısı</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="menu-note">
+                <p><strong>Not:</strong> Menüler mevsim şartlarına göre değişiklik gösterebilir. Güncel menüler için lütfen <a href="#contact">iletişime geçiniz</a>.</p>
+            </div>
+        </div>
+
+        <!-- Hizmet Bölgeleri -->
+        <div class="service-areas">
+            <h3>Çatalca'da Hizmet Verdiğimiz Mahalleler</h3>
+            <p>Çatalca'nın tüm mahallelerine tabldot yemek servisi yapmaktayız. Aşağıda başlıca hizmet verdiğimiz mahalleler bulunmaktadır:</p>
+            
+            <div class="area-list">
+                <ul>
+                    <li>Celaliye Mahallesi</li>
+                    <li>Kestanelik Mahallesi</li>
+                    <li>Maruflu Mahallesi</li>
+                    <li>Sinekli Mahallesi</li>
+                    <li>Yenice Mahallesi</li>
+                </ul>
+                <ul>
+                    <li>Ormanlı Mahallesi</li>
+                    <li>Kurfallı Mahallesi</li>
+                    <li>Saçlı Mahallesi</li>
+                    <li>Kasımpaşa Mahallesi</li>
+                    <li>Veliköy Mahallesi</li>
+                </ul>
+                <ul>
+                    <li>Alipaşa Mahallesi</li>
+                    <li>Çakıl Mahallesi</li>
+                    <li>Gümüşpınar Mahallesi</li>
+                    <li>Hallaçlı Mahallesi</li>
+                    <li>Karaağaç Mahallesi</li>
+                </ul>
+            </div>
+            
+            <div class="delivery-info">
+                <p><strong>Teslimat Bilgisi:</strong> Çatalca'nın tüm mahallelerine minimum 10 kişilik siparişlerde ücretsiz teslimat yapmaktayız.</p>
+            </div>
+        </div>
+
+        <!-- Neden Biz? -->
+        <div class="why-us">
+            <h3>Neden İstanbul Alev Catering'i Tercih Etmelisiniz?</h3>
+            
+            <div class="reasons-grid">
+                <div class="reason-item">
+                    <i class="fas fa-certificate" aria-hidden="true"></i>
+                    <h4>15 Yıllık Deneyim</h4>
+                    <p>2008'den beri Çatalca'da yemek sektöründe hizmet veriyoruz.</p>
+                </div>
+                
+                <div class="reason-item">
+                    <i class="fas fa-user-shield" aria-hidden="true"></i>
+                    <h4>Güvenilir Hizmet</h4>
+                    <p>100'den fazla kurumsal müşterimizle uzun süreli çalışıyoruz.</p>
+                </div>
+                
+                <div class="reason-item">
+                    <i class="fas fa-utensils" aria-hidden="true"></i>
+                    <h4>Zengin Menü</h4>
+                    <p>Her gün farklı lezzetlerle zengin bir menü sunuyoruz.</p>
+                </div>
+                
+                <div class="reason-item">
+                    <i class="fas fa-heart" aria-hidden="true"></i>
+                    <h4>Sağlıklı Beslenme</h4>
+                    <p>Dengeli ve sağlıklı beslenmeye uygun menüler hazırlıyoruz.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sipariş Bilgisi -->
+        <div class="order-info">
+            <div class="order-content">
+                <h3>Çatalca Tabldot Yemek Siparişi Nasıl Verilir?</h3>
+                <ol>
+                    <li><strong>Menü Seçimi:</strong> Haftalık menümüzden istediğiniz günleri seçin.</li>
+                    <li><strong>Kişi Sayısı:</strong> Kaç kişi için yemek istediğinizi belirtin.</li>
+                    <li><strong>Teslimat Adresi:</strong> Çatalca'daki teslimat adresinizi bildirin.</li>
+                    <li><strong>Ödeme:</strong> Nakit veya banka havalesi ile ödeme yapın.</li>
+                    <li><strong>Teslimat:</strong> Yemekleriniz belirtilen saatte kapınızda!</li>
+                </ol>
+                <div class="order-cta">
+                    <a href="#contact" class="btn">Hemen Sipariş Ver</a>
+                </div>
+            </div>
+            <div class="order-image">
+                <img src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Yemek siparişi teslimatı" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section" aria-labelledby="contact-heading">
+        <div class="container">
+            <div class="section-title">
+                <h2 id="contact-heading">İletişim</h2>
+                <p>Bizimle iletişime geçmek için aşağıdaki formu doldurabilir veya iletişim bilgilerimizi kullanabilirsiniz</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <article class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Adres</h3>
+                            <a href="https://www.google.com/maps/place/%C4%B0stanbul+Alev+Catering/@41.0824163,28.8841708,16.5z/data=!4m6!3m5!1s0x89d53cfbc558756b:0xe730685fc7684eff!8m2!3d41.0830302!4d28.8822169!16s%2Fg%2F11sd9rc6fh?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D" class="contact-link" target="_blank">Güneşli Mahallesi, 1140. Sk. Akdeniz İş Merkezi No:2, 34212 Bağcılar/İstanbul</a>
+                        </div>
+                    </article>
+                    
+                    <article class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Telefon</h3>
+                            <a href="tel:+905345769457" class="contact-link">+90 534 576 94 57</a>
+                        </div>
+                    </article>
+                    
+                    <article class="info-card whatsapp-card">
+                        <div class="info-icon">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>WhatsApp</h3>
+                            <div class="whatsapp-container">
+                                <a href="https://wa.me/905345769457" class="whatsapp-link" target="_blank">
+                                    <span class="phone-number">+90 534 576 94 57</span>
+                                    <span class="whatsapp-action">
+                                        <i class="fab fa-whatsapp" aria-hidden="true"></i> Mesaj Gönder
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>E-posta</h3>
+                            <a href="mailto:istanbulalevcatering@hotmail.com" class="contact-link">istanbulalevcatering@hotmail.com</a>
+                        </div>
+                    </article>
+                    
+                    <article class="working-hours">
+                        <h3>Çalışma Saatleri</h3>
+                        <p><strong>Pazartesi - Cuma:</strong> 08:00 - 18:00</p>
+                        <p><strong>Cumartesi:</strong> 09:00 - 15:00</p>
+                        <p><strong>Pazar:</strong> Kapalı</p>
+                    </article>
+                </div>
+                
+                <div class="contact-form-container">
+                    <div class="contact-form-header">
+                        <h3>Bize Ulaşın</h3>
+                        <p>Her türlü soru, görüş ve önerileriniz için formu doldurabilirsiniz.</p>
+                    </div>
+                    
+                    <form id="contactForm" method="post">
+                        <div class="form-group">
+                            <i class="fas fa-user" aria-hidden="true"></i>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Adınız Soyadınız" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                            <input type="tel" class="form-control" id="phone" name="phone" 
+                                   placeholder="Telefon (5__) ___ __ __" 
+                                   pattern="[\d\s\(\)\-]{10,}" 
+                                   title="10 haneli telefon numarası giriniz"
+                                   required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="E-posta Adresiniz" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <i class="fas fa-edit" aria-hidden="true"></i>
+                            <textarea class="form-control" id="message" name="message" placeholder="Mesajınız" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i> Gönder
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <i class="fas fa-utensils"></i>
+                        <span>İstanbul Alev Catering</span>
+                    </div>
+                    <p class="footer-description">Lüks yemek deneyimini özel etkinliklerinize taşıyoruz. Kaliteden ödün vermeden, lezzetin en şık hali.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Hızlı Linkler</h3>
+                    <ul class="footer-links">
+                        <li><a href="bagcilar-yemek-firmalari.html"><i class="fas fa-chevron-right"></i> Ana Sayfa</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Hizmetler</a></li>
+                        <li><a href="#pricing"><i class="fas fa-chevron-right"></i> Menü</a></li>
+                        <li><a href="hizmet-bolgelerimiz.html"><i class="fas fa-chevron-right"></i> Hizmet Bölgelerimiz</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> İletişim</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">İletişim</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Güneşli Mahallesi, 1140. Sk. Akdeniz İş Merkezi No:2, 34212 Bağcılar/İstanbul</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <a href="tel:+905345769457">+90 534 576 94 57</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:istanbulalevcatering@hotmail.com">istanbulalevcatering@hotmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/905345769457" target="_blank">WhatsApp'tan Yazın</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-title">Çalışma Saatleri</h3>
+                    <ul class="footer-hours">
+                        <li><span>Pazartesi - Cuma</span> <span>08:00 - 18:00</span></li>
+                        <li><span>Cumartesi</span> <span>09:00 - 15:00</span></li>
+                        <li><span>Pazar</span> <span>Kapalı</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    &copy; 2025 İstanbul Alev Catering. Tüm hakları saklıdır.
+                </div>
+                <div class="footer-legal">
+                    <a href="#privacy-policy">Gizlilik Politikası</a>
+                    <a href="#">Çerezler</a>
+                    <a href="#">Şartlar & Koşullar</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+	
+	<!-- Gizlilik Politikası Modal -->
+<div id="privacyModal" class="privacy-modal-overlay">
+  <div class="privacy-modal">
+    <div class="privacy-header">
+      <h2><i class="fas fa-shield-alt"></i> Gizlilik Politikası</h2>
+      <button class="privacy-close-btn" aria-label="Kapat">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    
+    <div class="privacy-content">
+      <div class="privacy-scroll-container">
+        <div class="privacy-intro">
+          <div class="privacy-badge">
+            <i class="fas fa-lock"></i> Son Güncelleme: 01/07/2025
+          </div>
+          <p>İstanbul Alev Catering olarak, gizliliğinize verdiğimiz önemi bu belgeyle açıkça ortaya koyuyoruz.</p>
+        </div>
+        
+        <div class="privacy-section">
+          <div class="section-header">
+            <div class="section-icon">
+              <i class="fas fa-database"></i>
+            </div>
+            <h3>Veri Toplama</h3>
+          </div>
+          <p>Şu verileri topluyoruz:</p>
+          <ul class="privacy-list">
+            <li><i class="fas fa-user"></i> Ad-Soyad</li>
+            <li><i class="fas fa-phone"></i> Telefon numarası</li>
+            <li><i class="fas fa-envelope"></i> E-posta adresi</li>
+            <li><i class="fas fa-building"></i> Şirket bilgileri</li>
+          </ul>
+        </div>
+        
+        <div class="privacy-section">
+          <div class="section-header">
+            <div class="section-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Veri Kullanımı</h3>
+          </div>
+          <p>Verileriniz şu amaçlarla kullanılır:</p>
+          <div class="usage-cards">
+            <div class="usage-card">
+              <i class="fas fa-utensils"></i>
+              <p>Sipariş işlemleri</p>
+            </div>
+            <div class="usage-card">
+              <i class="fas fa-headset"></i>
+              <p>Müşteri desteği</p>
+            </div>
+            <div class="usage-card">
+              <i class="fas fa-bell"></i>
+              <p>Yeniliklerden haberdar etme</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="privacy-section">
+          <div class="section-header">
+            <div class="section-icon">
+              <i class="fas fa-cookie-bite"></i>
+            </div>
+            <h3>Çerez Politikası</h3>
+          </div>
+          <p>Sitemizde şu çerezler kullanılır:</p>
+          <table class="cookie-table">
+            <tr>
+              <th>Çerez Türü</th>
+              <th>Amaç</th>
+              <th>Süre</th>
+            </tr>
+            <tr>
+              <td>Oturum Çerezleri</td>
+              <td>Giriş bilgilerini tutma</td>
+              <td>Tarayıcı kapanınca</td>
+            </tr>
+            <tr>
+              <td>Analiz Çerezleri</td>
+              <td>Kullanım istatistikleri</td>
+              <td>1 yıl</td>
+            </tr>
+          </table>
+        </div>
+        
+        <div class="privacy-contact">
+          <h4><i class="fas fa-question-circle"></i> Sorularınız mı var?</h4>
+          <a href="mailto:istanbulalevcatering@hotmail.com" class="contact-btn">
+            <i class="fas fa-paper-plane"></i> Bize Ulaşın
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTopBtn" aria-label="Sayfanın başına dön">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <script>
+    /**
+     * İstanbul Alev Catering - Optimize Edilmiş JavaScript
+     * Tüm fonksiyonlar modern ES6+ standartlarında yazılmıştır
+     */
+
+    document.addEventListener("DOMContentLoaded", () => {
+        // Tüm fonksiyonları başlat
+        initTheme();
+        setupMobileMenu();
+        setupBackToTop();
+        setupContactForm();
+		setupIntroAnimation();
+        setupHeaderEffects();
+        setupServicesDropdown();
+        setupCookieConsent();
+        
+        // Performans optimizasyonları
+        optimizeForMobile();
+    });
+
+    // 1. TEMA YÖNETİMİ
+    const initTheme = () => {
+        const body = document.body;
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        
+        // Kayıtlı tema kontrolü
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            darkModeToggle.setAttribute('aria-pressed', 'true');
+        }
+        
+        // Tema değiştirme butonu
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            darkModeToggle.setAttribute('aria-pressed', isDark);
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            
+            // Butona animasyon ekle
+            darkModeToggle.classList.add('animating');
+            setTimeout(() => darkModeToggle.classList.remove('animating'), 500);
+        });
+    };
+
+    // 2. MOBİL MENÜ YÖNETİMİ (Optimize Edildi)
+    const setupMobileMenu = () => {
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        if (!mobileMenuBtn || !mobileMenu) return;
+        
+        const toggleMenu = (isOpening) => {
+            mobileMenu.classList.toggle('active', isOpening);
+            document.body.classList.toggle('menu-open', isOpening);
+            mobileMenuBtn.setAttribute('aria-expanded', isOpening);
+            mobileMenu.setAttribute('aria-hidden', !isOpening);
+            
+            // Mobilde body scroll'u engelleme
+            if (isOpening) {
+                document.body.style.overflow = 'hidden';
+                // Açılırken tüm dropdown'ları kapat
+                document.querySelectorAll('.mobile-menu-links .services-dropdown').forEach(item => {
+                    item.classList.remove('active');
+                });
+            } else {
+                document.body.style.overflow = '';
+            }
+        };
+        
+        // Event delegation kullanarak mobil dropdown'ları yönetme
+        document.addEventListener('click', (e) => {
+            // Mobil menü butonu
+            if (e.target.closest('#mobileMenuBtn')) {
+                toggleMenu(!mobileMenu.classList.contains('active'));
+                return;
+            }
+            
+            // Mobil menü kapatma butonu
+            if (e.target.closest('.mobile-menu-close')) {
+                toggleMenu(false);
+                return;
+            }
+            
+            // Mobil dropdown'lar
+            if (window.innerWidth <= 992) {
+                const dropdownLink = e.target.closest('.mobile-menu-links .services-dropdown > a');
+                if (dropdownLink) {
+                    e.preventDefault();
+                    const dropdown = dropdownLink.parentElement;
+                    dropdown.classList.toggle('active');
+                    return;
+                }
+            }
+            
+            // Mobil menü dışına tıklama
+            if (mobileMenu.classList.contains('active') && 
+                !mobileMenu.contains(e.target) && 
+                !e.target.closest('#mobileMenuBtn')) {
+                toggleMenu(false);
+            }
+        }, { passive: true });
+    };
+
+    // 3. BACK TO TOP BUTONU
+    const setupBackToTop = () => {
+        const backToTopBtn = document.getElementById('backToTopBtn');
+        if (!backToTopBtn) return;
+        
+        const handleScroll = () => {
+            backToTopBtn.classList.toggle('active', window.scrollY > 300);
+        };
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Sayfa yüklendiğinde kontrol et
+    };
+
+    // 4. İLETİŞİM FORMU
+    const setupContactForm = () => {
+        const contactForm = document.getElementById('contactForm');
+        if (!contactForm) return;
+        
+        // Telefon numarası formatlama
+        const phoneInput = contactForm.querySelector('#phone');
+        if (phoneInput) {
+            phoneInput.addEventListener('input', (e) => {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length > 10) value = value.substring(0, 10);
+                
+                // Format: (5XX) XXX XX XX
+                value = value.replace(/^(\d{3})(\d{3})(\d{2})(\d{2})$/, '($1) $2 $3 $4');
+                e.target.value = value;
+            });
+        }
+        
+        // Form gönderimi
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            try {
+                const formData = new FormData(contactForm);
+                
+                // Burada gerçek API isteği yapılacak
+                console.log('Form data:', Object.fromEntries(formData));
+                
+                // Başarılı mesajı göster
+                alert('Mesajınız başarıyla gönderildi! Teşekkür ederiz.');
+                contactForm.reset();
+            } catch (error) {
+                console.error('Form error:', error);
+                alert('Bir hata oluştu. Lütfen daha sonra tekrar deneyin.');
+            }
+        });
+    };
+
+    // 5. HEADER SCROLL EFFECT
+    const setupHeaderEffects = () => {
+        const header = document.getElementById('mainHeader');
+        const heroSection = document.querySelector('.hero');
+        if (!header || !heroSection) return;
+        
+        let isHovering = false;
+        const heroHeight = heroSection.offsetHeight;
+        
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            const shouldBeTransparent = scrollPosition < heroHeight - 100 && !isHovering;
+            
+            header.classList.toggle('transparent', shouldBeTransparent);
+        };
+        
+        header.addEventListener('mouseenter', () => {
+            isHovering = true;
+            header.classList.remove('transparent');
+        });
+        
+        header.addEventListener('mouseleave', () => {
+            isHovering = false;
+            handleScroll();
+        });
+        
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Sayfa yüklendiğinde kontrol et
+    };
+
+    // 6. SERVİS DROPDOWN
+    const setupServicesDropdown = () => {
+        const dropdown = document.querySelector('.services-dropdown');
+        if (!dropdown) return;
+        
+        const dropdownContent = dropdown.querySelector('.services-dropdown-content');
+        
+        dropdown.addEventListener('mouseenter', () => {
+            dropdownContent.style.opacity = '1';
+            dropdownContent.style.visibility = 'visible';
+            dropdownContent.style.transform = 'translateY(0)';
+        });
+        
+        dropdown.addEventListener('mouseleave', () => {
+            dropdownContent.style.opacity = '0';
+            dropdownContent.style.visibility = 'hidden';
+            dropdownContent.style.transform = 'translateY(20px)';
+        });
+        
+        // Mobil için touch event'leri
+        dropdown.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            const isOpen = dropdownContent.style.opacity === '1';
+            
+            dropdownContent.style.opacity = isOpen ? '0' : '1';
+            dropdownContent.style.visibility = isOpen ? 'hidden' : 'visible';
+            dropdownContent.style.transform = isOpen ? 'translateY(20px)' : 'translateY(0)';
+        }, { passive: false });
+    };
+
+    // 7. ÇEREZ BİLDİRİMİ
+    const setupCookieConsent = () => {
+        const cookieConsent = document.getElementById('cookie-consent');
+        const acceptCookiesBtn = document.getElementById('accept-cookies');
+        
+        if (!cookieConsent || !acceptCookiesBtn) return;
+        
+        // Çerez izni kontrolü
+        if (!localStorage.getItem('cookiesAccepted')) {
+            setTimeout(() => {
+                cookieConsent.style.display = 'flex';
+            }, 1000);
+        }
+        
+        // Kabul butonu işlevselliği
+        acceptCookiesBtn.addEventListener('click', () => {
+            localStorage.setItem('cookiesAccepted', 'true');
+            cookieConsent.style.display = 'none';
+        });
+    };
+
+    // 8. MOBİL PERFORMANS OPTİMİZASYONLARI
+    const optimizeForMobile = () => {
+        if ('matchMedia' in window && window.matchMedia('(max-width: 768px)').matches) {
+            document.body.classList.add('mobile-device');
+            
+            // Düşük performanslı cihazlarda animasyonları kapat
+            if (navigator.connection?.saveData) {
+                document.querySelectorAll('*').forEach(el => {
+                    el.style.animation = 'none !important';
+                    el.style.transition = 'none !important';
+                });
+            }
+        }
+    };
+
+// 10. INTRO ANİMASYONU
+const setupIntroAnimation = () => {
+    const intro = document.getElementById('intro-animation');
+    if (!intro) return;
+    
+    // Animasyonu başlat
+    setTimeout(() => {
+        intro.style.opacity = '0';
+        setTimeout(() => {
+            intro.style.display = 'none';
+            document.body.style.overflow = ''; // Scroll'u tekrar aç
+        }, 500);
+    }, 500);
+};
+
+// Gizlilik Politikası Modal'ını Aç/Kapat
+  // Modal'ı aç/kapat
+  function setupPrivacyModal() {
+    const modal = document.getElementById('privacyModal');
+    const closeBtn = document.querySelector('.privacy-close-btn');
+    const privacyLinks = document.querySelectorAll('a[href*="privacy-policy"], a[href*="gizlilik-politikasi"]');
+    
+    // Tüm gizlilik politikası linklerini bul ve click eventi ekle
+    privacyLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        openPrivacyModal();
+      });
+    });
+    
+    // Kapat butonu
+    closeBtn.addEventListener('click', closePrivacyModal);
+    
+    // Dışarı tıklayınca kapat
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        closePrivacyModal();
+      }
+    });
+    
+    // ESC tuşuyla kapat
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closePrivacyModal();
+      }
+    });
+  }
+  
+  function openPrivacyModal() {
+    const modal = document.getElementById('privacyModal');
+    document.body.style.overflow = 'hidden';
+    modal.classList.add('active');
+  }
+  
+  function closePrivacyModal() {
+    const modal = document.getElementById('privacyModal');
+    document.body.style.overflow = 'auto';
+    modal.classList.remove('active');
+  }
+  
+  // Sayfa yüklendiğinde modal'ı kur
+  document.addEventListener('DOMContentLoaded', setupPrivacyModal);
+
+    </script>
+</body>
+</html>
