@@ -4553,6 +4553,14 @@ const setupContactForm = () => {
             e.target.value = value;
         });
     }
+	
+	const personInput = contactForm.querySelector('#person-count');
+if (personInput) {
+    personInput.addEventListener('input', (e) => {
+        let value = e.target.value.replace(/\D/g, '');
+        e.target.value = value;
+    });
+}
 
     // Form gönderimi
     contactForm.addEventListener('submit', async (e) => {
