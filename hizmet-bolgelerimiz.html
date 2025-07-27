@@ -530,6 +530,7 @@ body.dark-mode .services-dropdown-content a:hover {
     display: flex;
     flex-direction: column;
     will-change: transform;
+    overflow-y: auto;
 }
 
 body.dark-mode .mobile-menu {
@@ -544,13 +545,20 @@ body.dark-mode .mobile-menu {
 .mobile-menu-logo {
     margin-bottom: 30px;
     text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+body.dark-mode .mobile-menu-logo {
+    border-bottom-color: var(--dark-border);
 }
 
 .mobile-menu-links {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-top: 30px;
+    gap: 10px;
+    margin-top: 20px;
+    flex-grow: 1;
 }
 
 .mobile-menu-links li a {
@@ -558,21 +566,34 @@ body.dark-mode .mobile-menu {
     align-items: center;
     padding: 15px 20px;
     border-radius: var(--radius-md);
-    background: rgba(231, 76, 60, 0.1);
     color: var(--secondary-color);
     font-weight: 600;
     transition: var(--transition);
     min-height: 44px;
+    background: rgba(231, 76, 60, 0.05);
 }
 
 body.dark-mode .mobile-menu-links li a {
-    background-color: rgba(231, 76, 60, 0.2);
+    background-color: rgba(231, 76, 60, 0.1);
     color: var(--dark-text);
+}
+
+.mobile-menu-links li.active a {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    color: white;
+    box-shadow: var(--shadow-primary);
 }
 
 .mobile-menu-links li a i {
     margin-right: 10px;
     color: var(--primary-color);
+    width: 20px;
+    text-align: center;
+}
+
+.mobile-menu-links li.active a i,
+.mobile-menu-links li a:hover i {
+    color: white;
 }
 
 .mobile-menu-links li a:hover,
@@ -583,15 +604,44 @@ body.dark-mode .mobile-menu-links li a {
     outline: none;
 }
 
-body.dark-mode .mobile-menu-links li a:hover,
-body.dark-mode .mobile-menu-links li a:focus {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    color: white;
+/* Dropdown icon */
+.dropdown-icon {
+    margin-left: auto;
+    transition: transform 0.3s ease;
 }
 
-.mobile-menu-links li a:hover i,
-.mobile-menu-links li a:focus i {
-    color: white;
+.services-dropdown.active .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+/* Mobile dropdown content */
+.mobile-dropdown-content {
+    display: none;
+    padding-left: 30px;
+    margin-top: 10px;
+}
+
+.services-dropdown.active .mobile-dropdown-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mobile-dropdown-content a {
+    padding: 12px 15px;
+    background: rgba(231, 76, 60, 0.05);
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+body.dark-mode .mobile-dropdown-content a {
+    background: rgba(231, 76, 60, 0.1);
+}
+
+.mobile-dropdown-content a:hover {
+    background: rgba(231, 76, 60, 0.2);
+    transform: translateX(5px);
 }
 
 .mobile-menu-close {
@@ -624,6 +674,43 @@ body.dark-mode .mobile-menu-close {
     color: white;
     transform: rotate(90deg);
     outline: none;
+}
+
+/* Mobile social links */
+.mobile-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+body.dark-mode .mobile-social-links {
+    border-top-color: var(--dark-border);
+}
+
+.mobile-social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(231, 76, 60, 0.1);
+    border-radius: 50%;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+body.dark-mode .mobile-social-links a {
+    background: rgba(231, 76, 60, 0.2);
+    color: var(--dark-text);
+}
+
+.mobile-social-links a:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
 }
 
 /* Hero Section */
@@ -2487,19 +2574,24 @@ body.dark-mode .fa-sun {
     <a href="index.html" class="logo"><i class="fas fa-utensils logo-icon"></i> İstanbul Alev Catering</a>
   </div>
   <ul class="mobile-menu-links">
-    <li><a href="index.html"><i class="fas fa-home"></i> Anasayfa</a></li>
+    <li><a href="index.html"><i class="fas fa-home"></i> Ana Sayfa</a></li>
     
-    <!-- Hizmetler tek tek listeleniyor -->
-    <li><a href="firmalara-catering.html"><i class="fas fa-building"></i> Firmalara Catering</a></li>
-    <li><a href="fabrikalara-catering.html"><i class="fas fa-industry"></i> Fabrikalara Catering</a></li>
-    <li><a href="okullara-catering.html"><i class="fas fa-school"></i> Okullara Catering</a></li>
-    <li><a href="otellere-catering.html"><i class="fas fa-hotel"></i> Otellere Catering</a></li>
-    <li><a href="hastanelere-catering.html"><i class="fas fa-hospital"></i> Hastanelere Catering</a></li>
-    <li><a href="santiyelere-catering.html"><i class="fas fa-hard-hat"></i> Şantiyelere Catering</a></li>
+    <!-- Hizmetler dropdown -->
+    <li class="services-dropdown">
+      <a href="#"><i class="fas fa-concierge-bell"></i> Hizmetler <i class="fas fa-chevron-down dropdown-icon"></i></a>
+      <div class="mobile-dropdown-content">
+        <a href="firmalara-catering.html"><i class="fas fa-building"></i> Firmalara Catering</a>
+        <a href="fabrikalara-catering.html"><i class="fas fa-industry"></i> Fabrikalara Catering</a>
+        <a href="okullara-catering.html"><i class="fas fa-school"></i> Okullara Catering</a>
+        <a href="otellere-catering.html"><i class="fas fa-hotel"></i> Otellere Catering</a>
+        <a href="hastanelere-catering.html"><i class="fas fa-hospital"></i> Hastanelere Catering</a>
+        <a href="santiyelere-catering.html"><i class="fas fa-hard-hat"></i> Şantiyelere Catering</a>
+      </div>
+    </li>
     
-    <!-- Diğer bölümler -->
-    <li><a href="index.html#pricing"><i class="fas fa-book-open"></i> Menü</a></li>
-    <li><a href="index.html#contact"><i class="fas fa-phone-alt"></i> İletişim</a></li>
+    <!-- Diğer menü öğeleri -->
+    <li><a href="#pricing"><i class="fas fa-book-open"></i> Menü</a></li>
+    <li><a href="#contact"><i class="fas fa-phone-alt"></i> İletişim</a></li>
     <li class="active"><a href="hizmet-bolgelerimiz.html"><i class="fas fa-map-marked-alt"></i> Hizmet Bölgelerimiz</a></li>
   </ul>
 </div>
@@ -3602,35 +3694,53 @@ body.dark-mode .fa-sun {
         });
     };
 
-    // 2. MOBİL MENÜ YÖNETİMİ
-    const setupMobileMenu = () => {
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenuClose = document.querySelector('.mobile-menu-close');
-        const mobileMenu = document.getElementById('mobileMenu');
-        
-        if (!mobileMenuBtn || !mobileMenu) return;
-        
-        const toggleMenu = (isOpening) => {
-            mobileMenu.classList.toggle('active');
-            document.body.classList.toggle('menu-open', isOpening);
+// Mobil menü dropdown işlevselliği
+document.querySelectorAll('.mobile-menu-links .services-dropdown > a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        if (window.innerWidth <= 992) { // Sadece mobilde çalışsın
+            e.preventDefault();
+            const dropdown = this.parentElement;
+            dropdown.classList.toggle('active');
             
-            // ARIA özelliklerini güncelle
-            mobileMenuBtn.setAttribute('aria-expanded', isOpening);
-            mobileMenu.setAttribute('aria-hidden', !isOpening);
-        };
-        
-        mobileMenuBtn.addEventListener('click', () => toggleMenu(!mobileMenu.classList.contains('active')));
-        mobileMenuClose.addEventListener('click', () => toggleMenu(false));
-        
-        // Menü dışına tıklanınca kapat
-        document.addEventListener('click', (e) => {
-            if (mobileMenu.classList.contains('active') && 
-                !mobileMenu.contains(e.target) && 
-                e.target !== mobileMenuBtn) {
-                toggleMenu(false);
-            }
+            // Diğer açık dropdown'ları kapat
+            document.querySelectorAll('.mobile-menu-links .services-dropdown').forEach(item => {
+                if (item !== dropdown) {
+                    item.classList.remove('active');
+                }
+            });
+        }
+    });
+});
+
+// Mobil menü dışına tıklanınca kapatma
+document.addEventListener('click', function(e) {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    
+    if (mobileMenu.classList.contains('active') && 
+        !mobileMenu.contains(e.target) && 
+        e.target !== mobileMenuBtn) {
+        toggleMobileMenu(false);
+    }
+});
+
+// Mobil menü toggle fonksiyonu
+function toggleMobileMenu(show) {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    
+    mobileMenu.classList.toggle('active', show);
+    mobileMenuBtn.setAttribute('aria-expanded', show);
+    mobileMenu.setAttribute('aria-hidden', !show);
+    document.body.classList.toggle('menu-open', show);
+    
+    // Açılışta tüm dropdown'ları kapat
+    if (show) {
+        document.querySelectorAll('.mobile-menu-links .services-dropdown').forEach(item => {
+            item.classList.remove('active');
         });
-    };
+    }
+}
 
     // 3. BACK TO TOP BUTONU
     const setupBackToTop = () => {
