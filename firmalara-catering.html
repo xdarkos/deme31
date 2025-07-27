@@ -4608,6 +4608,26 @@ const setupContactForm = () => {
     });
 };
 
+  // Sayfa yüklendiğinde çalışacak kod
+  document.addEventListener("DOMContentLoaded", function () {
+
+    // Cihazın mobil olup olmadığını kontrol et:
+    // 1. Ekran genişliği 768 piksel veya daha küçükse
+    // 2. Veya userAgent içinde "Mobi" veya "Android" geçiyorsa
+    const isMobile = window.innerWidth <= 768 || /Mobi|Android/i.test(navigator.userAgent);
+
+    // Eğer mobil cihaz ise...
+    if (isMobile) {
+      // Tüm 'Hızlı Görüntüle' butonlarını seç
+      document.querySelectorAll(".quick-view-btn").forEach(function (btn) {
+        // Butonu gizle
+        btn.style.display = "none";
+        // Butonun tıklanmasını engelle
+        btn.disabled = true;
+      });
+    }
+  });
+
 // 5. HEADER SCROLL EFFECT
 const setupHeaderEffects = () => {
     const header = document.getElementById('mainHeader');
