@@ -7,14 +7,14 @@
     <meta name="color-scheme" content="light dark">
     
     <!-- SEO Meta Tags -->
-    <title>İstanbul Alev Catering - Okullara Özel Yemek Hizmetleri</title>
-    <meta name="description" content="İstanbul'da okullara özel profesyonel catering hizmetleri, sağlıklı ve besleyici okul yemekleri.">
-    <meta name="keywords" content="okul catering, okul yemek hizmeti, okul yemeği, sağlıklı okul yemeği, toplu yemek">
+    <title>İstanbul Alev Catering - Otellere Özel Profesyonel Catering Hizmetleri</title>
+    <meta name="description" content="Oteller için özel catering çözümleri, lüks yemek servisi, konaklama tesislerine yönelik profesyonel yemek hizmetleri.">
+    <meta name="keywords" content="otel catering, otel yemek hizmeti, konaklama tesisi catering, otel mutfak hizmetleri, toplu yemek servisi">
     <meta name="author" content="İstanbul Alev Catering">
     
     <!-- Open Graph / Social Media -->
-    <meta property="og:title" content="İstanbul Alev Catering - Okullara Özel Yemek Hizmetleri">
-    <meta property="og:description" content="İstanbul'da okullara özel profesyonel catering hizmetleri, sağlıklı ve besleyici okul yemekleri.">
+    <meta property="og:title" content="İstanbul Alev Catering - Otellere Özel Profesyonel Catering Hizmetleri">
+    <meta property="og:description" content="Oteller için özel catering çözümleri, lüks yemek servisi, konaklama tesislerine yönelik profesyonel yemek hizmetleri.">
     <meta property="og:image" content="https://ornek.com/path/to/image.jpg">
     <meta property="og:url" content="https://www.istanbulalevcatering.com">
     <meta property="og:type" content="website">
@@ -197,34 +197,31 @@
     }
     
     /* Buttons */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 30px;
-    background-color: var(--primary-color);
-    color: white; /* Yazı rengi kesin olarak beyaz yapıldı */
-    border-radius: var(--radius-full);
-    font-weight: 600;
-    transition: var(--transition);
-    border: 2px solid var(--primary-color);
-    cursor: pointer;
-    text-align: center;
-    min-width: 120px;
-    min-height: 44px;
-    gap: 8px;
-}
-
-.btn:hover, 
-.btn:focus {
-    background-color: var(--primary-light);
-    color: white; /* Hover'da yazı rengi korundu */
-    border-color: var(--primary-light);
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-primary);
-    outline: none;
-}
-
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 30px;
+        background-color: var(--primary-color);
+        color: white;
+        border-radius: var(--radius-full);
+        font-weight: 600;
+        transition: var(--transition);
+        border: 2px solid var(--primary-color);
+        cursor: pointer;
+        text-align: center;
+        min-width: 120px;
+        min-height: 44px;
+        gap: 8px;
+    }
+    
+    .btn:hover, 
+    .btn:focus {
+        background-color: var(--primary-light);
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-primary);
+        outline: none;
+    }
     
     .btn-outline {
         background-color: transparent;
@@ -375,42 +372,23 @@
         width: 60%;
     }
     
-/* Normal modda aktif menü öğesi */
-.nav-links li.active a {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-    color: white;
-    box-shadow: var(--shadow-primary);
-}
-
-/* Dark modda aktif menü öğesi */
-body.dark-mode .nav-links li.active a {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    color: white;
-}
-
-/* Transparent header durumunda aktif menü öğesi */
-.header.transparent .nav-links li.active a {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
-    backdrop-filter: blur(5px);
-    color: white;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Normal modda link renkleri */
-.nav-links li a {
-    color: var(--secondary-color);
-}
-
-/* Dark modda link renkleri */
-body.dark-mode .nav-links li a {
-    color: var(--dark-secondary);
-}
-
-/* Transparent header durumunda link renkleri */
-.header.transparent .nav-links li a {
-    color: white;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-}
+    .nav-links li.active a {
+        background: linear-gradient(135deg, var(--primary-light), var(--accent-light));
+        color: white;
+        box-shadow: var(--shadow-primary);
+    }
+    
+    body.dark-mode .nav-links li.active a {
+        background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+        color: white;
+    }
+    
+    .header.transparent .nav-links li.active a {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+        backdrop-filter: blur(5px);
+        color: white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
     
     .nav-links li.active a::before {
         display: none;
@@ -514,167 +492,117 @@ body.dark-mode .nav-links li a {
         outline: none;
     }
     
-/* Mobile Menu */
-.mobile-menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 85%;
-    max-width: 350px;
-    height: 100vh;
-    background: white;
-    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    padding: 80px 30px 30px;
-    display: flex;
-    flex-direction: column;
-    will-change: transform;
-    overflow-y: auto;
-}
-
-body.dark-mode .mobile-menu {
-    background-color: var(--dark-card);
-    border-left: 1px solid var(--dark-border);
-}
-
-.mobile-menu.active {
-    right: 0;
-}
-
-.mobile-menu-logo {
-    margin-bottom: 30px;
-    text-align: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-}
-
-body.dark-mode .mobile-menu-logo {
-    border-bottom-color: var(--dark-border);
-}
-
-.mobile-menu-links {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 20px;
-    flex-grow: 1;
-}
-
-.mobile-menu-links li a {
-    display: flex;
-    align-items: center;
-    padding: 15px 20px;
-    border-radius: var(--radius-md);
-    color: var(--secondary-color);
-    font-weight: 600;
-    transition: var(--transition);
-    min-height: 44px;
-    background: rgba(231, 76, 60, 0.05);
-}
-
-body.dark-mode .mobile-menu-links li a {
-    background-color: rgba(231, 76, 60, 0.1);
-    color: var(--dark-text);
-}
-
-.mobile-menu-links li.active a {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-    color: white;
-    box-shadow: var(--shadow-primary);
-}
-
-.mobile-menu-links li a i {
-    margin-right: 10px;
-    color: var(--primary-color);
-    width: 20px;
-    text-align: center;
-}
-
-.mobile-menu-links li.active a i,
-.mobile-menu-links li a:hover i {
-    color: white;
-}
-
-.mobile-menu-links li a:hover,
-.mobile-menu-links li a:focus {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    color: white;
-    transform: translateX(10px);
-    outline: none;
-}
-
-/* Dropdown icon */
-.dropdown-icon {
-    margin-left: auto;
-    transition: transform 0.3s ease;
-}
-
-.services-dropdown.active .dropdown-icon {
-    transform: rotate(180deg);
-}
-
-/* Mobile dropdown content */
-.mobile-dropdown-content {
-    display: none;
-    padding-left: 30px;
-    margin-top: 10px;
-}
-
-.services-dropdown.active .mobile-dropdown-content {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.mobile-dropdown-content a {
-    padding: 12px 15px;
-    background: rgba(231, 76, 60, 0.05);
-    border-radius: var(--radius-md);
-    font-size: 14px;
-    transition: var(--transition);
-}
-
-body.dark-mode .mobile-dropdown-content a {
-    background: rgba(231, 76, 60, 0.1);
-}
-
-.mobile-dropdown-content a:hover {
-    background: rgba(231, 76, 60, 0.2);
-    transform: translateX(5px);
-}
-
-.mobile-menu-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 40px;
-    height: 40px;
-    background: #f5f5f5;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    cursor: pointer;
-    transition: var(--transition);
-    border: none;
-    min-width: 44px;
-    min-height: 44px;
-}
-
-body.dark-mode .mobile-menu-close {
-    background: var(--dark-gray);
-    color: var(--dark-text);
-}
-
-.mobile-menu-close:hover,
-.mobile-menu-close:focus {
-    background: var(--primary-color);
-    color: white;
-    transform: rotate(90deg);
-    outline: none;
-}
+    /* Mobile Menu */
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 85%;
+        max-width: 350px;
+        height: 100vh;
+        background: white;
+        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        padding: 80px 30px 30px;
+        display: flex;
+        flex-direction: column;
+        will-change: transform;
+    }
+    
+    body.dark-mode .mobile-menu {
+        background-color: var(--dark-card);
+        border-left: 1px solid var(--dark-border);
+    }
+    
+    .mobile-menu.active {
+        right: 0;
+    }
+    
+    .mobile-menu-logo {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    .mobile-menu-links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 30px;
+    }
+    
+    .mobile-menu-links li a {
+        display: flex;
+        align-items: center;
+        padding: 15px 20px;
+        border-radius: var(--radius-md);
+        background: rgba(231, 76, 60, 0.1);
+        color: var(--secondary-color);
+        font-weight: 600;
+        transition: var(--transition);
+        min-height: 44px;
+    }
+    
+    body.dark-mode .mobile-menu-links li a {
+        background-color: rgba(231, 76, 60, 0.2);
+        color: var(--dark-text);
+    }
+    
+    .mobile-menu-links li a i {
+        margin-right: 10px;
+        color: var(--primary-color);
+    }
+    
+    .mobile-menu-links li a:hover,
+    .mobile-menu-links li a:focus {
+        background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+        color: white;
+        transform: translateX(10px);
+        outline: none;
+    }
+    
+    body.dark-mode .mobile-menu-links li a:hover,
+    body.dark-mode .mobile-menu-links li a:focus {
+        background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+        color: white;
+    }
+    
+    .mobile-menu-links li a:hover i,
+    .mobile-menu-links li a:focus i {
+        color: white;
+    }
+    
+    .mobile-menu-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        background: #f5f5f5;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        cursor: pointer;
+        transition: var(--transition);
+        border: none;
+        min-width: 44px;
+        min-height: 44px;
+    }
+    
+    body.dark-mode .mobile-menu-close {
+        background: var(--dark-gray);
+        color: var(--dark-text);
+    }
+    
+    .mobile-menu-close:hover,
+    .mobile-menu-close:focus {
+        background: var(--primary-color);
+        color: white;
+        transform: rotate(90deg);
+        outline: none;
+    }
     
     /* Hero Section */
     .hero {
@@ -685,7 +613,7 @@ body.dark-mode .mobile-menu-close {
         justify-content: center;
         align-items: center;
         text-align: center;
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.hizliresim.com/54xrrs3.jpg') no-repeat center center/cover;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.hizliresim.com/i8ia9l2.jpg') no-repeat center center/cover;
 
         color: white;
         padding: 0 20px;
@@ -715,803 +643,200 @@ body.dark-mode .mobile-menu-close {
         justify-content: center;
         animation: fadeInUp 1s ease forwards, pulse 2.5s ease-in-out infinite 1.5s;
     }
-	
-	/* Pricing Section Styles */
-.pricing-section {
-    background-color: var(--light-color);
-    position: relative;
-    overflow: hidden;
-    padding: 80px 0;
-}
-
-body.dark-mode .pricing-section {
-    background-color: var(--dark-bg);
-}
-
-.pricing-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(231, 76, 60, 0.03)" d="M0,0 L100,0 L100,100 L0,100 Z" /></svg>');
-    background-size: cover;
-    opacity: 0.1;
-    z-index: -1;
-}
-
-.pricing-tabs-container {
-    display: flex;
-    justify-content: center;  /* Ortalar */
-    margin-bottom: 40px;
-    position: relative;
-}
-
-.pricing-tabs-wrapper {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 10px;
-    white-space: nowrap;
-}
-
-.pricing-tabs {
-    display: inline-flex;
-    position: relative;
-    min-width: max-content;
-    background: white;
-    border-radius: var(--radius-full);
-    padding: 5px;
-    gap: 10px;
-    box-shadow: var(--shadow-sm);
-    margin-bottom: 30px;
-}
-
-body.dark-mode .pricing-tabs {
-    background-color: var(--dark-card);
-    border: 1px solid var(--dark-border);
-}
-
-.pricing-tab {
-    position: relative;
-    padding: 12px 20px;
-    border: none;
-    background: transparent;
-    color: var(--text-color);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    cursor: pointer;
-    transition: var(--transition);
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    z-index: 1;
-    border-radius: var(--radius-full);
-    min-height: 44px;
-}
-
-body.dark-mode .pricing-tab {
-    color: var(--dark-text);
-}
-
-.pricing-tab.active {
-    color: white;
-}
-
-.pricing-tab .tab-icon {
-    font-size: 14px;
-}
-
-.tab-indicator {
-    position: absolute;
-    bottom: 5px;
-    left: 5px;
-    height: calc(100% - 10px);
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    border-radius: var(--radius-full);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    z-index: 0;
-}
-
-.pricing-content {
-    display: none;
-}
-
-.pricing-content.active {
-    display: block;
-}
-
-.pricing-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 320px); /* sabit genişlik */
-    justify-content: center; /* ortalar */
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.pricing-card {
-    background: white;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    transition: var(--transition);
-    position: relative;
-    border-top: 4px solid transparent;
-}
-
-body.dark-mode .pricing-card {
-    background-color: var(--dark-card);
-    border-color: var(--dark-border);
-}
-
-.pricing-card.featured {
-    border-top-color: var(--primary-color);
-    box-shadow: 0 15px 35px rgba(231, 76, 60, 0.15);
-}
-
-.pricing-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-}
-
-.card-ribbon {
-    position: absolute;
-    top: 20px;
-    right: -40px;
-    background: var(--primary-color);
-    color: white;
-    padding: 5px 35px;
-    font-size: 13px;
-    font-weight: 600;
-    transform: rotate(45deg);
-    z-index: 2;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.pricing-header {
-    padding: 25px 25px 15px;
-    position: relative;
-}
-
-.pricing-badge {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 5px;
-}
-
-.popular-tag {
-    background: var(--accent-color);
-    color: white;
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.price-savings-badge {
-    background: rgba(231, 76, 60, 0.1);
-    color: var(--primary-color);
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-}
-
-body.dark-mode .price-savings-badge {
-    background: rgba(231, 76, 60, 0.2);
-}
-
-.pricing-card h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-    color: var(--secondary-color);
-}
-
-body.dark-mode .pricing-card h3 {
-    color: var(--dark-secondary);
-}
-
-.price-container {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 10px;
-}
-
-.price-currency {
-    font-size: 20px;
-    margin-right: 5px;
-    color: var(--primary-color);
-    font-weight: 600;
-}
-
-.price-amount {
-    font-size: 42px;
-    font-weight: 700;
-    line-height: 1;
-    color: var(--secondary-color);
-    font-family: 'Playfair Display', serif;
-}
-
-body.dark-mode .price-amount {
-    color: var(--dark-secondary);
-}
-
-.price-period {
-    align-self: flex-end;
-    font-size: 14px;
-    margin-left: 5px;
-    margin-bottom: 5px;
-    color: var(--gray-dark);
-}
-
-body.dark-mode .price-period {
-    color: var(--gray-medium);
-}
-
-.price-description {
-    font-size: 14px;
-    color: var(--gray-dark);
-    margin-bottom: 0;
-}
-
-body.dark-mode .price-description {
-    color: var(--gray-medium);
-}
-
-.pricing-image {
-    height: 200px;
-    position: relative;
-    overflow: hidden;
-}
-
-.pricing-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.pricing-card:hover .pricing-image img {
-    transform: scale(1.05);
-}
-
-.image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.1), transparent);
-}
-
-.pricing-body {
-    padding: 20px 25px;
-}
-
-.features-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.features-header h4 {
-    font-size: 18px;
-    color: var(--secondary-color);
-    margin-bottom: 0;
-}
-
-body.dark-mode .features-header h4 {
-    color: var(--dark-secondary);
-}
-
-.nutrition-summary {
-    display: flex;
-    gap: 15px;
-}
-
-.nutrition-item {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 12px;
-    color: var(--gray-dark);
-}
-
-body.dark-mode .nutrition-item {
-    color: var(--gray-medium);
-}
-
-.nutrition-item i {
-    color: var(--accent-color);
-}
-
-.pricing-features {
-    list-style: none;
-    margin-bottom: 25px;
-}
-
-.feature-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 0;
-    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
-}
-
-body.dark-mode .feature-item {
-    border-bottom-color: var(--dark-border);
-}
-
-.feature-icon {
-    color: var(--primary-color);
-    font-size: 14px;
-}
-
-.pricing-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.btn-gradient {
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: var(--radius-full);
-    font-weight: 600;
-    transition: var(--transition);
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.btn-gradient:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(231, 76, 60, 0.3);
-}
-
-.additional-info {
-    font-size: 12px;
-    color: var(--gray-dark);
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-body.dark-mode .additional-info {
-    color: var(--gray-medium);
-}
-
-.additional-info i {
-    color: var(--accent-color);
-}
-
-.pricing-notice {
-    background: white;
-    border-radius: var(--radius-md);
-    padding: 20px;
-    margin-top: 40px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition);
-}
-
-body.dark-mode .pricing-notice {
-    background-color: var(--dark-card);
-    border: 1px solid var(--dark-border);
-}
-
-.pricing-notice:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
-}
-
-.notice-icon-container {
-    width: 50px;
-    height: 50px;
-    background: rgba(231, 76, 60, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.notice-icon {
-    color: var(--primary-color);
-    font-size: 20px;
-}
-
-.notice-content h4 {
-    font-size: 18px;
-    margin-bottom: 5px;
-    color: var(--secondary-color);
-}
-
-body.dark-mode .notice-content h4 {
-    color: var(--dark-secondary);
-}
-
-.notice-content p {
-    font-size: 14px;
-    color: var(--text-color);
-    margin-bottom: 0;
-}
-
-body.dark-mode .notice-content p {
-    color: var(--gray-medium);
-}
-
-.notice-link {
-    width: 40px;
-    height: 40px;
-    background: rgba(231, 76, 60, 0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary-color);
-    transition: var(--transition);
-    flex-shrink: 0;
-    margin-left: auto;
-}
-
-.notice-link:hover {
-    background: var(--primary-color);
-    color: white;
-    transform: rotate(45deg);
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
+    
+    /* Services Section */
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+    
+    .service-card {
+        background: white;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-lg);
+        transition: var(--transition);
+        position: relative;
+        border-top: none;
+        will-change: transform;
+    }
+    
+    body.dark-mode .service-card {
+        background-color: var(--dark-card);
+        border: 1px solid var(--dark-border);
+        border-top: 5px solid var(--primary-color);
+    }
+    
+    .service-badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+        color: white;
+        padding: 5px 15px;
+        border-radius: var(--radius-full);
+        font-size: 12px;
+        font-weight: 600;
+        z-index: 1;
+    }
+    
+    .service-content {
+        padding: 30px;
+    }
+    
+    .service-icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, var(--primary-light), var(--accent-light));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        color: white;
+        font-size: 28px;
+        transition: var(--transition);
+        will-change: transform;
+    }
+    
+    .service-card h3 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+    
+    .service-card p {
+        margin-bottom: 15px;
+    }
+    
+    body.dark-mode .service-card p {
+        color: var(--gray-medium);
+    }
+    
+    /* Service Card Hover Effects */
+    .service-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s ease;
+        z-index: 1;
+    }
+    
+    .service-card:hover::before {
+        transform: scaleX(1);
+    }
+    
+    .service-card:hover {
+        animation: cardHover 1.5s ease infinite;
+    }
+    
+    .service-card:hover .service-icon {
+        animation: iconPulse 1.5s ease infinite;
+        background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+    }
+    
+    .service-badge {
+        animation: borderGlow 2s infinite;
+    }
+    
+    /* Pricing Cards */
     .pricing-cards {
-        grid-template-columns: 1fr 1fr;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
     }
     
-    .pricing-card.featured {
-        grid-column: span 2;
-    }
-}
-
-@media (max-width: 768px) {
-    .pricing-cards {
-        grid-template-columns: 1fr;
-    }
-    
-    .pricing-card.featured {
-        grid-column: span 1;
+    .pricing-card {
+        background: white;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        box-shadow: var(--shadow-lg);
+        transition: var(--transition);
+        position: relative;
+        border-top: none;
+        will-change: transform;
     }
     
-    .pricing-notice {
-        flex-direction: column;
-        text-align: center;
+    body.dark-mode .pricing-card {
+        background-color: var(--dark-card);
+        border: 1px solid var(--dark-border);
+        border-top: 5px solid var(--primary-color);
     }
     
-    .notice-link {
-        margin-left: 0;
-        margin-top: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .pricing-tab {
-        padding: 10px 15px;
-        font-size: 14px;
+    .pricing-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
     }
     
-    .price-amount {
-        font-size: 36px;
+    .pricing-tag {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: var(--gold);
+        color: white;
+        padding: 5px 15px;
+        border-radius: var(--radius-full);
+        font-size: 12px;
+        font-weight: 600;
+        z-index: 1;
     }
     
     .pricing-header {
-        padding: 20px;
+        padding: 30px;
+        background: var(--secondary-color);
+        color: white;
+        text-align: center;
+    }
+    
+    .pricing-header h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        color: white;
+    }
+    
+    .price {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 5px;
+        color: white;
+    }
+    
+    .price span {
+        font-size: 20px;
+        vertical-align: super;
+    }
+    
+    .pricing-header p {
+        font-size: 14px;
+        opacity: 0.8;
     }
     
     .pricing-body {
-        padding: 15px 20px;
-    }
-}
-    
-/* Services Section Styling */
-.services-section {
-    position: relative;
-    background: linear-gradient(135deg, rgba(247, 247, 247, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%);
-    overflow: hidden;
-    z-index: 1;
-}
-
-.services-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path fill="rgba(231, 76, 60, 0.03)" d="M0,0 L100,0 L100,100 L0,100 Z" /></svg>');
-    background-size: cover;
-    opacity: 0.1;
-    z-index: -1;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.service-card {
-    background: white;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    position: relative;
-    border-top: 4px solid transparent;
-    will-change: transform;
-}
-
-.service-card.featured {
-    border-top: 4px solid var(--primary-color);
-    box-shadow: 0 15px 35px rgba(231, 76, 60, 0.15);
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-}
-
-.service-card.featured:hover {
-    box-shadow: 0 20px 45px rgba(231, 76, 60, 0.2);
-}
-
-.service-image-container {
-    position: relative;
-    height: 220px;
-    overflow: hidden;
-}
-
-.service-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.service-card:hover .service-image {
-    transform: scale(1.05);
-}
-
-.service-badge {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    color: white;
-    padding: 8px 15px;
-    border-radius: 50px;
-    font-size: 12px;
-    font-weight: 600;
-    z-index: 2;
-    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.service-badge i {
-    font-size: 14px;
-}
-
-.service-content {
-    padding: 25px;
-    position: relative;
-}
-
-.service-icon {
-    position: absolute;
-    top: -30px;
-    left: 25px;
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 24px;
-    box-shadow: 0 10px 25px rgba(231, 76, 60, 0.3);
-    z-index: 2;
-    transition: all 0.4s ease;
-}
-
-.service-card:hover .service-icon {
-    transform: rotate(15deg) scale(1.1);
-    background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
-}
-
-.service-card h3 {
-    font-size: 22px;
-    margin-bottom: 15px;
-    color: var(--secondary-color);
-    padding-top: 10px;
-    position: relative;
-}
-
-.service-card h3::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 0;
-    width: 50px;
-    height: 3px;
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-    border-radius: 3px;
-}
-
-.service-description {
-    color: var(--text-color);
-    margin-bottom: 20px;
-    line-height: 1.6;
-    font-size: 15px;
-}
-
-.service-features {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
-    margin-bottom: 25px;
-}
-
-.feature-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
-    background: rgba(231, 76, 60, 0.05);
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
-.feature-item:hover {
-    background: rgba(231, 76, 60, 0.1);
-    transform: translateX(5px);
-}
-
-.feature-icon {
-    color: var(--primary-color);
-    font-size: 16px;
-    flex-shrink: 0;
-}
-
-.service-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px dashed rgba(0, 0, 0, 0.1);
-}
-
-.nutrition-info {
-    display: flex;
-    gap: 15px;
-}
-
-.nutrition-item {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 13px;
-    color: var(--gray-dark);
-}
-
-.nutrition-item i {
-    color: var(--accent-color);
-}
-
-.service-card .btn-small {
-    padding: 8px 20px;
-    font-size: 14px;
-    min-width: auto;
-    color: white;
-    background: var(--primary-color);
-    border: 2px solid var(--primary-color);
-    transition: var(--transition);
-}
-
-.service-card .btn-small:hover,
-.service-card .btn-small:focus {
-    color: white;
-    background: var(--primary-light);
-    border-color: var(--primary-light);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
-}
-
-/* Dark Mode Styles */
-body.dark-mode .service-card {
-    background-color: var(--dark-card);
-    border-color: var(--dark-border);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-body.dark-mode .service-card.featured {
-    border-top-color: var(--primary-color);
-    box-shadow: 0 15px 35px rgba(231, 76, 60, 0.25);
-}
-
-body.dark-mode .service-card h3 {
-    color: var(--dark-secondary);
-}
-
-body.dark-mode .service-description {
-    color: var(--gray-medium);
-}
-
-body.dark-mode .feature-item {
-    background: rgba(231, 76, 60, 0.1);
-}
-
-body.dark-mode .feature-item:hover {
-    background: rgba(231, 76, 60, 0.2);
-}
-
-body.dark-mode .service-footer {
-    border-top-color: var(--dark-border);
-}
-
-body.dark-mode .nutrition-item {
-    color: var(--gray-medium);
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
-    .services-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    .services-grid {
-        grid-template-columns: 1fr;
+        padding: 30px;
     }
     
-    .service-image-container {
-        height: 200px;
-    }
-}
-
-@media (max-width: 480px) {
-    .service-content {
-        padding: 20px;
+    .pricing-features {
+        margin-bottom: 30px;
     }
     
-    .service-features {
-        grid-template-columns: 1fr;
+    .pricing-features li {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
     }
     
-    .service-footer {
-        flex-direction: column;
-        gap: 15px;
-        align-items: flex-start;
+    .pricing-features li i {
+        margin-right: 10px;
+        color: var(--primary-color);
     }
-}
     
-
-
     /* Stats Section */
     .stats-section {
         background: linear-gradient(135deg, rgba(231, 76, 60, 0.03), rgba(243, 156, 18, 0.03));
@@ -2786,6 +2111,8 @@ body.dark-mode .nutrition-item {
     50% { opacity: 1; transform: scale(1.05); }
     100% { opacity: 1; transform: scale(1); }
 }
+
+	
     </style>
 </head>
 <body>
@@ -2805,7 +2132,7 @@ body.dark-mode .nutrition-item {
     <!-- Header -->
 <header class="header" id="mainHeader">
     <div class="header-container">
-        <a href="index.html" class="logo" aria-label="Kurumsal Catering Ana Sayfa">
+        <a href="index.html" class="logo" aria-label="İstanbul Alev Catering Ana Sayfa">
             <i class="fas fa-utensils logo-icon" aria-hidden="true"></i>
             İstanbul Alev Catering
         </a>
@@ -2816,17 +2143,16 @@ body.dark-mode .nutrition-item {
                 <li class="services-dropdown">
                     <a href="#services" aria-haspopup="true" aria-expanded="false"><i class="fas fa-concierge-bell" aria-hidden="true"></i> Hizmetler <i class="fas fa-chevron-down" aria-hidden="true"></i></a>
                     <div class="services-dropdown-content" aria-label="Hizmet Alt Menüsü">
-                        <a href="firmalara-catering.html" class="active"><i class="fas fa-building" aria-hidden="true"></i> Firmalara Catering</a>
+                        <a href="firmalara-catering.html"><i class="fas fa-building" aria-hidden="true"></i> Firmalara Catering</a>
                         <a href="fabrikalara-catering.html"><i class="fas fa-industry" aria-hidden="true"></i> Fabrikalara Catering</a>
                         <a href="okullara-catering.html"><i class="fas fa-school" aria-hidden="true"></i> Okullara Catering</a>
-                        <a href="otellere-catering.html"><i class="fas fa-hotel" aria-hidden="true"></i> Otellere Catering</a>
+                        <a href="otellere-catering.html" class="active"><i class="fas fa-hotel" aria-hidden="true"></i> Otellere Catering</a>
                         <a href="hastanelere-catering.html"><i class="fas fa-hospital" aria-hidden="true"></i> Hastanelere Catering</a>
                         <a href="santiyelere-catering.html"><i class="fas fa-hard-hat" aria-hidden="true"></i> Şantiyelere Catering</a>
                     </div>
                 </li>
-                <li><a href="#premium-products"><i class="fas fa-route" aria-hidden="true"></i> Tedarik</a></li>
+                <li><a href="#pricing"><i class="fas fa-book-open" aria-hidden="true"></i> Menü</a></li>
                 <li><a href="#contact"><i class="fas fa-phone-alt" aria-hidden="true"></i> İletişim</a></li>
-				<li class="active"><a href="hizmet-bolgelerimiz.html"><i class="fas fa-map-marked-alt" aria-hidden="true"></i> Hizmet Bölgelerimiz</a></li>
             </ul>
         </nav>
         
@@ -2843,25 +2169,19 @@ body.dark-mode .nutrition-item {
     <a href="index.html" class="logo"><i class="fas fa-utensils logo-icon"></i> İstanbul Alev Catering</a>
   </div>
   <ul class="mobile-menu-links">
-    <li><a href="index.html"><i class="fas fa-home"></i> Ana Sayfa</a></li>
+    <li><a href="otellere-catering.html"><i class="fas fa-home"></i> Anasayfa</a></li>
     
-    <!-- Hizmetler dropdown -->
-    <li class="services-dropdown">
-      <a href="#"><i class="fas fa-concierge-bell"></i> Hizmetler <i class="fas fa-chevron-down dropdown-icon"></i></a>
-      <div class="mobile-dropdown-content">
-        <a href="firmalara-catering.html"><i class="fas fa-building"></i> Firmalara Catering</a>
-        <a href="fabrikalara-catering.html"><i class="fas fa-industry"></i> Fabrikalara Catering</a>
-        <a href="okullara-catering.html"><i class="fas fa-school"></i> Okullara Catering</a>
-        <a href="otellere-catering.html"><i class="fas fa-hotel"></i> Otellere Catering</a>
-        <a href="hastanelere-catering.html"><i class="fas fa-hospital"></i> Hastanelere Catering</a>
-        <a href="santiyelere-catering.html"><i class="fas fa-hard-hat"></i> Şantiyelere Catering</a>
-      </div>
-    </li>
+    <!-- Hizmetler tek tek listeleniyor -->
+    <li><a href="firmalara-catering.html"><i class="fas fa-building"></i> Firmalara Catering</a></li>
+    <li><a href="fabrikalara-catering.html"><i class="fas fa-industry"></i> Fabrikalara Catering</a></li>
+    <li><a href="okullara-catering.html"><i class="fas fa-school"></i> Okullara Catering</a></li>
+    <li><a href="otellere-catering.html" class="active"><i class="fas fa-hotel"></i> Otellere Catering</a></li>
+    <li><a href="hastanelere-catering.html"><i class="fas fa-hospital"></i> Hastanelere Catering</a></li>
+    <li><a href="santiyelere-catering.html"><i class="fas fa-hard-hat"></i> Şantiyelere Catering</a></li>
     
-    <!-- Diğer menü öğeleri -->
+    <!-- Diğer bölümler -->
     <li><a href="#pricing"><i class="fas fa-book-open"></i> Menü</a></li>
     <li><a href="#contact"><i class="fas fa-phone-alt"></i> İletişim</a></li>
-    <li class="active"><a href="hizmet-bolgelerimiz.html"><i class="fas fa-map-marked-alt"></i> Hizmet Bölgelerimiz</a></li>
   </ul>
 </div>
 
@@ -2878,732 +2198,179 @@ body.dark-mode .nutrition-item {
    
     <!-- Hero Section -->
     <section id="home" class="hero section" aria-labelledby="hero-heading">
-        <h1 id="hero-heading">Okullara Özel Catering Hizmetleri</h1>
-        <p>Sağlıklı, Besleyici ve Lezzetli Okul Yemekleri</p>
+        <h1 id="hero-heading">Otellere Özel Catering Hizmetleri</h1>
+        <p>Konuklarınıza unutulmaz bir yemek deneyimi sunun</p>
         <div class="hero-btns">
-            <a href="#contact" class="btn">İletişime Geç</a>
-            <a href="#pricing" class="btn btn-outline">Menüyü Gör</a>
+            <a href="#contact" class="btn">Hemen Teklif Al</a>
+            <a href="#pricing" class="btn btn-outline">Menüyü İncele</a>
         </div>
     </section>
 
-<!-- Services Section -->
-<section id="services" class="section" aria-labelledby="services-heading">
-    <div class="container">
-        <div class="section-title">
-            <h2 id="services-heading">Okul Catering Hizmetlerimiz</h2>
-            <p>Öğrencilerin gelişimine uygun, besleyici ve hijyenik yemek çözümleri sunuyoruz</p>
-        </div>
-        
-        <div class="services-grid">
-            <!-- Kahvaltı Hizmeti -->
-            <article class="service-card">
-                <div class="service-image-container">
-                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                         alt="Sağlıklı okul kahvaltısı" 
-                         class="service-image"
-                         loading="lazy">
-                    <div class="service-badge">
-                        <i class="fas fa-star"></i> En Çok Tercih Edilen
-                    </div>
+        <!-- Services Section -->
+        <section id="services" class="section" aria-labelledby="services-heading">
+            <div class="container">
+                <div class="section-title">
+                    <h2 id="services-heading">Otel Catering Hizmetlerimiz</h2>
+                    <p>Konaklama tesisleriniz için özel olarak tasarlanmış profesyonel catering çözümleri</p>
                 </div>
-                <div class="service-content">
-                    <div class="service-icon">
-                        <i class="fas fa-apple-alt" aria-hidden="true"></i>
-                    </div>
-                    <h3>Okul Kahvaltısı</h3>
-                    <p class="service-description">Güne enerjik başlamak için dengeli ve besleyici kahvaltı menüleri. Öğrencilerin günlük vitamin ve mineral ihtiyaçlarını karşılayacak özel menüler.</p>
-                    
-                    <div class="service-features">
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle feature-icon"></i>
-                            <span>Taze meyve ve sebzeler</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle feature-icon"></i>
-                            <span>Tam tahıllı ürünler</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle feature-icon"></i>
-                            <span>Süt ve süt ürünleri</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle feature-icon"></i>
-                            <span>Organik reçel ve bal</span>
-                        </div>
-                    </div>
-                    
-                    <div class="service-footer">
-                        <div class="nutrition-info">
-                            <div class="nutrition-item">
-                                <i class="fas fa-fire"></i>
-                                <span>450-500 kcal</span>
-                            </div>
-                            <div class="nutrition-item">
-                                <i class="fas fa-leaf"></i>
-                                <span>%100 Doğal</span>
-                            </div>
-                        </div>
-                        <a href="#contact" class="btn btn-small">Teklif Al</a>
-                    </div>
-                </div>
-            </article>
-            
-            <!-- Öğle Yemeği Hizmeti -->
-            <article class="service-card featured">
-                <div class="service-image-container">
-                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                         alt="Besleyici okul öğle yemeği" 
-                         class="service-image"
-                         loading="lazy">
-                    <div class="service-badge">
-                        <i class="fas fa-award"></i> Uzman Onaylı
-                    </div>
-                </div>
-                <div class="service-content">
-                    <div class="service-icon">
-                        <i class="fas fa-drumstick-bite" aria-hidden="true"></i>
-                    </div>
-                    <h3>Öğle Yemeği</h3>
-                    <p class="service-description">Gün ortası enerji takviyesi için özel hazırlanmış, besleyici ve lezzetli öğle yemekleri. Çocukların seveceği tariflerle hazırlanmış menüler.</p>
-                    
-                    <div class="service-features">
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle feature-icon"></i>
-                            <span>Dengeli protein ve karbonhidrat</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle feature-icon"></i>
-                            <span>Mevsim sebzeleriyle yemekler</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle feature-icon"></i>
-                            <span>Ev yapımı tatlı alternatifleri</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle feature-icon"></i>
-                            <span>Sağlıklı içecek seçenekleri</span>
-                        </div>
-                    </div>
-                    
-                    <div class="service-footer">
-                        <div class="nutrition-info">
-                            <div class="nutrition-item">
-                                <i class="fas fa-fire"></i>
-                                <span>600-700 kcal</span>
-                            </div>
-                            <div class="nutrition-item">
-                                <i class="fas fa-leaf"></i>
-                                <span>%100 Doğal</span>
-                            </div>
-                        </div>
-                        <a href="#contact" class="btn btn-small">Teklif Al</a>
-                    </div>
-                </div>
-            </article>
-            
-            <!-- Ara Öğün Hizmeti -->
-            <article class="service-card">
-                <div class="service-image-container">
-                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                         alt="Sağlıklı ara öğünler" 
-                         class="service-image"
-                         loading="lazy">
-                    <div class="service-badge">
-                        <i class="fas fa-heart"></i> Sağlıklı Atıştırmalık
-                    </div>
-                </div>
-                <div class="service-content">
-                    <div class="service-icon">
-                        <i class="fas fa-ice-cream" aria-hidden="true"></i>
-                    </div>
-                    <h3>Ara Öğünler</h3>
-                    <p class="service-description">Öğrencilerin enerjisini korumak için sağlıklı atıştırmalıklar. Besin değeri yüksek, doğal malzemelerle hazırlanmış ara öğün seçenekleri.</p>
-                    
-                    <div class="service-features">
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle feature-icon"></i>
-                            <span>Taze meyve tabakları</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle feature-icon"></i>
-                            <span>Kuru yemiş ve kuru meyve</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle feature-icon"></i>
-                            <span>Ev yapımı kek ve kurabiyeler</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check-circle feature-icon"></i>
-                            <span>Yoğurt ve granola</span>
-                        </div>
-                    </div>
-                    
-                    <div class="service-footer">
-                        <div class="nutrition-info">
-                            <div class="nutrition-item">
-                                <i class="fas fa-fire"></i>
-                                <span>200-250 kcal</span>
-                            </div>
-                            <div class="nutrition-item">
-                                <i class="fas fa-leaf"></i>
-                                <span>%100 Doğal</span>
-                            </div>
-                        </div>
-                        <a href="#contact" class="btn btn-small">Teklif Al</a>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </div>
-</section>
                 
-<!-- Pricing Section -->
-<section id="pricing" class="pricing-section section" aria-labelledby="pricing-heading">
-    <div class="container">
-        <div class="section-title">
-            <h2 id="pricing-heading">Okul Yemek Paketlerimiz</h2>
-            <p class="section-subtitle">Öğrencilerin beslenme ihtiyaçlarına uygun, ekonomik ve kaliteli yemek seçenekleri</p>
-        </div>
-        
-        <!-- Tab Navigation -->
-        <div class="pricing-tabs-container">
-            <div class="pricing-tabs-wrapper">
-                <div class="pricing-tabs" role="tablist" aria-label="Yemek Paketleri">
-                    <button class="pricing-tab active" role="tab" aria-selected="true" aria-controls="monthly-tab" id="monthly-tab-btn" data-tab="monthly">
-                        <i class="fas fa-calendar-alt tab-icon" aria-hidden="true"></i>
-                        <span>Aylık Paketler</span>
-                    </button>
-                    <button class="pricing-tab" role="tab" aria-selected="false" aria-controls="daily-tab" id="daily-tab-btn" data-tab="daily">
-                        <i class="fas fa-utensils tab-icon" aria-hidden="true"></i>
-                        <span>Günlük Paketler</span>
-                    </button>
-                    <button class="pricing-tab" role="tab" aria-selected="false" aria-controls="special-tab" id="special-tab-btn" data-tab="special">
-                        <i class="fas fa-star tab-icon" aria-hidden="true"></i>
-                        <span>Özel Menüler</span>
-                    </button>
-                    <div class="tab-indicator" aria-hidden="true"></div>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-badge">Popüler</div>
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-coffee" aria-hidden="true"></i>
+                            </div>
+                            <h3>Kahvaltı Buffet Servisi</h3>
+                            <p>Otel konuklarınıza özel zengin kahvaltı seçenekleri. Taze malzemelerle hazırlanmış, görsel olarak etkileyici sunumlar.</p>
+                            <ul style="margin-top: 15px; padding-left: 20px; list-style-type: disc; color: var(--text-color);">
+                                <li>Geleneksel ve uluslararası lezzetler</li>
+                                <li>Taze sıkılmış meyve suları</li>
+                                <li>Özel diyet seçenekleri</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <article class="service-card">
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-utensils" aria-hidden="true"></i>
+                            </div>
+                            <h3>Oda Servisi Menüleri</h3>
+                            <p>Konuklarınızın odalarında konforlu bir şekilde yemek yiyebilmeleri için özel hazırlanmış menüler.</p>
+                            <ul style="margin-top: 15px; padding-left: 20px; list-style-type: disc; color: var(--text-color);">
+                                <li>24 saat servis imkanı</li>
+                                <li>Özel sunumlu tabaklar</li>
+                                <li>Hızlı ve hijyenik servis</li>
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <article class="service-card">
+                        <div class="service-content">
+                            <div class="service-icon">
+                                <i class="fas fa-glass-cheers" aria-hidden="true"></i>
+                            </div>
+                            <h3>Toplantı ve Etkinlik Cateringi</h3>
+                            <p>Otelinizde düzenlenen toplantı, seminer ve özel etkinlikler için profesyonel catering hizmeti.</p>
+                            <ul style="margin-top: 15px; padding-left: 20px; list-style-type: disc; color: var(--text-color);">
+                                <li>Kokteyl menüleri</li>
+                                <li>Kahve molası ikramları</li>
+                                <li>Özel konseptli sunumlar</li>
+                            </ul>
+                        </div>
+                    </article>
                 </div>
-            </div>
-        </div>
-        
-        <!-- Tab Contents -->
-        <div class="pricing-content-wrapper">
-            <!-- Aylık Paketler -->
-            <div class="pricing-content active" id="monthly-tab" role="tabpanel" aria-labelledby="monthly-tab-btn">
+                
+                <!-- Pricing Section -->
+                <div class="section-title" style="margin-top: 80px;" id="pricing">
+                    <h2>Otel Catering Paketlerimiz</h2>
+                    <p>Konuk memnuniyetini artıracak, farklı bütçelere uygun catering seçenekleri</p>
+                </div>
+                
                 <div class="pricing-cards">
-                    <!-- Temel Paket -->
                     <article class="pricing-card">
-                       
                         <div class="pricing-header">
-                            <div class="pricing-badge">
-                                <span class="popular-tag">En Çok Tercih</span>
-                                <div class="price-savings-badge">%10 Tasarruf</div>
+                            <h3>Standart Oda Servisi</h3>
+                            <div class="price">
+                                <span>₺</span>150
                             </div>
-                            <h3>Temel Paket</h3>
-                            <div class="price-container">
-                                <span class="price-currency">₺</span>
-                                <span class="price-amount">25</span>
-                                <span class="price-period">/öğrenci/gün</span>
-                            </div>
-                            <p class="price-description">Temel beslenme ihtiyaçlarını karşılayan ekonomik çözüm</p>
-                        </div>
-                        <div class="pricing-image">
-                            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                                 alt="Temel Paket Örnek Yemek" 
-                                 loading="lazy">
-                            <div class="image-overlay"></div>
+                            <p>Kişi başı</p>
                         </div>
                         <div class="pricing-body">
-                            <div class="features-header">
-                                <h4>Paket Özellikleri</h4>
-                                <div class="nutrition-summary">
-                                    <span class="nutrition-item"><i class="fas fa-fire"></i> 550-650 kcal</span>
-                                    <span class="nutrition-item"><i class="fas fa-leaf"></i> %90 Doğal</span>
-                                </div>
-                            </div>
-                            <ul class="pricing-features" aria-label="Temel Paket Özellikleri">
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>1 Çeşit Ana Yemek</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>1 Çeşit Çorba</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>Pilav/Makarna</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>Mevsim Salatası</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>Ayran veya Meyve Suyu</span>
-                                </li>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check" aria-hidden="true"></i> 3 Çeşit Ana Yemek</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> 2 Çeşit Çorba</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> 2 Çeşit Meze</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Pilav/Makarna</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> 1 Çeşit Tatlı</li>
                             </ul>
-                            <div class="pricing-footer">
-                                <a href="#contact" class="btn btn-gradient">
-                                    <i class="fas fa-paper-plane" aria-hidden="true"></i>
-                                    TEKLİF AL
-                                </a>
-                                <div class="additional-info">
-                                    <p><i class="fas fa-info-circle"></i> Minimum 50 öğrenci</p>
-                                </div>
-                            </div>
+                            <a href="#contact" class="btn" style="width: 100%; text-align: center;">TEKLİF AL</a>
                         </div>
                     </article>
                     
-                    <!-- Standart Paket (Öne Çıkan) -->
-                    <article class="pricing-card featured">
-                        
-                        <div class="pricing-header">
-                            <div class="pricing-badge">
-                                <span class="popular-tag">En Çok Tercih</span>
-                                <div class="price-savings-badge">%15 Tasarruf</div>
+                    <article class="pricing-card">
+                        <div class="pricing-tag">Popüler</div>
+                        <div class="pricing-header" style="background: linear-gradient(135deg, var(--accent-color), var(--primary-light));">
+                            <h3>Premium Buffet</h3>
+                            <div class="price">
+                                <span>₺</span>200
                             </div>
-                            <h3>Standart Paket</h3>
-                            <div class="price-container">
-                                <span class="price-currency">₺</span>
-                                <span class="price-amount">35</span>
-                                <span class="price-period">/öğrenci/gün</span>
-                            </div>
-                            <p class="price-description">Dengeli beslenme için ideal çözüm</p>
-                        </div>
-                        <div class="pricing-image">
-                            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                                 alt="Standart Paket Örnek Yemek" 
-                                 loading="lazy">
-                            <div class="image-overlay"></div>
+                            <p>Kişi başı</p>
                         </div>
                         <div class="pricing-body">
-                            <div class="features-header">
-                                <h4>Paket Özellikleri</h4>
-                                <div class="nutrition-summary">
-                                    <span class="nutrition-item"><i class="fas fa-fire"></i> 700-800 kcal</span>
-                                    <span class="nutrition-item"><i class="fas fa-leaf"></i> %95 Doğal</span>
-                                </div>
-                            </div>
-                            <ul class="pricing-features" aria-label="Standart Paket Özellikleri">
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>2 Çeşit Ana Yemek</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>1 Çeşit Çorba</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>Pilav/Makarna</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>Mevsim Salatası</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>1 Çeşit Tatlı</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>Ayran veya Taze Meyve Suyu</span>
-                                </li>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check" aria-hidden="true"></i> 5 Çeşit Ana Yemek</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> 3 Çeşit Çorba</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> 5 Çeşit Meze</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Özel Pilav Çeşitleri</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> 3 Çeşit Tatlı</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Sınırsız İçecek</li>
                             </ul>
-                            <div class="pricing-footer">
-                                <a href="#contact" class="btn btn-gradient">
-                                    <i class="fas fa-paper-plane" aria-hidden="true"></i>
-                                    TEKLİF AL
-                                </a>
-                                <div class="additional-info">
-                                    <p><i class="fas fa-info-circle"></i> Minimum 30 öğrenci</p>
-                                </div>
-                            </div>
+                            <a href="#contact" class="btn" style="width: 100%; text-align: center;">TEKLİF AL</a>
                         </div>
                     </article>
                     
-                    <!-- Premium Paket -->
                     <article class="pricing-card">
-                       
                         <div class="pricing-header">
-                            <div class="pricing-badge">
-                                <span class="popular-tag">Premium</span>
-                                <div class="price-savings-badge">%20 Tasarruf</div>
+                            <h3>Lüks Etkinlik Paketi</h3>
+                            <div class="price">
+                                <span>₺</span>250
                             </div>
-                            <h3>Premium Paket</h3>
-                            <div class="price-container">
-                                <span class="price-currency">₺</span>
-                                <span class="price-amount">45</span>
-                                <span class="price-period">/öğrenci/gün</span>
-                            </div>
-                            <p class="price-description">Üst düzey beslenme deneyimi</p>
-                        </div>
-                        <div class="pricing-image">
-                            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                                 alt="Premium Paket Örnek Yemek" 
-                                 loading="lazy">
-                            <div class="image-overlay"></div>
+                            <p>Kişi başı</p>
                         </div>
                         <div class="pricing-body">
-                            <div class="features-header">
-                                <h4>Paket Özellikleri</h4>
-                                <div class="nutrition-summary">
-                                    <span class="nutrition-item"><i class="fas fa-fire"></i> 850-950 kcal</span>
-                                    <span class="nutrition-item"><i class="fas fa-leaf"></i> %100 Doğal</span>
-                                </div>
-                            </div>
-                            <ul class="pricing-features" aria-label="Premium Paket Özellikleri">
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>2 Çeşit Ana Yemek</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>1 Çeşit Çorba</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>Özel Pilav Çeşitleri</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>Mevsim Salatası</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>2 Çeşit Tatlı</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>Taze Sıkılmış Meyve Suyu</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>Ara Öğün İkramı</span>
-                                </li>
+                            <ul class="pricing-features">
+                                <li><i class="fas fa-check" aria-hidden="true"></i> 7 Çeşit Ana Yemek</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> 3 Çeşit Çorba</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> 8 Çeşit Meze</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Özel Şef İkramları</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> 5 Çeşit Tatlı</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Sınırsız İçecek</li>
+                                <li><i class="fas fa-check" aria-hidden="true"></i> Kişiye Özel Servis</li>
                             </ul>
-                            <div class="pricing-footer">
-                                <a href="#contact" class="btn btn-gradient">
-                                    <i class="fas fa-paper-plane" aria-hidden="true"></i>
-                                    TEKLİF AL
-                                </a>
-                                <div class="additional-info">
-                                    <p><i class="fas fa-info-circle"></i> Minimum 20 öğrenci</p>
-                                </div>
-                            </div>
+                            <a href="#contact" class="btn" style="width: 100%; text-align: center;">TEKLİF AL</a>
                         </div>
                     </article>
                 </div>
-            </div>
-            
-            <!-- Günlük Paketler -->
-            <div class="pricing-content" id="daily-tab" role="tabpanel" aria-labelledby="daily-tab-btn" hidden>
-                <div class="pricing-cards">
-                    <!-- Günlük Temel Paket -->
-                    <article class="pricing-card">
-                        <div class="pricing-header">
-                            <div class="pricing-badge">
-                                <div class="price-savings-badge">Haftalık %5 İndirim</div>
-                            </div>
-                            <h3>Günlük Temel</h3>
-                            <div class="price-container">
-                                <span class="price-currency">₺</span>
-                                <span class="price-amount">30</span>
-                                <span class="price-period">/öğrenci/gün</span>
-                            </div>
-                            <p class="price-description">Esnek ve ekonomik günlük çözüm</p>
-                        </div>
-                        <div class="pricing-image">
-                            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                                 alt="Günlük Temel Paket Örnek Yemek" 
-                                 loading="lazy">
-                            <div class="image-overlay"></div>
-                        </div>
-                        <div class="pricing-body">
-                            <div class="features-header">
-                                <h4>Paket Özellikleri</h4>
-                                <div class="nutrition-summary">
-                                    <span class="nutrition-item"><i class="fas fa-fire"></i> 550-650 kcal</span>
-                                    <span class="nutrition-item"><i class="fas fa-leaf"></i> %90 Doğal</span>
-                                </div>
-                            </div>
-                            <ul class="pricing-features" aria-label="Günlük Temel Paket Özellikleri">
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>1 Çeşit Ana Yemek</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>1 Çeşit Çorba</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>Pilav/Makarna</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>Mevsim Salatası</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>Ayran veya Meyve Suyu</span>
-                                </li>
-                            </ul>
-                            <div class="pricing-footer">
-                                <a href="#contact" class="btn btn-gradient">
-                                    <i class="fas fa-paper-plane" aria-hidden="true"></i>
-                                    TEKLİF AL
-                                </a>
-                                <div class="additional-info">
-                                    <p><i class="fas fa-info-circle"></i> Minimum 20 öğrenci</p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <!-- Günlük Standart Paket -->
-                    <article class="pricing-card featured">
-                        <div class="pricing-header">
-                            <div class="pricing-badge">
-                                <span class="popular-tag">Önerilen</span>
-                                <div class="price-savings-badge">Haftalık %10 İndirim</div>
-                            </div>
-                            <h3>Günlük Standart</h3>
-                            <div class="price-container">
-                                <span class="price-currency">₺</span>
-                                <span class="price-amount">40</span>
-                                <span class="price-period">/öğrenci/gün</span>
-                            </div>
-                            <p class="price-description">Dengeli günlük beslenme çözümü</p>
-                        </div>
-                        <div class="pricing-image">
-                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                                 alt="Günlük Standart Paket Örnek Yemek" 
-                                 loading="lazy">
-                            <div class="image-overlay"></div>
-                        </div>
-                        <div class="pricing-body">
-                            <div class="features-header">
-                                <h4>Paket Özellikleri</h4>
-                                <div class="nutrition-summary">
-                                    <span class="nutrition-item"><i class="fas fa-fire"></i> 700-800 kcal</span>
-                                    <span class="nutrition-item"><i class="fas fa-leaf"></i> %95 Doğal</span>
-                                </div>
-                            </div>
-                            <ul class="pricing-features" aria-label="Günlük Standart Paket Özellikleri">
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>2 Çeşit Ana Yemek</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>1 Çeşit Çorba</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>Pilav/Makarna</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>Mevsim Salatası</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>1 Çeşit Tatlı</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>Ayran veya Taze Meyve Suyu</span>
-                                </li>
-                            </ul>
-                            <div class="pricing-footer">
-                                <a href="#contact" class="btn btn-gradient">
-                                    <i class="fas fa-paper-plane" aria-hidden="true"></i>
-                                    TEKLİF AL
-                                </a>
-                                <div class="additional-info">
-                                    <p><i class="fas fa-info-circle"></i> Minimum 15 öğrenci</p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+                
+                <div style="text-align: center; margin-top: 50px;">
+                    <p style="font-style: italic; color: var(--primary-color); font-weight: 500;">
+                        <i class="fas fa-info-circle" aria-hidden="true"></i> Tüm paketlerimiz otelinizin konseptine ve ihtiyaçlarına göre özelleştirilebilir. Detaylı bilgi için bizimle iletişime geçin.
+                    </p>
                 </div>
             </div>
-            
-            <!-- Özel Menüler -->
-            <div class="pricing-content" id="special-tab" role="tabpanel" aria-labelledby="special-tab-btn" hidden>
-                <div class="pricing-cards">
-                    <!-- Vejetaryen Menü -->
-                    <article class="pricing-card">
-                        
-                        <div class="pricing-header">
-                            <div class="pricing-badge">
-                                <div class="price-savings-badge">%100 Bitkisel</div>
-                            </div>
-                            <h3>Vejetaryen Menü</h3>
-                            <div class="price-container">
-                                <span class="price-currency">₺</span>
-                                <span class="price-amount">38</span>
-                                <span class="price-period">/öğrenci/gün</span>
-                            </div>
-                            <p class="price-description">Bitkisel bazlı beslenme çözümü</p>
-                        </div>
-                        <div class="pricing-image">
-                            <img src="https://images.unsplash.com/photo-1543351611-58f69d7c1781?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                                 alt="Vejetaryen Menü Örnek Yemek" 
-                                 loading="lazy">
-                            <div class="image-overlay"></div>
-                        </div>
-                        <div class="pricing-body">
-                            <div class="features-header">
-                                <h4>Paket Özellikleri</h4>
-                                <div class="nutrition-summary">
-                                    <span class="nutrition-item"><i class="fas fa-fire"></i> 600-700 kcal</span>
-                                    <span class="nutrition-item"><i class="fas fa-leaf"></i> %100 Bitkisel</span>
-                                </div>
-                            </div>
-                            <ul class="pricing-features" aria-label="Vejetaryen Menü Özellikleri">
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>2 Çeşit Vejetaryen Ana Yemek</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>1 Çeşit Çorba</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>Bulgur/Pilav</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>Mevsim Salatası</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>1 Çeşit Tatlı</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>Taze Sıkılmış Meyve Suyu</span>
-                                </li>
-                            </ul>
-                            <div class="pricing-footer">
-                                <a href="#contact" class="btn btn-gradient">
-                                    <i class="fas fa-paper-plane" aria-hidden="true"></i>
-                                    TEKLİF AL
-                                </a>
-                                <div class="additional-info">
-                                    <p><i class="fas fa-info-circle"></i> Minimum 10 öğrenci</p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <!-- Glutensiz Menü -->
-                    <article class="pricing-card">
-                      
-                        <div class="pricing-header">
-                            <div class="pricing-badge">
-                                <div class="price-savings-badge">%100 Glutensiz</div>
-                            </div>
-                            <h3>Glutensiz Menü</h3>
-                            <div class="price-container">
-                                <span class="price-currency">₺</span>
-                                <span class="price-amount">42</span>
-                                <span class="price-period">/öğrenci/gün</span>
-                            </div>
-                            <p class="price-description">Gluten hassasiyeti için özel menü</p>
-                        </div>
-                        <div class="pricing-image">
-                            <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                                 alt="Glutensiz Menü Örnek Yemek" 
-                                 loading="lazy">
-                            <div class="image-overlay"></div>
-                        </div>
-                        <div class="pricing-body">
-                            <div class="features-header">
-                                <h4>Paket Özellikleri</h4>
-                                <div class="nutrition-summary">
-                                    <span class="nutrition-item"><i class="fas fa-fire"></i> 650-750 kcal</span>
-                                    <span class="nutrition-item"><i class="fas fa-leaf"></i> %100 Glutensiz</span>
-                                </div>
-                            </div>
-                            <ul class="pricing-features" aria-label="Glutensiz Menü Özellikleri">
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>2 Çeşit Glutensiz Ana Yemek</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>1 Çeşit Çorba</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>Glutensiz Pilav/Makarna</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>Mevsim Salatası</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>1 Çeşit Glutensiz Tatlı</span>
-                                </li>
-                                <li class="feature-item">
-                                    <i class="fas fa-check-circle feature-icon" aria-hidden="true"></i>
-                                    <span>Taze Sıkılmış Meyve Suyu</span>
-                                </li>
-                            </ul>
-                            <div class="pricing-footer">
-                                <a href="#contact" class="btn btn-gradient">
-                                    <i class="fas fa-paper-plane" aria-hidden="true"></i>
-                                    TEKLİF AL
-                                </a>
-                                <div class="additional-info">
-                                    <p><i class="fas fa-info-circle"></i> Minimum 5 öğrenci</p>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </div>
-        
-        <div class="pricing-notice">
-            <div class="notice-icon-container">
-                <i class="fas fa-info-circle notice-icon" aria-hidden="true"></i>
-            </div>
-            <div class="notice-content">
-                <h4>Özelleştirilebilir Paketler</h4>
-                <p>Tüm paketlerimizde menü içerikleri mevsimsel ürünlere ve okulun ihtiyaçlarına göre özelleştirilebilir. Özel diyet gereksinimleri ve alerjen durumları için lütfen bizimle iletişime geçin.</p>
-            </div>
-            <a href="#contact" class="notice-link" aria-label="Daha fazla bilgi için iletişime geçin">
-                <i class="fas fa-arrow-right" aria-hidden="true"></i>
-            </a>
-        </div>
-    </div>
-</section>
-
+        </section>
 <!-- Stats Section -->
 <section class="stats-section section" aria-labelledby="stats-heading">
     <div class="container">
         <div class="section-title">
-            <h2 id="stats-heading">Eğitim Kurumlarına Hizmet</h2>
-            <p>Okullara özel catering hizmetimizle öğrencilerin sağlıklı beslenmesine katkı sağlıyoruz</p>
+            <h2 id="stats-heading">Sektördeki Deneyimimiz</h2>
+            <p>Oteller için sunduğumuz catering hizmetleriyle sektörde öncü olmaya devam ediyoruz</p>
         </div>
         
         <div class="stats-grid">
             <article class="stat-card">
                 <div class="stat-icon-wrapper">
                     <div class="stat-icon">
-                        <i class="fas fa-school" aria-hidden="true"></i>
+                        <i class="fas fa-hotel" aria-hidden="true"></i>
                     </div>
                 </div>
                 <div class="stat-content">
-                    <div class="stat-number"><span class="counter" data-target="150">0</span></div>
-                    <div class="stat-title">Hizmet Verdiğimiz Okul</div>
+                    <div class="stat-number"><span class="counter" data-target="120">0</span></div>
+                    <div class="stat-title">Mutlu Otel İşletmesi</div>
+                </div>
+            </article>
+            
+            <article class="stat-card">
+                <div class="stat-icon-wrapper">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-check" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="stat-content">
+                    <div class="stat-number"><span class="counter" data-target="850">0</span></div>
+                    <div class="stat-title">Tamamlanan Oda Servisi</div>
                 </div>
             </article>
             
@@ -3614,32 +2381,20 @@ body.dark-mode .nutrition-item {
                     </div>
                 </div>
                 <div class="stat-content">
-                    <div class="stat-number"><span class="counter" data-target="50000">0</span></div>
-                    <div class="stat-title">Günlük Öğrenciye Hizmet</div>
+                    <div class="stat-number"><span class="counter" data-target="50">0</span></div>
+                    <div class="stat-title">Özel Menü Çeşidi</div>
                 </div>
             </article>
             
             <article class="stat-card">
                 <div class="stat-icon-wrapper">
                     <div class="stat-icon">
-                        <i class="fas fa-heart" aria-hidden="true"></i>
+                        <i class="fas fa-smile" aria-hidden="true"></i>
                     </div>
                 </div>
                 <div class="stat-content">
-                    <div class="stat-number"><span class="counter" data-target="100">0</span></div>
-                    <div class="stat-title">Beslenme Uzmanı</div>
-                </div>
-            </article>
-            
-            <article class="stat-card">
-                <div class="stat-icon-wrapper">
-                    <div class="stat-icon">
-                        <i class="fas fa-award" aria-hidden="true"></i>
-                    </div>
-                </div>
-                <div class="stat-content">
-                    <div class="stat-number"><span class="counter" data-target="25">0</span></div>
-                    <div class="stat-title">Sertifika ve Ödül</div>
+                    <div class="stat-number"><span class="counter" data-target="10000">0</span></div>
+                    <div class="stat-title">Memnun Konuk</div>
                 </div>
             </article>
         </div>
@@ -3649,159 +2404,160 @@ body.dark-mode .nutrition-item {
         <section class="why-us-section section" aria-labelledby="why-us-heading">
             <div class="container">
                 <div class="section-title">
-                    <h2 id="why-us-heading">Neden Okul Catering Hizmetimiz?</h2>
-                    <p>Okullara özel catering çözümlerimizle fark yaratıyoruz</p>
+                    <h2 id="why-us-heading">Neden Oteller Bizi Tercih Ediyor?</h2>
+                    <p>Otel catering hizmetlerimizle fark yaratıyoruz</p>
                 </div>
                 
                 <div class="why-us-grid">
                     <article class="why-us-card">
                         <div class="why-us-icon">
-                            <i class="fas fa-child" aria-hidden="true"></i>
+                            <i class="fas fa-award" aria-hidden="true"></i>
                         </div>
-                        <h3>Çocuklara Özel Menüler</h3>
-                        <p>Çocukların gelişim dönemlerine uygun, besleyici ve lezzetli menüler hazırlıyoruz. Menülerimiz pediatrik beslenme uzmanları tarafından onaylanmıştır.</p>
+                        <h3>Otel Standartlarında Hizmet</h3>
+                        <p>5 yıldızlı otel mutfak deneyimine sahip şeflerimizle, konuklarınıza lüks bir yemek deneyimi sunuyoruz.</p>
                         <div class="why-us-number">01</div>
-                    </article>
-                    
-                    <article class="why-us-card">
-                        <div class="why-us-icon">
-                            <i class="fas fa-seedling" aria-hidden="true"></i>
-                        </div>
-                        <h3>Organik ve Taze Ürünler</h3>
-                        <p>Yemeklerimizde sadece taze, mevsiminde ve mümkün olduğunca organik ürünler kullanıyoruz. Sağlıklı nesiller için kaliteli malzemeler seçiyoruz.</p>
-                        <div class="why-us-number">02</div>
-                    </article>
-                    
-                    <article class="why-us-card">
-                        <div class="why-us-icon">
-                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
-                        </div>
-                        <h3>Hijyen ve Güvenlik</h3>
-                        <p>ISO 22000 gıda güvenliği sertifikalı mutfağımızda, en sıkı hijyen standartlarını uyguluyoruz. Tüm süreçlerimiz düzenli olarak denetlenmektedir.</p>
-                        <div class="why-us-number">03</div>
                     </article>
                     
                     <article class="why-us-card">
                         <div class="why-us-icon">
                             <i class="fas fa-clock" aria-hidden="true"></i>
                         </div>
-                        <h3>Zamanında Teslimat</h3>
-                        <p>Yemeklerimizi okullara zamanında ulaştırıyoruz. Özel ısı korumalı araçlarımızla yemeklerin tazeliğini ve sıcaklığını koruyoruz.</p>
+                        <h3>7/24 Kesintisiz Servis</h3>
+                        <p>Otel işletmenizin ihtiyaç duyduğu her saatte, hızlı ve kaliteli servis garantisi sunuyoruz.</p>
+                        <div class="why-us-number">02</div>
+                    </article>
+                    
+                    <article class="why-us-card">
+                        <div class="why-us-icon">
+                            <i class="fas fa-heart" aria-hidden="true"></i>
+                        </div>
+                        <h3>Kişiye Özel Menüler</h3>
+                        <p>Vegan, glutensiz, diyabetik gibi özel beslenme ihtiyaçlarına uygun menüler hazırlıyoruz.</p>
+                        <div class="why-us-number">03</div>
+                    </article>
+                    
+                    <article class="why-us-card">
+                        <div class="why-us-icon">
+                            <i class="fas fa-leaf" aria-hidden="true"></i>
+                        </div>
+                        <h3>Yerel ve Organik Ürünler</h3>
+                        <p>Yemeklerimizde sadece taze ve doğal malzemeler kullanıyoruz. Sağlıklı ve lezzetli menülerimizle fark yaratıyoruz.</p>
                         <div class="why-us-number">04</div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section section" aria-labelledby="contact-heading">
-            <div class="container">
-                <div class="section-title">
-                    <h2 id="contact-heading">İletişim</h2>
-                    <p>Okulunuz için catering hizmeti almak veya detaylı bilgi için bizimle iletişime geçin</p>
-                </div>
-                
-                <div class="contact-container">
-                    <div class="contact-info">
-                        <article class="info-card">
-                            <div class="info-icon">
-                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                            </div>
-                            <div class="info-content">
-                                <h3>Adres</h3>
-                                <a href="https://www.google.com/maps/place/%C4%B0stanbul+Alev+Catering/@41.0824163,28.8841708,16.5z/data=!4m6!3m5!1s0x89d53cfbc558756b:0xe730685fc7684eff!8m2!3d41.0830302!4d28.8822169!16s%2Fg%2F11sd9rc6fh?entry=ttu&g_ep=EgoyMDI1MDcyMy4wIKXMDSoASAFQAw%3D%3D" class="contact-link" target="_blank">Güneşli Mahallesi, 1140. Sk. Akdeniz İş Merkezi No:2, 34212 Bağcılar/İstanbul</a>
-                            </div>
-                        </article>
-                        
-                        <article class="info-card">
-                            <div class="info-icon">
-                                <i class="fas fa-phone-alt" aria-hidden="true"></i>
-                            </div>
-                            <div class="info-content">
-                                <h3>Telefon</h3>
-                                <a href="tel:+905345769457" class="contact-link">+90 534 576 94 57</a>
-                            </div>
-                        </article>
-                        
-                        <article class="info-card whatsapp-card">
-                            <div class="info-icon">
-                                <i class="fab fa-whatsapp" aria-hidden="true"></i>
-                            </div>
-                            <div class="info-content">
-                                <h3>WhatsApp</h3>
-                                <div class="whatsapp-container">
-                                    <a href="https://wa.me/905345769457" class="whatsapp-link" target="_blank">
-                                        <span class="phone-number">+90 534 576 94 57</span>
-                                        <span class="whatsapp-action">
-                                            <i class="fab fa-whatsapp" aria-hidden="true"></i> Mesaj Gönder
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-                        
-                        <article class="info-card">
-                            <div class="info-icon">
-                                <i class="fas fa-envelope" aria-hidden="true"></i>
-                            </div>
-                            <div class="info-content">
-                                <h3>E-posta</h3>
-                                <a href="mailto:istanbulalevcatering@hotmail.com" class="contact-link">istanbulalevcatering@hotmail.com</a>
-                            </div>
-                        </article>
-                        
-                        <article class="working-hours">
-                            <h3>Çalışma Saatleri</h3>
-                            <p><strong>Pazartesi - Cuma:</strong> 08:00 - 17:00</p>
-                            <p><strong>Cumartesi:</strong> 09:00 - 15:00</p>
-                            <p><strong>Pazar:</strong> Kapalı</p>
-                        </article>
-                    </div>
-                    
-                    <div class="contact-form-container">
-                        <div class="contact-form-header">
-                            <h3>Okulunuz İçin Teklif Alın</h3>
-                            <p>Okulunuzun ihtiyaçlarına uygun catering hizmeti için formu doldurabilirsiniz.</p>
-                        </div>
-                        
-                        <form id="contactForm" method="post">
-                            <div class="form-group">
-                                <i class="fas fa-user" aria-hidden="true"></i>
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Adınız Soyadınız" required>
-                            </div>
-                            
-<div class="form-group">
-    <i class="fas fa-phone-alt" aria-hidden="true"></i>
-    <input type="tel" class="form-control" id="phone" name="phone" 
-           placeholder="Telefon (5__) ___ __ __" 
-           pattern="[\d\s\(\)\-]{10,}" 
-           title="10 haneli telefon numarası giriniz"
-           required>
-</div>
-                            
-                            <div class="form-group">
-                                <i class="fas fa-envelope" aria-hidden="true"></i>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="E-posta Adresiniz" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <i class="fas fa-school" aria-hidden="true"></i>
-                                <input type="text" class="form-control" id="school" name="school" placeholder="Okul Adı" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <i class="fas fa-edit" aria-hidden="true"></i>
-                                <textarea class="form-control" id="message" name="message" placeholder="Öğrenci sayısı ve özel istekleriniz" required></textarea>
-                            </div>
-                            
-                            <button type="submit" class="submit-btn">
-                                <i class="fas fa-paper-plane" aria-hidden="true"></i> Gönder
-                            </button>
-                        </form>
-                    </div>
-                </div>
+<!-- Contact Section -->
+<section id="contact" class="contact-section section" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="section-title">
+      <h2 id="contact-heading">İletişim</h2>
+      <p>Otel işletmeniz için catering hizmeti almak için bizimle iletişime geçebilirsiniz</p>
+    </div>
+
+    <div class="contact-container">
+      <div class="contact-info">
+        <article class="info-card">
+          <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="info-content">
+            <h3>Adres</h3>
+            <a href="https://www.google.com/maps/place/İstanbul+Alev+Catering" class="contact-link" target="_blank">
+              Güneşli Mahallesi, 1140. Sk. Akdeniz İş Merkezi No:2, 34212 Bağcılar/İstanbul
+            </a>
+          </div>
+        </article>
+
+        <article class="info-card">
+          <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
+          <div class="info-content">
+            <h3>Telefon</h3>
+            <a href="tel:+905345769457" class="contact-link">+90 534 576 94 57</a>
+          </div>
+        </article>
+
+        <article class="info-card whatsapp-card">
+          <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
+          <div class="info-content">
+            <h3>WhatsApp</h3>
+            <div class="whatsapp-container">
+              <a href="https://wa.me/905345769457" class="whatsapp-link" target="_blank">
+                <span class="phone-number">+90 534 576 94 57</span>
+                <span class="whatsapp-action">
+                  <i class="fab fa-whatsapp"></i> Mesaj Gönder
+                </span>
+              </a>
             </div>
-        </section>
+          </div>
+        </article>
+
+        <article class="info-card">
+          <div class="info-icon"><i class="fas fa-envelope"></i></div>
+          <div class="info-content">
+            <h3>E-posta</h3>
+            <a href="mailto:istanbulalevcatering@hotmail.com" class="contact-link">istanbulalevcatering@hotmail.com</a>
+          </div>
+        </article>
+
+        <article class="working-hours">
+          <h3>Çalışma Saatleri</h3>
+          <p><strong>Pazartesi - Cuma:</strong> 08:00 - 17:00</p>
+          <p><strong>Cumartesi:</strong> 09:00 - 15:00</p>
+          <p><strong>Pazar:</strong> Kapalı</p>
+        </article>
+      </div>
+
+      <div class="contact-form-container">
+        <div class="contact-form-header">
+          <h3>Otel Catering Teklifi Alın</h3>
+          <p>Otel işletmeniz için özel catering teklifi almak için formu doldurabilirsiniz.</p>
+        </div>
+
+        <form id="contactForm" action="https://formspree.io/f/mwpqogyd" method="POST">
+          <div class="form-group">
+            <i class="fas fa-user"></i>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Adınız Soyadınız" required>
+          </div>
+
+          <div class="form-group">
+            <i class="fas fa-phone-alt"></i>
+            <input
+              type="tel"
+              class="form-control"
+              id="phone"
+              name="phone"
+              placeholder="Telefon (5__) ___ __ __"
+              inputmode="numeric"
+              pattern="[\d\s\(\)]{14,15}"
+              title="Telefon numaranızı (5XX) XXX XX XX formatında giriniz"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" class="form-control" id="email" name="email" placeholder="E-posta Adresiniz" required>
+          </div>
+
+          <div class="form-group">
+            <i class="fas fa-hotel"></i>
+            <input type="text" class="form-control" id="hotel" name="hotel" placeholder="Otel Adı" required>
+          </div>
+
+          <div class="form-group">
+            <i class="fas fa-edit"></i>
+            <textarea class="form-control" id="message" name="message" placeholder="İhtiyaçlarınız ve Özel Notlar" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-paper-plane"></i> Teklif Al
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
     </main>
 
     <!-- Footer -->
@@ -3813,7 +2569,7 @@ body.dark-mode .nutrition-item {
                         <i class="fas fa-utensils"></i>
                         <span>İstanbul Alev Catering</span>
                     </div>
-                    <p class="footer-description">Okullara özel sağlıklı ve besleyici yemek hizmetleri sunuyoruz. Öğrencilerin gelişimine katkı sağlayan menülerimizle hizmetinizdeyiz.</p>
+                    <p class="footer-description">Oteller için lüks yemek deneyimi sunuyoruz. Konuklarınıza unutulmaz lezzetler ve profesyonel servis garantisi.</p>
                     <div class="footer-social">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -3825,7 +2581,7 @@ body.dark-mode .nutrition-item {
                 <div class="footer-col">
                     <h3 class="footer-title">Hızlı Linkler</h3>
                     <ul class="footer-links">
-                        <a href="index.html" class="active"><i class="fas fa-building" aria-hidden="true"></i> Ana Sayfa</a>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Ana Sayfa</a></li>
                         <li><a href="#services"><i class="fas fa-chevron-right"></i> Hizmetler</a></li>
                         <li><a href="#pricing"><i class="fas fa-chevron-right"></i> Menü</a></li>
                         <li><a href="#contact"><i class="fas fa-chevron-right"></i> İletişim</a></li>
@@ -3905,9 +2661,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setupHeaderEffects();
     setupServicesDropdown();
     setupCookieConsent();
-    setupPricingTabs();
-    setupIntroAnimation();
-    
+
     // Performans optimizasyonları
     optimizeForMobile();
 });
@@ -3916,99 +2670,65 @@ document.addEventListener("DOMContentLoaded", () => {
 const initTheme = () => {
     const body = document.body;
     const darkModeToggle = document.getElementById('darkModeToggle');
-    
-    // Kayıtlı tema kontrolü
+
     if (localStorage.getItem('theme') === 'dark') {
         body.classList.add('dark-mode');
         darkModeToggle?.setAttribute('aria-pressed', 'true');
     }
-    
-    // Tema değiştirme butonu
+
     darkModeToggle?.addEventListener('click', () => {
         body.classList.toggle('dark-mode');
         const isDark = body.classList.contains('dark-mode');
         darkModeToggle.setAttribute('aria-pressed', isDark);
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        
-        // Butona animasyon ekle
+
         darkModeToggle.classList.add('animating');
         setTimeout(() => darkModeToggle.classList.remove('animating'), 500);
     });
 };
 
-    // 2. MOBİL MENÜ YÖNETİMİ (Optimize Edildi)
-    const setupMobileMenu = () => {
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenuClose = document.querySelector('.mobile-menu-close');
-        const mobileMenu = document.getElementById('mobileMenu');
-        
-        if (!mobileMenuBtn || !mobileMenu) return;
-        
-        const toggleMenu = (isOpening) => {
-            mobileMenu.classList.toggle('active', isOpening);
-            document.body.classList.toggle('menu-open', isOpening);
-            mobileMenuBtn.setAttribute('aria-expanded', isOpening);
-            mobileMenu.setAttribute('aria-hidden', !isOpening);
-            
-            // Mobilde body scroll'u engelleme
-            if (isOpening) {
-                document.body.style.overflow = 'hidden';
-                // Açılırken tüm dropdown'ları kapat
-                document.querySelectorAll('.mobile-menu-links .services-dropdown').forEach(item => {
-                    item.classList.remove('active');
-                });
-            } else {
-                document.body.style.overflow = '';
-            }
-        };
-        
-        // Event delegation kullanarak mobil dropdown'ları yönetme
-        document.addEventListener('click', (e) => {
-            // Mobil menü butonu
-            if (e.target.closest('#mobileMenuBtn')) {
-                toggleMenu(!mobileMenu.classList.contains('active'));
-                return;
-            }
-            
-            // Mobil menü kapatma butonu
-            if (e.target.closest('.mobile-menu-close')) {
-                toggleMenu(false);
-                return;
-            }
-            
-            // Mobil dropdown'lar
-            if (window.innerWidth <= 992) {
-                const dropdownLink = e.target.closest('.mobile-menu-links .services-dropdown > a');
-                if (dropdownLink) {
-                    e.preventDefault();
-                    const dropdown = dropdownLink.parentElement;
-                    dropdown.classList.toggle('active');
-                    return;
-                }
-            }
-            
-            // Mobil menü dışına tıklama
-            if (mobileMenu.classList.contains('active') && 
-                !mobileMenu.contains(e.target) && 
-                !e.target.closest('#mobileMenuBtn')) {
-                toggleMenu(false);
-            }
-        }, { passive: true });
+// 2. MOBİL MENÜ YÖNETİMİ
+const setupMobileMenu = () => {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (!mobileMenuBtn || !mobileMenu) return;
+
+    const toggleMenu = (isOpening) => {
+        mobileMenu.classList.toggle('active');
+        document.body.classList.toggle('menu-open', isOpening);
+
+        // ARIA özelliklerini güncelle
+        mobileMenuBtn.setAttribute('aria-expanded', isOpening);
+        mobileMenu.setAttribute('aria-hidden', !isOpening);
     };
+
+    mobileMenuBtn?.addEventListener('click', () => toggleMenu(!mobileMenu.classList.contains('active')));
+    mobileMenuClose?.addEventListener('click', () => toggleMenu(false));
+
+    document.addEventListener('click', (e) => {
+        if (mobileMenu.classList.contains('active') &&
+            !mobileMenu.contains(e.target) &&
+            e.target !== mobileMenuBtn) {
+            toggleMenu(false);
+        }
+    });
+};
 
 // 3. BACK TO TOP BUTONU
 const setupBackToTop = () => {
     const backToTopBtn = document.getElementById('backToTopBtn');
     if (!backToTopBtn) return;
-    
+
     const handleScroll = () => {
         backToTopBtn.classList.toggle('active', window.scrollY > 300);
     };
-    
+
     backToTopBtn.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-    
+
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Sayfa yüklendiğinde kontrol et
 };
@@ -4017,32 +2737,36 @@ const setupBackToTop = () => {
 const setupContactForm = () => {
     const contactForm = document.getElementById('contactForm');
     if (!contactForm) return;
-    
+
     // Telefon numarası formatlama
     const phoneInput = contactForm.querySelector('#phone');
     if (phoneInput) {
         phoneInput.addEventListener('input', (e) => {
             let value = e.target.value.replace(/\D/g, '');
             if (value.length > 10) value = value.substring(0, 10);
-            
-            // Format: (5XX) XXX XX XX
-            value = value.replace(/^(\d{3})(\d{3})(\d{2})(\d{2})$/, '($1) $2 $3 $4');
-            e.target.value = value;
+
+            if (value.length === 1 && value[0] === '0') {
+                value = '';
+            }
+
+            let formatted = '';
+            if (value.length > 0) formatted += `(${value.slice(0, 3)}`;
+            if (value.length >= 4) formatted += `) ${value.slice(3, 6)}`;
+            if (value.length >= 7) formatted += ` ${value.slice(6, 8)}`;
+            if (value.length >= 9) formatted += ` ${value.slice(8, 10)}`;
+
+            e.target.value = formatted;
         });
     }
-    
+
     // Form gönderimi
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
+
         try {
             const formData = new FormData(contactForm);
-            
-            // Burada gerçek API isteği yapılacak
-            console.log('Form data:', Object.fromEntries(formData));
-            
-            // Başarılı mesajı göster
-            alert('Mesajınız başarıyla gönderildi! En kısa sürede sizinle iletişime geçeceğiz.');
+
+            alert('Talebiniz başarıyla gönderildi! En kısa sürede sizinle iletişime geçeceğiz.');
             contactForm.reset();
         } catch (error) {
             console.error('Form error:', error);
@@ -4055,7 +2779,7 @@ const setupContactForm = () => {
 const setupCounters = () => {
     const counters = document.querySelectorAll(".counter");
     if (!counters.length) return;
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -4064,29 +2788,29 @@ const setupCounters = () => {
             }
         });
     }, { threshold: 0.5 });
-    
+
     counters.forEach(counter => observer.observe(counter));
 };
 
 const animateCounter = (counter) => {
     const target = +counter.getAttribute("data-target");
-    const duration = 2000; // 2 saniye
+    const duration = 2000;
     const startTime = performance.now();
-    
+
     const updateCount = (currentTime) => {
         const elapsedTime = currentTime - startTime;
         const progress = Math.min(elapsedTime / duration, 1);
         const value = Math.floor(progress * target);
-        
+
         counter.textContent = value.toLocaleString();
-        
+
         if (progress < 1) {
             requestAnimationFrame(updateCount);
         } else {
             counter.textContent = target.toLocaleString();
         }
     };
-    
+
     requestAnimationFrame(updateCount);
 };
 
@@ -4095,55 +2819,54 @@ const setupHeaderEffects = () => {
     const header = document.getElementById('mainHeader');
     const heroSection = document.querySelector('.hero');
     if (!header || !heroSection) return;
-    
+
     let isHovering = false;
     const heroHeight = heroSection.offsetHeight;
-    
+
     const handleScroll = () => {
         const scrollPosition = window.scrollY;
         const shouldBeTransparent = scrollPosition < heroHeight - 100 && !isHovering;
-        
+
         header.classList.toggle('transparent', shouldBeTransparent);
     };
-    
+
     header.addEventListener('mouseenter', () => {
         isHovering = true;
         header.classList.remove('transparent');
     });
-    
+
     header.addEventListener('mouseleave', () => {
         isHovering = false;
         handleScroll();
     });
-    
+
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Sayfa yüklendiğinde kontrol et
+    handleScroll();
 };
 
 // 7. SERVİS DROPDOWN
 const setupServicesDropdown = () => {
     const dropdown = document.querySelector('.services-dropdown');
     if (!dropdown) return;
-    
+
     const dropdownContent = dropdown.querySelector('.services-dropdown-content');
-    
+
     dropdown.addEventListener('mouseenter', () => {
         dropdownContent.style.opacity = '1';
         dropdownContent.style.visibility = 'visible';
         dropdownContent.style.transform = 'translateY(0)';
     });
-    
+
     dropdown.addEventListener('mouseleave', () => {
         dropdownContent.style.opacity = '0';
         dropdownContent.style.visibility = 'hidden';
         dropdownContent.style.transform = 'translateY(20px)';
     });
-    
-    // Mobil için touch event'leri
+
     dropdown.addEventListener('touchstart', (e) => {
         e.preventDefault();
         const isOpen = dropdownContent.style.opacity === '1';
-        
+
         dropdownContent.style.opacity = isOpen ? '0' : '1';
         dropdownContent.style.visibility = isOpen ? 'hidden' : 'visible';
         dropdownContent.style.transform = isOpen ? 'translateY(20px)' : 'translateY(0)';
@@ -4154,17 +2877,15 @@ const setupServicesDropdown = () => {
 const setupCookieConsent = () => {
     const cookieConsent = document.getElementById('cookie-consent');
     const acceptCookiesBtn = document.getElementById('accept-cookies');
-    
+
     if (!cookieConsent || !acceptCookiesBtn) return;
-    
-    // Çerez izni kontrolü
+
     if (!localStorage.getItem('cookiesAccepted')) {
         setTimeout(() => {
             cookieConsent.style.display = 'flex';
         }, 1000);
     }
-    
-    // Kabul butonu işlevselliği
+
     acceptCookiesBtn.addEventListener('click', () => {
         localStorage.setItem('cookiesAccepted', 'true');
         cookieConsent.style.display = 'none';
@@ -4175,147 +2896,28 @@ const setupCookieConsent = () => {
 const optimizeForMobile = () => {
     if ('matchMedia' in window && window.matchMedia('(max-width: 768px)').matches) {
         document.body.classList.add('mobile-device');
-        
-        // Düşük performanslı cihazlarda animasyonları kapat
+
         if (navigator.connection?.saveData) {
             document.querySelectorAll('*').forEach(el => {
-                el.style.animation = 'none !important';
-                el.style.transition = 'none !important';
+                el.style.animation = 'none';
+                el.style.transition = 'none';
             });
         }
     }
 };
 
-// 10. FİYATLANDIRMA TABLARI
-const setupPricingTabs = () => {
-    const tabs = document.querySelectorAll('.pricing-tab');
-    const tabContents = document.querySelectorAll('.pricing-content');
-    const tabSlider = document.querySelector('.tab-slider');
-    
-    if (!tabs.length || !tabSlider) return;
-    
-    // Set initial active tab
-    let activeTab = document.querySelector('.pricing-tab.active');
-    let activeTabIndex = Array.from(tabs).indexOf(activeTab);
-    updateTabSlider(activeTabIndex);
-    
-    tabs.forEach((tab, index) => {
-        tab.addEventListener('click', function() {
-            // Remove active class from all tabs and contents
-            tabs.forEach(t => t.classList.remove('active'));
-            tabContents.forEach(c => c.classList.remove('active'));
-            
-            // Add active class to clicked tab and corresponding content
-            this.classList.add('active');
-            const tabId = this.getAttribute('data-tab');
-            document.getElementById(`${tabId}-tab`)?.classList.add('active');
-            
-            // Update tab slider position
-            updateTabSlider(index);
-        });
-    });
-    
-    function updateTabSlider(index) {
-        const tabWidth = 100 / tabs.length;
-        tabSlider.style.width = `${tabWidth}%`;
-        tabSlider.style.left = `${index * tabWidth}%`;
-    }
-    
-    // Add hover effect to tabs
-    tabs.forEach(tab => {
-        tab.addEventListener('mouseenter', function() {
-            if (!this.classList.contains('active')) {
-                this.style.color = 'var(--primary-color)';
-            }
-        });
-        
-        tab.addEventListener('mouseleave', function() {
-            if (!this.classList.contains('active')) {
-                this.style.color = '';
-            }
-        });
-    });
-};
-
-// 10. YARDIMCI FONKSİYONLAR
-const showAlert = (message, type = 'info') => {
-    // Basit bir alert fonksiyonu, daha gelişmiş bir modal ile değiştirilebilir
-    alert(message);
-};
-
-// 11. INTRO ANIMASYONU
+// 10. GİRİŞ ANİMASYONU KAPATMA
 window.addEventListener('load', () => {
     const intro = document.getElementById('intro-animation');
-    setTimeout(() => {
-        intro.style.opacity = '0';
+    if (intro) {
         setTimeout(() => {
-            intro.style.display = 'none';
-        }, 100); // animasyon süresi kadar
-    }, 100); // intro kalma süresi
-});
-
-// Pricing Tabs Functionality
-document.addEventListener("DOMContentLoaded", function() {
-    const tabs = document.querySelectorAll('.pricing-tab');
-    const tabContents = document.querySelectorAll('.pricing-content');
-    const tabIndicator = document.querySelector('.tab-indicator');
-    
-    if (!tabs.length || !tabIndicator) return;
-    
-    // Set initial active tab
-    let activeTab = document.querySelector('.pricing-tab.active');
-    let activeTabIndex = Array.from(tabs).indexOf(activeTab);
-    updateTabIndicator(activeTabIndex);
-    
-    tabs.forEach((tab, index) => {
-        tab.addEventListener('click', function() {
-            // Remove active class from all tabs and contents
-            tabs.forEach(t => {
-                t.classList.remove('active');
-                t.setAttribute('aria-selected', 'false');
-            });
-            tabContents.forEach(c => {
-                c.classList.remove('active');
-                c.hidden = true;
-            });
-            
-            // Add active class to clicked tab and corresponding content
-            this.classList.add('active');
-            this.setAttribute('aria-selected', 'true');
-            const tabId = this.getAttribute('data-tab');
-            const content = document.getElementById(`${tabId}-tab`);
-            if (content) {
-                content.classList.add('active');
-                content.hidden = false;
-            }
-            
-            // Update tab indicator position
-            updateTabIndicator(index);
-        });
-    });
-    
-    function updateTabIndicator(index) {
-        const tabWidth = 100 / tabs.length;
-        tabIndicator.style.width = `${tabWidth}%`;
-        tabIndicator.style.left = `${index * tabWidth}%`;
+            intro.style.opacity = '0';
+            setTimeout(() => {
+                intro.style.display = 'none';
+            }, 100);
+        }, 100);
     }
-    
-    // Add hover effect to tabs
-    tabs.forEach(tab => {
-        tab.addEventListener('mouseenter', function() {
-            if (!this.classList.contains('active')) {
-                this.style.color = 'var(--primary-color)';
-            }
-        });
-        
-        tab.addEventListener('mouseleave', function() {
-            if (!this.classList.contains('active')) {
-                this.style.color = '';
-            }
-        });
-    });
 });
-
 
 </script>
 </body>
