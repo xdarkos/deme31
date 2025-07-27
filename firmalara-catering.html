@@ -1164,6 +1164,8 @@ body.dark-mode .premium-products-section::before {
     opacity: 0.03;
 }
 
+
+
 /* Footer */
 .footer {
     background-color: #2c3e50;
@@ -1798,6 +1800,338 @@ body.dark-mode .detail-btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(231, 76, 60, 0.4);
 }
+
+        /* Gizlilik Politika */
+        /* Temel Stiller */
+        .privacy-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 99999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            padding: 20px;
+        }
+        
+        .privacy-modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .privacy-modal {
+            background: white;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 850px;
+            max-height: 90vh;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            transform: translateY(30px);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .privacy-modal-overlay.active .privacy-modal {
+            transform: translateY(0);
+        }
+        
+        /* Başlık */
+        .privacy-header {
+            background: linear-gradient(135deg, #e74c3c, #ff6b5b);
+            color: white;
+            padding: 25px;
+            position: relative;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+        }
+        
+        .privacy-header h2 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        
+        /* Kapat Butonu */
+        .privacy-close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .privacy-close-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(90deg);
+        }
+        
+        /* İçerik Alanı */
+        .privacy-content {
+            padding: 0;
+        }
+        
+        .privacy-scroll-container {
+            max-height: calc(90vh - 120px);
+            overflow-y: auto;
+            padding: 25px;
+        }
+        
+        /* Giriş Bölümü */
+
+        
+        .privacy-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #f8f9fa;
+            border: 1px solid #eee;
+            padding: 8px 15px;
+            border-radius: 50px;
+            font-size: 14px;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        
+        
+        /* Bölümler */
+        .privacy-section {
+            margin-bottom: 35px;
+            border-bottom: 1px solid #f0f0f0;
+            padding-bottom: 25px;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .section-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #e74c3c, #ff6b5b);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+        }
+        
+        .privacy-section h3 {
+            margin: 0;
+            font-size: 20px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        .privacy-section p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        
+        /* Liste */
+        .privacy-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 20px 0;
+        }
+        
+        .privacy-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #f9f9f9;
+            padding: 12px 15px;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #444;
+        }
+        
+        .privacy-list i {
+            color: #e74c3c;
+            width: 20px;
+            text-align: center;
+        }
+        
+        /* Kartlar */
+        .usage-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .usage-card {
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .usage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .usage-card i {
+            font-size: 24px;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+        
+        .usage-card p {
+            margin: 0;
+            font-size: 13px;
+            color: #555;
+        }
+        
+        /* Tablo */
+        .cookie-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        
+        .cookie-table th, 
+        .cookie-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .cookie-table th {
+            background: #f5f5f5;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        .cookie-table tr:hover td {
+            background: #f9f9f9;
+        }
+        
+        /* İletişim */
+        .privacy-contact {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .privacy-contact h4 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+        
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #e74c3c, #ff6b5b);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 15px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(231, 76, 60, 0.4);
+        }
+        
+        /* Karanlık Mod */
+        body.dark-mode .privacy-modal {
+            background: #2c3e50;
+        }
+        
+        body.dark-mode .privacy-section h3,
+        body.dark-mode .privacy-contact h4 {
+            color: #f5f5f5;
+        }
+        
+        body.dark-mode .privacy-section p,
+        
+        body.dark-mode .privacy-list li,
+        body.dark-mode .usage-card p {
+            color: #ddd;
+        }
+        
+        body.dark-mode .privacy-list li,
+        body.dark-mode .usage-card,
+        body.dark-mode .cookie-table th {
+            background: #34495e;
+        }
+        
+        body.dark-mode .cookie-table td {
+            background: #2c3e50;
+        }
+        
+        body.dark-mode .privacy-list li {
+            border: 1px solid #3d5166;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .privacy-header h2 {
+                font-size: 22px;
+                padding-right: 30px;
+            }
+            
+            .privacy-scroll-container {
+                padding: 20px;
+            }
+            
+            .privacy-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .usage-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .cookie-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
 
 /* MARKA SLIDER */
 .brands-slider-section {
@@ -4193,23 +4527,22 @@ body.dark-mode .brand-item {
             <h2 id="contact-heading">İletişim</h2>
             <p>Firmanız için catering hizmeti almak veya detaylı bilgi için bizimle iletişime geçin</p>
         </div>
-        
+
         <div class="contact-container">
+            <!-- SOL BİLGİ KARTLARI -->
             <div class="contact-info">
                 <article class="info-card">
-                    <div class="info-icon">
-                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                    </div>
+                    <div class="info-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
                     <div class="info-content">
                         <h3>Adres</h3>
-                        <a href="https://www.google.com/maps/place/%C4%B0stanbul+Alev+Catering/@41.031533,28.901311,17z/data=!3m1!4b1!4m6!3m5!1s0x89d53cfbc558756b:0xe730685fc7684eff!8m2!3d41.031533!4d28.901311!16s%2Fg%2F11sd9rc6fh?entry=ttu" class="contact-link" target="_blank">Terazidere, Sema Sk. No:2, 34045 Bayrampaşa/İstanbul</a>
+                        <a href="https://www.google.com/maps/place/..." class="contact-link" target="_blank">
+                            Güneşli Mahallesi, 1140. Sk. Akdeniz İş Merkezi No:2, 34212 Bağcılar/İstanbul
+                        </a>
                     </div>
                 </article>
 
                 <article class="info-card">
-                    <div class="info-icon">
-                        <i class="fas fa-phone-alt" aria-hidden="true"></i>
-                    </div>
+                    <div class="info-icon"><i class="fas fa-phone-alt" aria-hidden="true"></i></div>
                     <div class="info-content">
                         <h3>Telefon</h3>
                         <a href="tel:+902123456789" class="contact-link">+90 212 345 67 89</a>
@@ -4217,26 +4550,20 @@ body.dark-mode .brand-item {
                 </article>
 
                 <article class="info-card whatsapp-card">
-                    <div class="info-icon">
-                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
-                    </div>
+                    <div class="info-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
                     <div class="info-content">
                         <h3>WhatsApp</h3>
                         <div class="whatsapp-container">
                             <a href="https://wa.me/905555555555" class="whatsapp-link" target="_blank">
                                 <span class="phone-number">+90 555 555 55 55</span>
-                                <span class="whatsapp-action">
-                                    <i class="fab fa-whatsapp" aria-hidden="true"></i> Mesaj Gönder
-                                </span>
+                                <span class="whatsapp-action"><i class="fab fa-whatsapp"></i> Mesaj Gönder</span>
                             </a>
                         </div>
                     </div>
                 </article>
 
                 <article class="info-card">
-                    <div class="info-icon">
-                        <i class="fas fa-envelope" aria-hidden="true"></i>
-                    </div>
+                    <div class="info-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
                     <div class="info-content">
                         <h3>E-posta</h3>
                         <a href="mailto:info@kurumsalcatering.com" class="contact-link">info@kurumsalcatering.com</a>
@@ -4251,61 +4578,51 @@ body.dark-mode .brand-item {
                 </article>
             </div>
 
+            <!-- FORM ALANI -->
             <div class="contact-form-container">
                 <div class="contact-form-header">
                     <h3>Teklif Formu</h3>
                     <p>Firmanız için catering hizmeti almak istiyorsanız lütfen formu doldurun</p>
                 </div>
 
-                <!-- Form -->
-<form id="contactForm" action="https://formspree.io/f/mwpqogyd" method="POST">
-    <div class="form-group">
-        <i class="fas fa-user" aria-hidden="true"></i>
-        <input type="text" class="form-control" name="Ad Soyad" placeholder="Adınız Soyadınız" required>
-    </div>
+                <form id="contactForm" action="https://formspree.io/f/mwpqogyd" method="POST">
+                    <div class="form-group">
+                        <i class="fas fa-user" aria-hidden="true"></i>
+                        <input type="text" class="form-control" name="Ad Soyad" placeholder="Adınız Soyadınız" required>
+                    </div>
 
-    <div class="form-group">
-        <i class="fas fa-building" aria-hidden="true"></i>
-        <input type="text" class="form-control" name="Firma" placeholder="Firma Adı" required>
-    </div>
+                    <div class="form-group">
+                        <i class="fas fa-building" aria-hidden="true"></i>
+                        <input type="text" class="form-control" name="Firma" placeholder="Firma Adı" required>
+                    </div>
 
-    <div class="form-group">
-        <i class="fas fa-phone-alt" aria-hidden="true"></i>
-        <input type="tel" class="form-control" id="phone" name="Telefon"
-               placeholder="Telefon (5__) ___ __ __"
-               pattern="[\d\s\(\)\-]{10,}"
-               title="10 haneli telefon numarası giriniz"
-               required>
-    </div>
+                    <div class="form-group">
+                        <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                        <input type="tel" class="form-control" id="phoneVisible"
+                            placeholder="Telefon (5__) ___ __ __" inputmode="numeric" maxlength="19" required>
+                        <input type="hidden" name="Telefon" id="phone">
+                    </div>
 
-    <div class="form-group">
-        <i class="fas fa-envelope" aria-hidden="true"></i>
-        <input type="email" class="form-control" name="E-posta" placeholder="E-posta Adresiniz" required>
-    </div>
+                    <div class="form-group">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <input type="email" class="form-control" name="E-posta" placeholder="E-posta Adresiniz" required>
+                    </div>
 
-    <div class="form-group">
-        <i class="fas fa-users" aria-hidden="true"></i>
-        <input type="number"
-               class="form-control"
-               name="Kişi Sayısı"
-               id="person-count"
-               placeholder="Günlük Kişi Sayısı"
-               inputmode="numeric"
-               pattern="[0-9]*"
-               min="1"
-               step="1"
-               required>
-    </div>
+                    <div class="form-group">
+                        <i class="fas fa-users" aria-hidden="true"></i>
+                        <input type="text" class="form-control" name="Kişi Sayısı" id="person-count"
+                            placeholder="Günlük Kişi Sayısı" inputmode="numeric" maxlength="5" required>
+                    </div>
 
-    <div class="form-group">
-        <i class="fas fa-edit" aria-hidden="true"></i>
-        <textarea class="form-control" name="Mesaj" placeholder="Ek bilgiler ve özel istekleriniz" required></textarea>
-    </div>
+                    <div class="form-group">
+                        <i class="fas fa-edit" aria-hidden="true"></i>
+                        <textarea class="form-control" name="Mesaj" placeholder="Ek bilgiler ve özel istekleriniz" required></textarea>
+                    </div>
 
-    <button type="submit" class="submit-btn">
-        <i class="fas fa-paper-plane" aria-hidden="true"></i> TEKLİF AL
-    </button>
-</form>
+                    <button type="submit" class="submit-btn">
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i> TEKLİF AL
+                    </button>
+                </form>
             </div>
         </div>
     </div>
@@ -4377,13 +4694,262 @@ body.dark-mode .brand-item {
                     &copy; 2025 İstanbul Alev Catering. Tüm hakları saklıdır.
                 </div>
                 <div class="footer-legal">
-                    <a href="#">Gizlilik Politikası</a>
+                    <a href="#privacy-policy">Gizlilik Politikası</a>
                     <a href="#">Çerezler</a>
                     <a href="#">Şartlar & Koşullar</a>
                 </div>
             </div>
         </div>
     </footer>
+	
+	    <!-- Gizlilik Politikası Modal -->
+    <div id="privacyModal" class="privacy-modal-overlay">
+        <div class="privacy-modal">
+            <div class="privacy-header">
+                <h2><i class="fas fa-shield-alt"></i> Gizlilik Politikası</h2>
+                <button class="privacy-close-btn" aria-label="Kapat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="privacy-content">
+                <div class="privacy-scroll-container">
+                    <div class="privacy-intro">
+                        <div class="privacy-badge">
+                            <i class="fas fa-lock"></i> Son Güncelleme: 01/07/2025
+                        </div>
+                        <p>İstanbul Alev Catering olarak, müşterilerimizin gizliliğine büyük önem veriyoruz. Bu Gizlilik Politikası, web sitemizi ziyaret ettiğinizde veya hizmetlerimizden yararlandığınızda kişisel bilgilerinizin nasıl toplandığını, kullanıldığını, korunduğunu ve açığa çıkarıldığını açıklamaktadır. Lütfen bu politikayı dikkatlice okuyunuz.</p>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <div class="section-header">
+                            <div class="section-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3>Toplanan Kişisel Veriler</h3>
+                        </div>
+                        <p>İstanbul Alev Catering olarak, hizmetlerimizi sunabilmek ve iyileştirebilmek amacıyla çeşitli kişisel veriler toplamaktayız. Topladığımız bilgiler şunları içerebilir:</p>
+                        <ul class="privacy-list">
+                            <li><i class="fas fa-user"></i> Adınız, soyadınız</li>
+                            <li><i class="fas fa-phone"></i> Telefon numaranız</li>
+                            <li><i class="fas fa-envelope"></i> E-posta adresiniz</li>
+                            <li><i class="fas fa-map-marker-alt"></i> Adres bilgileriniz</li>
+                            <li><i class="fas fa-building"></i> Şirket bilgileriniz (kurumsal müşteriler için)</li>
+                            <li><i class="fas fa-credit-card"></i> Ödeme bilgileriniz (sadece işlem sırasında)</li>
+                            <li><i class="fas fa-calendar-alt"></i> Etkinlik tarihleri ve detayları</li>
+                            <li><i class="fas fa-utensils"></i> Yemek tercihleriniz ve diyet kısıtlamalarınız</li>
+                            <li><i class="fas fa-network-wired"></i> IP adresiniz ve tarayıcı bilgileriniz</li>
+                        </ul>
+                        <p>Bu bilgiler doğrudan sizden (formlar aracılığıyla, telefon görüşmelerinde veya e-posta yoluyla) veya otomatik olarak (çerezler ve benzeri teknolojiler aracılığıyla) toplanabilir.</p>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <div class="section-header">
+                            <div class="section-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>Verilerin Kullanım Amacı</h3>
+                        </div>
+                        <p>Topladığımız kişisel verileri aşağıdaki amaçlarla kullanmaktayız:</p>
+                        <div class="usage-cards">
+                            <div class="usage-card">
+                                <i class="fas fa-utensils"></i>
+                                <p>Siparişlerinizi işleme alma ve catering hizmetlerimizi sunma</p>
+                            </div>
+                            <div class="usage-card">
+                                <i class="fas fa-headset"></i>
+                                <p>Müşteri hizmetleri ve destek sağlama</p>
+                            </div>
+                            <div class="usage-card">
+                                <i class="fas fa-bell"></i>
+                                <p>Yeni menüler, kampanyalar ve hizmetler hakkında bilgilendirme</p>
+                            </div>
+                            <div class="usage-card">
+                                <i class="fas fa-chart-pie"></i>
+                                <p>Hizmetlerimizi geliştirmek için analiz yapma</p>
+                            </div>
+                            <div class="usage-card">
+                                <i class="fas fa-shield-alt"></i>
+                                <p>Güvenlik ve dolandırıcılık önleme</p>
+                            </div>
+                            <div class="usage-card">
+                                <i class="fas fa-gavel"></i>
+                                <p>Yasal yükümlülükleri yerine getirme</p>
+                            </div>
+                        </div>
+                        <p>Kişisel verileriniz, yalnızca bu Gizlilik Politikası'nda belirtilen amaçlar doğrultusunda ve yürürlükteki veri koruma yasalarına uygun olarak kullanılacaktır.</p>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <div class="section-header">
+                            <div class="section-icon">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <h3>Veri Paylaşımı ve Aktarım</h3>
+                        </div>
+                        <p>İstanbul Alev Catering olarak, topladığımız kişisel verileri üçüncü taraflarla yalnızca aşağıdaki durumlarda paylaşırız:</p>
+                        <ul class="privacy-list">
+                            <li><i class="fas fa-truck"></i> Catering hizmetlerimizin bir parçası olarak tedarikçiler ve lojistik partnerlerle (sadece gerekli bilgiler paylaşılır)</li>
+                            <li><i class="fas fa-lock"></i> Veri işleme hizmeti sağlayan güvenilir üçüncü taraflarla (sözleşmeli veri işleyiciler)</li>
+                            <li><i class="fas fa-gavel"></i> Yasal bir zorunluluk olduğunda veya haklarımızı korumak için gerekli olduğunda</li>
+                            <li><i class="fas fa-handshake"></i> Açık rızanız olduğunda (örneğin ortak promosyonlar için)</li>
+                        </ul>
+                        <p>Uluslararası veri transferi yapmıyoruz. Tüm veri işleme faaliyetleri Türkiye sınırları içinde gerçekleşmektedir.</p>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <div class="section-header">
+                            <div class="section-icon">
+                                <i class="fas fa-shield-virus"></i>
+                            </div>
+                            <h3>Veri Güvenliği</h3>
+                        </div>
+                        <p>İstanbul Alev Catering olarak, kişisel verilerinizin güvenliğini sağlamak için uygun teknik ve idari önlemleri almaktayız:</p>
+                        <ul class="privacy-list">
+                            <li><i class="fas fa-lock"></i> SSL şifreleme kullanıyoruz</li>
+                            <li><i class="fas fa-firewall"></i> Güvenlik duvarları ve saldırı tespit sistemleri</li>
+                            <li><i class="fas fa-user-shield"></i> Sınırlı erişim politikası</li>
+                            <li><i class="fas fa-key"></i> Güçlü şifreleme yöntemleri</li>
+                            <li><i class="fas fa-history"></i> Düzenli yedekleme sistemleri</li>
+                        </ul>
+                        <p>Ödeme bilgileriniz işlem tamamlandıktan sonra saklanmaz. Kredi kartı bilgileri doğrudan ödeme işlemcisi tarafından işlenir ve biz bu bilgilere erişemeyiz.</p>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <div class="section-header">
+                            <div class="section-icon">
+                                <i class="fas fa-cookie-bite"></i>
+                            </div>
+                            <h3>Çerez Politikası</h3>
+                        </div>
+                        <p>Web sitemiz, kullanıcı deneyimini iyileştirmek ve hizmetlerimizi geliştirmek amacıyla çerezler ve benzeri teknolojiler kullanmaktadır. Çerezler, tarayıcınız tarafından bilgisayarınıza kaydedilen küçük metin dosyalarıdır.</p>
+                        <p>Kullandığımız çerez türleri:</p>
+                        <table class="cookie-table">
+                            <tr>
+                                <th>Çerez Türü</th>
+                                <th>Amaç</th>
+                                <th>Süre</th>
+                                <th>Devre Dışı Bırakma</th>
+                            </tr>
+                            <tr>
+                                <td>Zorunlu Çerezler</td>
+                                <td>Sitenin temel işlevlerini çalıştırmak için gerekli</td>
+                                <td>Oturum boyunca</td>
+                                <td>Tarayıcı ayarlarından, ancak site işlevselliği etkilenir</td>
+                            </tr>
+                            <tr>
+                                <td>Performans Çerezleri</td>
+                                <td>Ziyaretçi trafiği ve site kullanım analizi</td>
+                                <td>1 ay - 1 yıl</td>
+                                <td>Google Analytics opt-out eklentisi ile</td>
+                            </tr>
+                            <tr>
+                                <td>İşlevsellik Çerezleri</td>
+                                <td>Tercihlerinizi hatırlama (dil, bölge vb.)</td>
+                                <td>1 yıl</td>
+                                <td>Tarayıcı ayarlarından</td>
+                            </tr>
+                            <tr>
+                                <td>Hedefleme Çerezleri</td>
+                                <td>İlgi alanlarınıza göre reklam gösterme</td>
+                                <td>1 ay - 1 yıl</td>
+                                <td>Reklam tercihleri sayfasından</td>
+                            </tr>
+                        </table>
+                        <p>Çerezleri tarayıcı ayarlarınızı değiştirerek kontrol edebilir veya devre dışı bırakabilirsiniz. Ancak bu, web sitemizin bazı özelliklerinin düzgün çalışmamasına neden olabilir.</p>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <div class="section-header">
+                            <div class="section-icon">
+                                <i class="fas fa-user-clock"></i>
+                            </div>
+                            <h3>Veri Saklama Süresi</h3>
+                        </div>
+                        <p>Kişisel verileriniz, hizmet ilişkimiz devam ettiği sürece ve yasal yükümlülüklerimiz gerektirdiği ölçüde saklanır. Genel olarak:</p>
+                        <ul class="privacy-list">
+                            <li><i class="fas fa-calendar-check"></i> Müşteri bilgileri: Son işlemden itibaren 5 yıl</li>
+                            <li><i class="fas fa-file-invoice"></i> Fatura bilgileri: Yasal zorunluluk gereği 10 yıl</li>
+                            <li><i class="fas fa-envelope"></i> E-posta abonelikleri: Abonelikten çıkana kadar</li>
+                            <li><i class="fas fa-cookie"></i> Çerezler: Tabloda belirtilen süreler kadar</li>
+                        </ul>
+                        <p>Saklama süresi dolan veriler anonim hale getirilir veya güvenli bir şekilde imha edilir.</p>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <div class="section-header">
+                            <div class="section-icon">
+                                <i class="fas fa-user-cog"></i>
+                            </div>
+                            <h3>Haklarınız</h3>
+                        </div>
+                        <p>Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında aşağıdaki haklara sahipsiniz:</p>
+                        <div class="usage-cards">
+                            <div class="usage-card">
+                                <i class="fas fa-info-circle"></i>
+                                <p>Verilerinizin işlenip işlenmediğini öğrenme</p>
+                            </div>
+                            <div class="usage-card">
+                                <i class="fas fa-address-card"></i>
+                                <p>Verilerinize erişim sağlama</p>
+                            </div>
+                            <div class="usage-card">
+                                <i class="fas fa-edit"></i>
+                                <p>Yanlış verilerin düzeltilmesini isteme</p>
+                            </div>
+                            <div class="usage-card">
+                                <i class="fas fa-trash-alt"></i>
+                                <p>Verilerin silinmesini isteme</p>
+                            </div>
+                            <div class="usage-card">
+                                <i class="fas fa-ban"></i>
+                                <p>İşleme faaliyetlerine itiraz etme</p>
+                            </div>
+                            <div class="usage-card">
+                                <i class="fas fa-file-export"></i>
+                                <p>Verilerin aktarılmasını isteme</p>
+                            </div>
+                        </div>
+                        <p>Bu haklarınızı kullanmak için <strong>istanbulalevcatering@hotmail.com</strong> adresine e-posta gönderebilir veya aşağıdaki iletişim butonunu kullanabilirsiniz. Talebinizin işleme alınabilmesi için kimliğinizi doğrulamamız gerekebilir.</p>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <div class="section-header">
+                            <div class="section-icon">
+                                <i class="fas fa-child"></i>
+                            </div>
+                            <h3>Çocukların Gizliliği</h3>
+                        </div>
+                        <p>Hizmetlerimiz 18 yaşın altındaki kişilere yönelik değildir. Bilerek 18 yaşından küçüklerden kişisel veri toplamıyoruz. Bir çocuğun bize kişisel veri sağladığını fark edersek, bu verileri derhal sileriz.</p>
+                    </div>
+                    
+                    <div class="privacy-section">
+                        <div class="section-header">
+                            <div class="section-icon">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <h3>Politika Değişiklikleri</h3>
+                        </div>
+                        <p>Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz. Değişiklik yapıldığında, politikayı "Son Güncelleme" tarihini değiştirerek güncelleyeceğiz. Önemli değişiklikler durumunda, mümkün olan durumlarda sizi e-posta yoluyla bilgilendireceğiz.</p>
+                        <p>Politikanın güncel halini web sitemizde her zaman görüntüleyebilirsiniz. Değişikliklerden haberdar olmak için bu politikayı periyodik olarak gözden geçirmenizi öneririz.</p>
+                    </div>
+                    
+<div class="privacy-contact">
+    <h4><i class="fas fa-question-circle"></i> Sorularınız mı var?</h4>
+    <p>Gizlilik politikamızla ilgili herhangi bir sorunuz varsa, lütfen bizimle iletişime geçmekten çekinmeyin:</p>
+    <a href="mailto:istanbulalevcatering@hotmail.com" class="contact-btn">
+        <i class="fas fa-paper-plane"></i> E-posta Gönder
+    </a>
+    <p style="margin-top: 15px; font-size: 14px;">
+        <i class="fas fa-map-marker-alt"></i> <strong>Adres:</strong> Güneşli Mahallesi, 1140. Sk. Akdeniz İş Merkezi No:2, 34212 Bağcılar/İstanbul<br>
+        <i class="fas fa-phone"></i> <strong>Telefon:</strong> 0534 576 94 57<br>
+        <i class="fas fa-envelope"></i> <strong>E-posta:</strong> istanbulalevcatering@hotmail.com
+    </p>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <!-- Back to Top Button -->
 <button class="back-to-top" id="backToTopBtn" aria-label="Sayfanın başına dön">
@@ -4403,7 +4969,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setupMobileMenu();
     setupBackToTop();
     setupContactForm();
-	setupIntroAnimation();
+	 setupIntroAnimation();
     setupHeaderEffects();
     setupServicesDropdown();
     setupCookieConsent();
@@ -4427,6 +4993,53 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+        // Gizlilik Politikası Modal'ını Aç/Kapat
+        function setupPrivacyModal() {
+            const modal = document.getElementById('privacyModal');
+            const closeBtn = document.querySelector('.privacy-close-btn');
+            const privacyLinks = document.querySelectorAll('a[href*="privacy-policy"], a[href*="gizlilik-politikasi"]');
+            
+            // Tüm gizlilik politikası linklerini bul ve click eventi ekle
+            privacyLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    openPrivacyModal();
+                });
+            });
+            
+            // Kapat butonu
+            closeBtn.addEventListener('click', closePrivacyModal);
+            
+            // Dışarı tıklayınca kapat
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closePrivacyModal();
+                }
+            });
+            
+            // ESC tuşuyla kapat
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    closePrivacyModal();
+                }
+            });
+        }
+        
+        function openPrivacyModal() {
+            const modal = document.getElementById('privacyModal');
+            document.body.style.overflow = 'hidden';
+            modal.classList.add('active');
+        }
+        
+        function closePrivacyModal() {
+            const modal = document.getElementById('privacyModal');
+            document.body.style.overflow = 'auto';
+            modal.classList.remove('active');
+        }
+        
+        // Sayfa yüklendiğinde modal'ı kur
+        document.addEventListener('DOMContentLoaded', setupPrivacyModal);
 
 // 1. TEMA YÖNETİMİ
 const initTheme = () => {
@@ -4545,36 +5158,60 @@ const setupBackToTop = () => {
     handleScroll(); // Sayfa yüklendiğinde kontrol et
 };
 
-// 4. İLETİŞİM FORMU
 const setupContactForm = () => {
     const contactForm = document.getElementById('contactForm');
     if (!contactForm) return;
 
-    // Telefon numarası otomatik formatlama
-    const phoneInput = contactForm.querySelector('#phone');
-    if (phoneInput) {
-        phoneInput.addEventListener('input', (e) => {
+    const phoneVisibleInput = contactForm.querySelector('#phoneVisible');
+    const phoneHiddenInput = contactForm.querySelector('#phone');
+    const personCountInput = contactForm.querySelector('#person-count');
+
+    // TELEFON: Formatla ve doğrula
+    if (phoneVisibleInput) {
+        phoneVisibleInput.addEventListener('input', (e) => {
             let value = e.target.value.replace(/\D/g, '');
-            if (value.length > 10) value = value.substring(0, 10);
-            if (value.length >= 10) {
-                value = value.replace(/^(\d{3})(\d{3})(\d{2})(\d{2})$/, '($1) $2 $3 $4');
+            if (value.length === 1 && value[0] === '0') {
+                e.target.value = '';
+                phoneHiddenInput.value = '';
+                return;
             }
-            e.target.value = value;
+            if (value.length > 10) value = value.slice(0, 10);
+
+            let formatted = '';
+            if (value.length > 0) formatted += `(${value.slice(0, 3)}`;
+            if (value.length >= 4) formatted += `) ${value.slice(3, 6)}`;
+            if (value.length >= 7) formatted += ` ${value.slice(6, 8)}`;
+            if (value.length >= 9) formatted += ` ${value.slice(8, 10)}`;
+
+            e.target.value = formatted.trim();
+            phoneHiddenInput.value = value;
+        });
+
+        phoneVisibleInput.addEventListener('paste', (e) => {
+            e.preventDefault();
+            const pasted = (e.clipboardData || window.clipboardData).getData('text');
+            let digits = pasted.replace(/\D/g, '').slice(0, 10);
+            if (digits.charAt(0) === '0') {
+                phoneVisibleInput.value = '';
+                phoneHiddenInput.value = '';
+                return;
+            }
+            let formatted = `(${digits.slice(0, 3)}) ${digits.slice(3, 6)} ${digits.slice(6, 8)} ${digits.slice(8, 10)}`;
+            phoneVisibleInput.value = formatted.trim();
+            phoneHiddenInput.value = digits;
         });
     }
 
-    // Günlük kişi sayısı sadece sayı kabul etsin
-    const personInput = contactForm.querySelector('#person-count');
-    if (personInput) {
-        personInput.addEventListener('input', (e) => {
+    // GÜNLÜK KİŞİ SAYISI: Sadece rakam
+    if (personCountInput) {
+        personCountInput.addEventListener('input', (e) => {
             e.target.value = e.target.value.replace(/\D/g, '');
         });
     }
 
-    // Form gönderimi
+    // FORM GÖNDERİMİ
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalBtnText = submitBtn.innerHTML;
 
@@ -4583,18 +5220,17 @@ const setupContactForm = () => {
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Gönderiliyor...';
 
             const formData = new FormData(contactForm);
-
             const response = await fetch(contactForm.action, {
                 method: 'POST',
                 body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
+                headers: { 'Accept': 'application/json' }
             });
 
             if (response.ok) {
                 alert('Talebiniz başarıyla gönderildi! En kısa sürede sizinle iletişime geçeceğiz.');
                 contactForm.reset();
+                if (phoneVisibleInput) phoneVisibleInput.value = '';
+                if (phoneHiddenInput) phoneHiddenInput.value = '';
             } else {
                 alert('Gönderim başarısız. Lütfen bilgilerinizi kontrol ederek tekrar deneyin.');
             }
@@ -4608,24 +5244,34 @@ const setupContactForm = () => {
     });
 };
 
-  // Sayfa yüklendiğinde çalışacak kod
-  document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', setupContactForm);
 
-    // Cihazın mobil olup olmadığını kontrol et:
-    // 1. Ekran genişliği 768 piksel veya daha küçükse
-    // 2. Veya userAgent içinde "Mobi" veya "Android" geçiyorsa
+  // Hızlı Görüntüle Mobilde Kapanması İçin
+   document.addEventListener("DOMContentLoaded", function () {
+
+    /**
+     * Mobil cihaz kontrolü:
+     * - Ekran genişliği 768px veya daha az ise
+     * - Ya da userAgent mobil bir cihaz içeriyorsa
+     */
     const isMobile = window.innerWidth <= 768 || /Mobi|Android/i.test(navigator.userAgent);
 
-    // Eğer mobil cihaz ise...
     if (isMobile) {
-      // Tüm 'Hızlı Görüntüle' butonlarını seç
+      // 1. Hızlı Görüntüle butonlarını gizle ve devre dışı bırak
       document.querySelectorAll(".quick-view-btn").forEach(function (btn) {
-        // Butonu gizle
-        btn.style.display = "none";
-        // Butonun tıklanmasını engelle
-        btn.disabled = true;
+        btn.style.display = "none";     // Butonu tamamen gizle
+        btn.disabled = true;            // Tıklanamaz hale getir
+      });
+
+      // 2. Detaylar butonunu görünür tut, ama tıklanmasını engelle
+      document.querySelectorAll(".detail-btn").forEach(function (btn) {
+        btn.disabled = true; // Tıklanmayı engelle (görünür kalır)
+        btn.style.pointerEvents = "none"; // Tıklama olayını tamamen iptal et
+        btn.style.opacity = "0.6"; // Opsiyonel: biraz şeffaf yap (istersen)
+        btn.style.cursor = "not-allowed"; // Opsiyonel: el işareti yerine engelli işaret
       });
     }
+
   });
 
 // 5. HEADER SCROLL EFFECT
@@ -5121,11 +5767,13 @@ const setupTouchEvents = () => {
     }
 };
 
-// 10. INTRO ANİMASYONU
 const setupIntroAnimation = () => {
     const intro = document.getElementById('intro-animation');
     if (!intro) return;
-    
+
+    // Sayfa yüklenene kadar scroll'u engelle
+    document.body.style.overflow = 'hidden';
+
     // Animasyonu başlat
     setTimeout(() => {
         intro.style.opacity = '0';
