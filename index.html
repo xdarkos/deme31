@@ -2814,71 +2814,65 @@ const initTheme = () => {
     });
 };
 
-// 4. MOBİL MENÜ YÖNETİMİ
-const setupMobileMenu = () => {
-    if (!DOM_ELEMENTS.mobileMenuBtn || !DOM_ELEMENTS.mobileMenu) return;
-    
-    const toggleMenu = (isOpening) => {
-        DOM_ELEMENTS.mobileMenu.classList.toggle('active', isOpening);
-        DOM_ELEMENTS.body.classList.toggle('menu-open', isOpening);
-        DOM_ELEMENTS.mobileMenuBtn.setAttribute('aria-expanded', isOpening);
-        DOM_ELEMENTS.mobileMenu.setAttribute('aria-hidden', !isOpening);
+    // 2. MOBİL MENÜ YÖNETİMİ (Optimize Edildi)
+    const setupMobileMenu = () => {
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenuClose = document.querySelector('.mobile-menu-close');
+        const mobileMenu = document.getElementById('mobileMenu');
         
-        // Açılışta tüm dropdown'ları kapat
-        if (isOpening) {
-            document.querySelectorAll('.mobile-menu-links .services-dropdown').forEach(item => {
-                item.classList.remove('active');
-            });
-        }
-    };
-    
-    // Mobil menü butonu
-    DOM_ELEMENTS.mobileMenuBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        toggleMenu(!DOM_ELEMENTS.mobileMenu.classList.contains('active'));
-    });
-    
-    // Kapatma butonu
-    if (DOM_ELEMENTS.mobileMenuClose) {
-        DOM_ELEMENTS.mobileMenuClose.addEventListener('click', (e) => {
-            e.stopPropagation();
-            toggleMenu(false);
-        });
-    }
-    
-    // Mobil menü dropdown işlevselliği
-    document.querySelectorAll('.mobile-menu-links .services-dropdown > a').forEach(link => {
-        link.addEventListener('click', function(e) {
-            if (window.innerWidth <= 992) {
-                e.preventDefault();
-                e.stopPropagation();
-                const dropdown = this.parentElement;
-                dropdown.classList.toggle('active');
-                
-                // Diğer açık dropdown'ları kapat
+        if (!mobileMenuBtn || !mobileMenu) return;
+        
+        const toggleMenu = (isOpening) => {
+            mobileMenu.classList.toggle('active', isOpening);
+            document.body.classList.toggle('menu-open', isOpening);
+            mobileMenuBtn.setAttribute('aria-expanded', isOpening);
+            mobileMenu.setAttribute('aria-hidden', !isOpening);
+            
+            // Mobilde body scroll'u engelleme
+            if (isOpening) {
+                document.body.style.overflow = 'hidden';
+                // Açılırken tüm dropdown'ları kapat
                 document.querySelectorAll('.mobile-menu-links .services-dropdown').forEach(item => {
-                    if (item !== dropdown) item.classList.remove('active');
+                    item.classList.remove('active');
                 });
+            } else {
+                document.body.style.overflow = '';
             }
-        });
-    });
-    
-    // Menü dışına tıklanınca kapat
-    document.addEventListener('click', (e) => {
-        if (DOM_ELEMENTS.mobileMenu.classList.contains('active') && 
-            !DOM_ELEMENTS.mobileMenu.contains(e.target) && 
-            e.target !== DOM_ELEMENTS.mobileMenuBtn) {
-            toggleMenu(false);
-        }
-    });
-    
-    // Dokunmatik olaylar için optimizasyon
-    DOM_ELEMENTS.mobileMenu.addEventListener('touchmove', (e) => {
-        if (DOM_ELEMENTS.mobileMenu.classList.contains('active')) {
-            e.preventDefault();
-        }
-    }, { passive: false });
-};
+        };
+        
+        // Event delegation kullanarak mobil dropdown'ları yönetme
+        document.addEventListener('click', (e) => {
+            // Mobil menü butonu
+            if (e.target.closest('#mobileMenuBtn')) {
+                toggleMenu(!mobileMenu.classList.contains('active'));
+                return;
+            }
+            
+            // Mobil menü kapatma butonu
+            if (e.target.closest('.mobile-menu-close')) {
+                toggleMenu(false);
+                return;
+            }
+            
+            // Mobil dropdown'lar
+            if (window.innerWidth <= 992) {
+                const dropdownLink = e.target.closest('.mobile-menu-links .services-dropdown > a');
+                if (dropdownLink) {
+                    e.preventDefault();
+                    const dropdown = dropdownLink.parentElement;
+                    dropdown.classList.toggle('active');
+                    return;
+                }
+            }
+            
+            // Mobil menü dışına tıklama
+            if (mobileMenu.classList.contains('active') && 
+                !mobileMenu.contains(e.target) && 
+                !e.target.closest('#mobileMenuBtn')) {
+                toggleMenu(false);
+            }
+        }, { passive: true });
+    };
 
 // 5. BACK TO TOP BUTONU
 const setupBackToTop = () => {
