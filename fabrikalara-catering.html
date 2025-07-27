@@ -3479,7 +3479,7 @@ body.dark-mode .fa-sun {
         
 </section>
 
-        <!-- Contact Section -->
+<!-- Contact Section -->
 <section id="contact" class="contact-section section" aria-labelledby="contact-heading">
     <div class="container">
         <div class="section-title">
@@ -3490,9 +3490,8 @@ body.dark-mode .fa-sun {
         <div class="contact-container">
             <!-- Sol Bilgi Kartları -->
             <div class="contact-info">
-                <!-- Adres Kartı -->
                 <article class="info-card">
-                    <div class="info-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
+                    <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
                     <div class="info-content">
                         <h3>Adres</h3>
                         <a href="https://www.google.com/maps/place/..." class="contact-link" target="_blank">
@@ -3501,9 +3500,8 @@ body.dark-mode .fa-sun {
                     </div>
                 </article>
 
-                <!-- Diğer Kartlar (Telefon, WhatsApp, E-posta, Çalışma Saatleri) -->
                 <article class="info-card">
-                    <div class="info-icon"><i class="fas fa-phone-alt" aria-hidden="true"></i></div>
+                    <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
                     <div class="info-content">
                         <h3>Fabrika Çözümleri</h3>
                         <a href="tel:+905345769457" class="contact-link">+90 534 576 94 57</a>
@@ -3511,7 +3509,7 @@ body.dark-mode .fa-sun {
                 </article>
 
                 <article class="info-card whatsapp-card">
-                    <div class="info-icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
+                    <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
                     <div class="info-content">
                         <h3>WhatsApp</h3>
                         <div class="whatsapp-container">
@@ -3524,7 +3522,7 @@ body.dark-mode .fa-sun {
                 </article>
 
                 <article class="info-card">
-                    <div class="info-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+                    <div class="info-icon"><i class="fas fa-envelope"></i></div>
                     <div class="info-content">
                         <h3>E-posta</h3>
                         <a href="mailto:fabrika@istanbulalevcatering.com" class="contact-link">fabrika@istanbulalevcatering.com</a>
@@ -3548,37 +3546,37 @@ body.dark-mode .fa-sun {
 
                 <form id="contactForm" action="https://formspree.io/f/mwpqogyd" method="POST">
                     <div class="form-group">
-                        <i class="fas fa-user" aria-hidden="true"></i>
+                        <i class="fas fa-user"></i>
                         <input type="text" class="form-control" id="name" name="name" placeholder="Adınız Soyadınız" required>
                     </div>
 
                     <div class="form-group">
-                        <i class="fas fa-industry" aria-hidden="true"></i>
+                        <i class="fas fa-industry"></i>
                         <input type="text" class="form-control" id="company" name="company" placeholder="Fabrika Adı" required>
                     </div>
 
                     <div class="form-group">
-                        <i class="fas fa-phone-alt" aria-hidden="true"></i>
-                        <input type="tel" class="form-control" id="phone" name="phone"
-                               inputmode="numeric" pattern="\d*"
+                        <i class="fas fa-phone-alt"></i>
+                        <input type="tel" class="form-control" id="phoneVisible"
                                placeholder="Telefon (5__) ___ __ __"
-                               maxlength="19" required>
+                               inputmode="numeric" maxlength="19" required>
+                        <input type="hidden" name="phone" id="phone">
                     </div>
 
                     <div class="form-group">
-                        <i class="fas fa-users" aria-hidden="true"></i>
+                        <i class="fas fa-users"></i>
                         <input type="number" class="form-control" id="personCount" name="personCount"
                                placeholder="Günlük Yemek Sayısı"
                                inputmode="numeric" pattern="\d*" required>
                     </div>
 
                     <div class="form-group">
-                        <i class="fas fa-edit" aria-hidden="true"></i>
+                        <i class="fas fa-edit"></i>
                         <textarea class="form-control" id="message" name="message" placeholder="Özel İstekleriniz veya Notlarınız"></textarea>
                     </div>
 
                     <button type="submit" class="submit-btn">
-                        <i class="fas fa-paper-plane" aria-hidden="true"></i> Teklif İste
+                        <i class="fas fa-paper-plane"></i> Teklif İste
                     </button>
                 </form>
             </div>
@@ -3794,25 +3792,58 @@ const setupContactForm = () => {
     const phoneVisibleInput = contactForm.querySelector('#phoneVisible');
     const phoneHiddenInput = contactForm.querySelector('#phone');
 
-    // Telefon numarası formatlama (görsel alan)
-    if (phoneVisibleInput) {
-        phoneVisibleInput.addEventListener('input', (e) => {
-            let value = e.target.value.replace(/\D/g, '');
-            if (value.length > 10) value = value.substring(0, 10);
+if (phoneVisibleInput) {
+    phoneVisibleInput.addEventListener('input', (e) => {
+        let value = e.target.value.replace(/\D/g, '');
 
-            // Formatlı gösterim
-            if (value.length === 10) {
-                e.target.value = value.replace(/^(\d{3})(\d{3})(\d{2})(\d{2})$/, '($1) $2 $3 $4');
-            } else {
-                e.target.value = value;
-            }
+        //  İlk rakam 0 ise iptal et
+        if (value.length === 1 && value[0] === '0') {
+            e.target.value = '';
+            phoneHiddenInput.value = '';
+            return;
+        }
 
-            // Gizli inputa düz sayı aktar
-            phoneHiddenInput.value = value;
-        }, { passive: true });
-    }
+        //  En fazla 10 hane (rakam)
+        if (value.length > 10) {
+            value = value.slice(0, 10);
+        }
 
-    // Form gönderimi
+        //  Her adımda canlı formatlama
+        let formatted = '';
+        if (value.length > 0) formatted += `(${value.slice(0, 3)}`;
+        if (value.length >= 4) formatted += `) ${value.slice(3, 6)}`;
+        if (value.length >= 7) formatted += ` ${value.slice(6, 8)}`;
+        if (value.length >= 9) formatted += ` ${value.slice(8, 10)}`;
+
+        e.target.value = formatted.trim();
+        phoneHiddenInput.value = value;
+    }, { passive: true });
+
+    phoneVisibleInput.addEventListener('paste', (e) => {
+        e.preventDefault();
+        const pasted = (e.clipboardData || window.clipboardData).getData('text');
+        let digits = pasted.replace(/\D/g, '').slice(0, 10);
+
+        //  İlk rakam 0 ise iptal et
+        if (digits.charAt(0) === '0') {
+            phoneVisibleInput.value = '';
+            phoneHiddenInput.value = '';
+            return;
+        }
+
+        //  Formatlı gösterim (örnek: (534) 576 94 57)
+        let formatted = '';
+        if (digits.length > 0) formatted += `(${digits.slice(0, 3)}`;
+        if (digits.length >= 4) formatted += `) ${digits.slice(3, 6)}`;
+        if (digits.length >= 7) formatted += ` ${digits.slice(6, 8)}`;
+        if (digits.length >= 9) formatted += ` ${digits.slice(8, 10)}`;
+
+        phoneVisibleInput.value = formatted.trim();
+        phoneHiddenInput.value = digits;
+    });
+}
+
+
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const submitBtn = contactForm.querySelector('button[type="submit"]');
@@ -3833,6 +3864,8 @@ const setupContactForm = () => {
             if (response.ok) {
                 alert('Teklif isteğiniz başarıyla gönderildi! En kısa sürede sizinle iletişime geçeceğiz.');
                 contactForm.reset();
+                phoneVisibleInput.value = '';
+                phoneHiddenInput.value = '';
             } else {
                 alert('Bir hata oluştu. Lütfen bilgilerinizi kontrol ederek tekrar deneyin.');
             }
@@ -3846,9 +3879,8 @@ const setupContactForm = () => {
     });
 };
 
-
-// Sayfa yüklendiğinde başlat
 document.addEventListener('DOMContentLoaded', setupContactForm);
+
 
     // 5. HEADER SCROLL EFFECT (Optimize Edildi)
     const setupHeaderEffects = () => {
