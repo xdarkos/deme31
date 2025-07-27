@@ -3791,20 +3791,28 @@ const setupContactForm = () => {
     const contactForm = document.getElementById('contactForm');
     if (!contactForm) return;
 
-    // Telefon numarası formatlama
-    const phoneInput = contactForm.querySelector('#phone');
-    if (phoneInput) {
-        phoneInput.addEventListener('input', (e) => {
+    const phoneVisibleInput = contactForm.querySelector('#phoneVisible');
+    const phoneHiddenInput = contactForm.querySelector('#phone');
+
+    // Telefon numarası formatlama (görsel alan)
+    if (phoneVisibleInput) {
+        phoneVisibleInput.addEventListener('input', (e) => {
             let value = e.target.value.replace(/\D/g, '');
             if (value.length > 10) value = value.substring(0, 10);
+
+            // Formatlı gösterim
             if (value.length === 10) {
-                value = value.replace(/^(\d{3})(\d{3})(\d{2})(\d{2})$/, '($1) $2 $3 $4');
+                e.target.value = value.replace(/^(\d{3})(\d{3})(\d{2})(\d{2})$/, '($1) $2 $3 $4');
+            } else {
+                e.target.value = value;
             }
-            e.target.value = value;
+
+            // Gizli inputa düz sayı aktar
+            phoneHiddenInput.value = value;
         }, { passive: true });
     }
 
-    // Form gönderimi (Formspree)
+    // Form gönderimi
     contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const submitBtn = contactForm.querySelector('button[type="submit"]');
@@ -3819,9 +3827,7 @@ const setupContactForm = () => {
             const response = await fetch(contactForm.action, {
                 method: 'POST',
                 body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
+                headers: { 'Accept': 'application/json' }
             });
 
             if (response.ok) {
@@ -3839,6 +3845,7 @@ const setupContactForm = () => {
         }
     });
 };
+
 
 // Sayfa yüklendiğinde başlat
 document.addEventListener('DOMContentLoaded', setupContactForm);
