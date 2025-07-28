@@ -2946,35 +2946,32 @@ body.dark-mode .fa-sun {
                         <p>Her türlü soru, görüş ve önerileriniz için formu doldurabilirsiniz.</p>
                     </div>
                     
-                    <form id="contactForm" method="post">
-                        <div class="form-group">
-                            <i class="fas fa-user" aria-hidden="true"></i>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Adınız Soyadınız" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <i class="fas fa-phone-alt" aria-hidden="true"></i>
-                            <input type="tel" class="form-control" id="phone" name="phone" 
-                                   placeholder="Telefon (5__) ___ __ __" 
-                                   pattern="[\d\s\(\)\-]{10,}" 
-                                   title="10 haneli telefon numarası giriniz"
-                                   required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <i class="fas fa-envelope" aria-hidden="true"></i>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="E-posta Adresiniz" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <i class="fas fa-edit" aria-hidden="true"></i>
-                            <textarea class="form-control" id="message" name="message" placeholder="Mesajınız" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn">
-                            <i class="fas fa-paper-plane" aria-hidden="true"></i> Gönder
-                        </button>
-                    </form>
+<form id="contactForm" action="https://formspree.io/f/mwpqogyd" method="POST">
+    <div class="form-group">
+        <i class="fas fa-user" aria-hidden="true"></i>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Adınız Soyadınız" required>
+    </div>
+
+    <div class="form-group">
+        <i class="fas fa-phone-alt" aria-hidden="true"></i>
+        <input type="tel" class="form-control" id="phoneVisible" placeholder="(5__) ___ __ __" required>
+        <input type="hidden" id="phone" name="phone">
+    </div>
+
+    <div class="form-group">
+        <i class="fas fa-envelope" aria-hidden="true"></i>
+        <input type="email" class="form-control" id="email" name="email" placeholder="E-posta Adresiniz" required>
+    </div>
+
+    <div class="form-group">
+        <i class="fas fa-edit" aria-hidden="true"></i>
+        <textarea class="form-control" id="message" name="message" placeholder="Mesajınız" required></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">
+        <i class="fas fa-paper-plane" aria-hidden="true"></i> Gönder
+    </button>
+</form>
                 </div>
             </div>
         </div>
@@ -3167,6 +3164,7 @@ body.dark-mode .fa-sun {
         initTheme();
         setupMobileMenu();
         setupBackToTop();
+		preventHorizontalScroll();
         setupContactForm();
         setupHeaderEffects();
         setupServicesDropdown();
@@ -3279,42 +3277,91 @@ body.dark-mode .fa-sun {
     };
 
     // 4. İLETİŞİM FORMU
-    const setupContactForm = () => {
-        const contactForm = document.getElementById('contactForm');
-        if (!contactForm) return;
-        
-        // Telefon numarası formatlama
-        const phoneInput = contactForm.querySelector('#phone');
-        if (phoneInput) {
-            phoneInput.addEventListener('input', (e) => {
-                let value = e.target.value.replace(/\D/g, '');
-                if (value.length > 10) value = value.substring(0, 10);
-                
-                // Format: (5XX) XXX XX XX
-                value = value.replace(/^(\d{3})(\d{3})(\d{2})(\d{2})$/, '($1) $2 $3 $4');
-                e.target.value = value;
-            });
-        }
-        
-        // Form gönderimi
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            try {
-                const formData = new FormData(contactForm);
-                
-                // Burada gerçek API isteği yapılacak
-                console.log('Form data:', Object.fromEntries(formData));
-                
-                // Başarılı mesajı göster
-                alert('Mesajınız başarıyla gönderildi! Teşekkür ederiz.');
-                contactForm.reset();
-            } catch (error) {
-                console.error('Form error:', error);
-                alert('Bir hata oluştu. Lütfen daha sonra tekrar deneyin.');
+const setupContactForm = () => {
+    const contactForm = document.getElementById('contactForm');
+    if (!contactForm) return;
+
+    const phoneVisibleInput = document.getElementById('phoneVisible');
+    const phoneHiddenInput = document.getElementById('phone');
+
+    if (phoneVisibleInput && phoneHiddenInput) {
+        phoneVisibleInput.addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, '');
+
+            if (value.startsWith('0')) {
+                value = value.slice(1); // 0 ile başlamasını engelle
             }
+
+            value = value.slice(0, 10); // Maksimum 10 hane
+
+            let formatted = '';
+            if (value.length > 0) {
+                formatted = '(' + value.substring(0, 3);
+            }
+            if (value.length >= 4) {
+                formatted += ') ' + value.substring(3, 6);
+            }
+            if (value.length >= 7) {
+                formatted += ' ' + value.substring(6, 8);
+            }
+            if (value.length >= 9) {
+                formatted += ' ' + value.substring(8, 10);
+            }
+
+            phoneVisibleInput.value = formatted.trim();
+            phoneHiddenInput.value = value;
         });
-    };
+    }
+
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        try {
+            const formData = new FormData(contactForm);
+
+            // ✅ Gerçek gönderim noktası buraya gelecek
+            console.log('Form data:', Object.fromEntries(formData));
+
+            alert('Mesajınız başarıyla gönderildi! Teşekkür ederiz.');
+            contactForm.reset();
+            if (phoneVisibleInput) phoneVisibleInput.value = ''; // input mask temizle
+        } catch (error) {
+            console.error('Form error:', error);
+            alert('Bir hata oluştu. Lütfen daha sonra tekrar deneyin.');
+        }
+    });
+};
+
+// 15. YATAY KAYDIRMAYI ÖNLEME (Yeni eklendi)
+const preventHorizontalScroll = () => {
+    if (window.innerWidth <= 992) {
+        // Body ve html'e taşmayı engelle
+        document.body.style.overflowX = 'hidden';
+        document.documentElement.style.overflowX = 'hidden';
+
+        // Tüm taşma kaynaklarını engellemek için stil ekle
+        const style = document.createElement('style');
+        style.id = 'no-horizontal-scroll-style'; // Çift eklenmesini önler
+        style.textContent = `
+            html, body {
+                overflow-x: hidden !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                position: relative !important;
+            }
+
+            *, *::before, *::after {
+                box-sizing: border-box !important;
+                overscroll-behavior-x: contain !important;
+            }
+        `;
+        
+        // Önceki stil eklendiyse tekrar eklenmesin
+        if (!document.getElementById('no-horizontal-scroll-style')) {
+            document.head.appendChild(style);
+        }
+    }
+};
 
     // 5. HEADER SCROLL EFFECT
     const setupHeaderEffects = () => {
