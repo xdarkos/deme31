@@ -3979,6 +3979,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setupHeaderEffects();
     setupServicesDropdown();
     setupCookieConsent();
+	preventHorizontalScroll();
     
     // Performans optimizasyonları
     optimizeForMobile();
@@ -3990,6 +3991,37 @@ document.addEventListener("DOMContentLoaded", () => {
     setupTestimonialSlider();
     setupBlogLinks();
 });
+
+// 15. YATAY KAYDIRMAYI ÖNLEME (Yeni eklendi)
+const preventHorizontalScroll = () => {
+    if (window.innerWidth <= 992) {
+        // Body ve html'e taşmayı engelle
+        document.body.style.overflowX = 'hidden';
+        document.documentElement.style.overflowX = 'hidden';
+
+        // Tüm taşma kaynaklarını engellemek için stil ekle
+        const style = document.createElement('style');
+        style.id = 'no-horizontal-scroll-style'; // Çift eklenmesini önler
+        style.textContent = `
+            html, body {
+                overflow-x: hidden !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                position: relative !important;
+            }
+
+            *, *::before, *::after {
+                box-sizing: border-box !important;
+                overscroll-behavior-x: contain !important;
+            }
+        `;
+        
+        // Önceki stil eklendiyse tekrar eklenmesin
+        if (!document.getElementById('no-horizontal-scroll-style')) {
+            document.head.appendChild(style);
+        }
+    }
+};
 
 // 1. INTRO ANİMASYONU (DÜZELTİLMİŞ HALİ)
 const setupIntroAnimation = () => {
@@ -4481,28 +4513,7 @@ const setupBlogLinks = () => {
   // Sayfa yüklendiğinde modal'ı kur
   document.addEventListener('DOMContentLoaded', setupPrivacyModal);
   
-  // 15. YATAY KAYDIRMAYI ÖNLEME (Yeni eklendi)
-const preventHorizontalScroll = () => {
-    // Mobil cihazlarda yatay kaydırmayı önle
-    if (window.innerWidth <= 992) {
-        document.body.style.overflowX = 'hidden';
-        document.documentElement.style.overflowX = 'hidden';
-        
-        // Tüm elementler için yatay kaydırmayı engelle
-        const style = document.createElement('style');
-        style.textContent = `
-            html, body {
-                overflow-x: hidden !important;
-                width: 100% !important;
-                max-width: 100% !important;
-            }
-            * {
-                overscroll-behavior-x: contain !important;
-            }
-        `;
-        document.head.appendChild(style);
-    }
-};
+  
   
     </script>
 </body>
